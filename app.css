@@ -1146,3 +1146,6 @@ body *:not(svg):not(svg *){text-transform:none!important;letter-spacing:0!import
 @media(min-width:900px){.sch{margin-top:12px;min-height:32px}.sch b{font-size:13.5px;padding:0 22px 0 16px}.sch button{font-size:13px}.scbar{margin-left:0!important;margin-top:8px!important}}
 .sch button{position:relative}.sch button:after{content:"";position:absolute;inset:-7px 0}
 @media(min-width:900px){.scbar{margin-left:22px!important}}
+/* v928 Scores tab: same shape, navy fill with gold lettering, so solid gold stays unique to Hot Off the Press */
+.sch{border-bottom-color:rgba(212,177,90,.4)}
+.sch b{background:#1B3C6B;color:var(--goldl);box-shadow:inset 0 2px 0 var(--goldl)}
