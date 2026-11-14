@@ -1149,3 +1149,10 @@ body *:not(svg):not(svg *){text-transform:none!important;letter-spacing:0!import
 /* v928 Scores tab: same shape, navy fill with gold lettering, so solid gold stays unique to Hot Off the Press */
 .sch{border-bottom-color:rgba(212,177,90,.4)}
 .sch b{background:#1B3C6B;color:var(--goldl);box-shadow:inset 0 2px 0 var(--goldl)}
+
+/* v932 possession: a small drawn football beside the team with the ball (red-orange inside the 20); down and distance under the clock */
+.pos{display:inline-block;width:11px;height:7px;border-radius:50%;background:#B9722E;border:1px solid #F0E2B0;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.25);transform:rotate(-24deg);margin:0 0 1px 5px;vertical-align:middle;flex:none}
+.pos.rz{background:#E0492F;border-color:#FFD9C9}
+.sc .sct .pos{width:9px;height:6px;margin-left:4px}
+.dnd{display:block;font:600 11.5px/1.25 var(--sys)!important;color:var(--goldl)!important;font-style:normal;margin-top:2px;white-space:nowrap}
+.ghm b .dnd{font-size:12px!important}.ghm span u{text-decoration:none}
