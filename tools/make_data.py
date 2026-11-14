@@ -62,9 +62,9 @@ def blank_private_strings(o):
 
 
 def full_snap(src):
-    """Everything the private dashboard shows, unscrubbed. Only ever stored encrypted."""
-    full = {"dash": {}, "picks": {}, "btm": {}}
-    for coll in ("dash", "picks"):
+    """Everything the private dashboard shows, unscrubbed (dash, picks, and The Arena's btm and surv if present)."""
+    full = {"dash": {}, "picks": {}, "btm": {}, "surv": {}}
+    for coll in ("dash", "picks", "btm", "surv"):
         for f in sorted(glob.glob(os.path.join(src, coll, "*.json"))):
             name = os.path.basename(f)[:-5]
             if coll == "picks" and name == "today":
@@ -89,7 +89,22 @@ def lock(obj, keys):
     return {"v": 1, "wk": e(wk), "iv": e(iv), "ct": e(ct)}
 
 
+def mode():
+    """tools/mode.txt holds one word. "mirror" = publish the owner's full private view in the clear
+    (the owner chose this on Nov 14 2026 while he is the only visitor). Anything else = public, scrubbed."""
+    f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mode.txt")
+    return open(f).read().strip().lower() if os.path.exists(f) else "public"
+
+
 def main(src, out):
+    if mode() == "mirror":
+        snap = full_snap(src)
+        snap["mode"] = "full"
+        snap["built"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        json.dump(snap, open(out, "w"), ensure_ascii=False, separators=(",", ":"))
+        print("wrote", out, os.path.getsize(out), "bytes; MIRROR mode (owner's full view, not scrubbed);",
+              len(snap["dash"]), "dash,", len(snap["picks"]), "picks,", len(snap["btm"]), "arena records")
+        return
     snap = {"dash": {}, "picks": {}, "btm": {}}
     for name in DASH_ALLOW:
         f = os.path.join(src, "dash", name + ".json")
