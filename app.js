@@ -301,6 +301,7 @@ var BTM={},SV={you:{picks:{}},model:{picks:{}}},AV="open",WHYOPEN={},LOCAL=false
 var INV={"W":"L","L":"W","EVEN":"EVEN","P":"EVEN","½ W":"½ L","½ L":"½ W"};
 var WHY=[["momentum","Momentum"],["home","Home field"],["qb","QB"],["matchup","Matchup"],["motivation","Motivation"],["line","Line value"],["hunch","Hunch"],["defense","Defense"],["injury","Injuries/News"],["better","Better team"],["rest","Rest/Schedule"],["rivalry","Rivalry/Division"],["coach","Coaching"],["weather","Weather"],["guess","Coin flip"]];
 var HEART='<svg class="life" viewBox="0 0 24 24" aria-hidden="true"><path fill="#D4B15A" stroke="#9C7A2B" stroke-width="1.6" stroke-linejoin="round" d="M12 21.2 10.6 20C5.4 15.3 2 12.2 2 8.5 2 5.5 4.3 3.2 7.3 3.2c1.7 0 3.4.8 4.7 2.2 1.3-1.4 3-2.2 4.7-2.2 3 0 5.3 2.3 5.3 5.3 0 3.7-3.4 6.8-8.6 11.5z"/></svg>',HEARTO=HEART.replace('fill="#D4B15A"','fill="none"');
+function siteNoSave(){sheet('<h3 style="margin:22px 0 8px;font:700 18px/1.25 var(--sys)">Picks are made on the private dashboard</h3><p style="font-size:14.5px;line-height:1.5;margin:0 0 6px">The website can show The Arena, but it has nowhere to save a pick yet. Make your pick on the private dashboard and it will appear here at the next update.</p><div class="btnrow"><button type="button" class="btn" data-act="close">Close</button><a class="btn go" href="https://claude.ai/artifact/2G3paAfWW9KQan7HLFGWwg" target="_blank" rel="noopener" data-focus>Open the dashboard ›</a></div>')}
 function toast(title,text){var o=document.querySelector(".toast");if(o)o.remove();var d=document.createElement("div");d.className="toast";d.setAttribute("role","status");d.innerHTML="<b>"+esc(title)+"</b>"+(text?"<span>"+esc(text)+"</span>":"");document.body.appendChild(d);setTimeout(function(){if(d.parentNode)d.remove()},3600)}
 function fmtL(x,soc){if(!x)return soc?"0":"PK";var a=Math.abs(x),s=a%1===.25||a%1===.75?a.toFixed(2):String(a);return(x>0?"+":"−")+s}
 function nameSide(nm,g){var n=nz(nm),a=nz(g.an),h=nz(g.hn);if(!n)return null;return n===h||h.indexOf(n)===0||n.indexOf(h)===0?"home":n===a||a.indexOf(n)===0||n.indexOf(a)===0?"away":null}
@@ -510,7 +511,8 @@ function act(el,e){var a=el.getAttribute("data-act");
  else if(a==="av"){AV=el.getAttribute("data-k");DONEALL=false;render();window.scrollTo(0,0)}
  else if(a==="adoneall"){DONEALL=true;render()}
  else if(a==="h2h"){AH=!AH;render()}else if(a==="bv"){BV=el.getAttribute("data-k");render()}
- else if(a==="apick")aPick(el.getAttribute("data-k"),el.getAttribute("data-s"));
+ else if(SITE&&/^(apick|astar|awhy|svpick)$/.test(a))siteNoSave();
+  else if(a==="apick")aPick(el.getAttribute("data-k"),el.getAttribute("data-s"));
  else if(a==="astar")aEdit(el.getAttribute("data-k"),function(d){if(!d.star&&starsThisWeek()>=3&&wkStart(d.start)===wkStart(new Date().toISOString())){toast("3 ★ picks already","You get 3 a week (Mon–Sun). Un-star one first.");return null}d.star=!d.star;toast(d.star?"★ Confidence pick":"Star removed",d.star?"Tracked separately in your ★ picks record.":"Back to a regular pick.");return d});
  else if(a==="awhyopen"){var wk2=el.getAttribute("data-k");WHYOPEN[wk2]=!WHYOPEN[wk2];render()}
  else if(a==="awhy")aEdit(el.getAttribute("data-k"),function(d){var w=(d.why||[]).slice(),t2=el.getAttribute("data-w"),i3=w.indexOf(t2);if(i3>=0)w.splice(i3,1);else{if(w.length>=3){toast("Up to 3 reasons","Tap one to remove it first.");return null}w.push(t2)}d.why=w;return d});
