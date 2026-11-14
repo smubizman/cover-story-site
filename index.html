@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Cover Story</title>
 <meta name="description" content="Cover Story: sports news, scores and picks in one place. For entertainment only.">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#050E1F">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,7 +16,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Work+Sans:wght@400;500;600;700&family=Special+Elite&display=swap">
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px);background:#050E1F}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#050E1F;color:#EEF2F8}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.boot{padding:48px 20px;text-align:center;font:500 15px -apple-system,BlinkMacSystemFont,sans-serif;color:#AEC0D9}</style>
-<link rel="stylesheet" href="app.css?v=21b3d50c">
+<link rel="stylesheet" href="app.css?v=66653c5e">
 </head>
 <body>
 <main id="app" class="app"><p class="boot">Loading Cover Story…</p></main>
@@ -23,9 +24,27 @@
 <script>
 window.CS_PUBLIC=true;
 (function(){
-  function fail(){document.getElementById("app").innerHTML='<p class="boot">Cover Story could not load. Check your connection and try again.</p>'}
-  fetch("data.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
-    window.CS_SNAP=d;var s=document.createElement("script");s.src="app.js?v=21b3d50c";s.onerror=fail;document.body.appendChild(s)
+  var app=document.getElementById("app");
+  function fail(){app.innerHTML='<p class="boot">Cover Story could not load. Check your connection and try again.</p>'}
+  function idb(mode,fn){return new Promise(function(res,rej){var o=indexedDB.open("cs-site",1);o.onupgradeneeded=function(){o.result.createObjectStore("k")};o.onerror=function(){rej(o.error)};o.onsuccess=function(){try{var tx=o.result.transaction("k",mode),rq=fn(tx.objectStore("k"));tx.oncomplete=function(){res(rq&&rq.result)};tx.onerror=function(){rej(tx.error)}}catch(e){rej(e)}}})}
+  function b64(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u}
+  window.CS_OPEN=async function(d){
+    if(!d||!d.locked||!window.crypto||!crypto.subtle)return d;
+    try{var key=await idb("readonly",function(s){return s.get("priv")});if(!key)return d;
+      var L=d.locked,raw=await crypto.subtle.decrypt({name:"RSA-OAEP"},key,b64(L.wk)),k=await crypto.subtle.importKey("raw",raw,"AES-GCM",false,["decrypt"]),pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(L.iv)},k,b64(L.ct)),full=JSON.parse(new TextDecoder().decode(pt));
+      full.mode="full";full.built=d.built;return full}catch(e){return d}};
+  window.CS_LOCK=function(){idb("readwrite",function(s){return s.delete("priv")}).then(function(){location.reload()},function(){location.reload()})};
+  window.CS_UNLOCK=function(){
+    var o=document.createElement("div");o.style.cssText="position:fixed;inset:0;z-index:999;background:rgba(3,10,22,.82);display:flex;align-items:center;justify-content:center;padding:20px";
+    o.innerHTML='<form style="width:100%;max-width:340px;background:#0F2B50;border:1px solid rgba(240,218,152,.6);border-radius:16px;padding:20px;font:15px -apple-system,BlinkMacSystemFont,sans-serif;color:#EEF2F8"><b style="display:block;font-size:17px;margin-bottom:6px">Owner sign-in</b><p style="margin:0 0 14px;color:#AEC0D9;font-size:13px;line-height:1.45">Enter your passcode to see your bets and bankroll on this device.</p><input type="text" name="username" autocomplete="username" value="Cover Story owner" readonly style="position:absolute;opacity:0;height:0;width:0;border:0;padding:0"><input type="password" name="password" autocomplete="current-password" placeholder="Passcode" required style="width:100%;box-sizing:border-box;font-size:16px;padding:12px;border-radius:10px;border:1px solid rgba(159,179,207,.5);background:#081A36;color:#EEF2F8"><p class="e" style="min-height:18px;margin:8px 0;color:#F59B9B;font-size:13px"></p><div style="display:flex;gap:10px"><button type="button" class="c" style="flex:1;padding:12px;border-radius:10px;border:1px solid rgba(159,179,207,.5);background:none;color:#EEF2F8;font-size:15px">Cancel</button><button type="submit" style="flex:1;padding:12px;border-radius:10px;border:0;background:#F0DA98;color:#0B2340;font-weight:700;font-size:15px">Unlock</button></div></form>';
+    document.body.appendChild(o);var f=o.querySelector("form"),err=o.querySelector(".e");o.querySelector(".c").onclick=function(){o.remove()};o.querySelector("input[type=password]").focus();
+    f.onsubmit=async function(ev){ev.preventDefault();err.textContent="Checking…";try{
+      var K=await (await fetch("keys.json?t="+Date.now(),{cache:"no-store"})).json(),enc=new TextEncoder(),base=await crypto.subtle.importKey("raw",enc.encode(f.password.value),"PBKDF2",false,["deriveKey"]),aes=await crypto.subtle.deriveKey({name:"PBKDF2",salt:b64(K.salt),iterations:K.iter,hash:"SHA-256"},base,{name:"AES-GCM",length:256},false,["decrypt"]),p8;
+      try{p8=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(K.iv)},aes,b64(K.priv))}catch(e){err.textContent="That passcode is not right.";return}
+      var priv=await crypto.subtle.importKey("pkcs8",p8,{name:"RSA-OAEP",hash:"SHA-256"},false,["decrypt"]);await idb("readwrite",function(s){return s.put(priv,"priv")});location.reload()
+    }catch(e){err.textContent="Could not sign in. Check your connection and try again."}}};
+  fetch("data.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){return window.CS_OPEN(d)}).then(function(d){
+    window.CS_SNAP=d;var s=document.createElement("script");s.src="app.js?v=66653c5e";s.onerror=fail;document.body.appendChild(s)
   }).catch(fail);
 })();
 </script>

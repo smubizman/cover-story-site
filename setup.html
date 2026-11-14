@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Cover Story owner setup</title>
+<style>body{margin:0;background:#050E1F;color:#EEF2F8;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;padding:24px 18px}main{max-width:460px;margin:0 auto}h1{font-size:22px;color:#F3E3B0;margin:0 0 8px}p{color:#AEC0D9;margin:0 0 14px}label{display:block;font-weight:600;margin:14px 0 6px}input,textarea{width:100%;box-sizing:border-box;font-size:16px;padding:12px;border-radius:10px;border:1px solid rgba(159,179,207,.5);background:#081A36;color:#EEF2F8}textarea{height:170px;font:12px/1.4 ui-monospace,Menlo,monospace}button{width:100%;margin-top:16px;padding:13px;border-radius:10px;border:0;background:#F0DA98;color:#0B2340;font-weight:700;font-size:16px}.e{color:#F59B9B;min-height:20px;margin-top:10px}#out{margin-top:22px}b{color:#EEF2F8}</style></head>
+<body><main>
+<h1>Owner setup</h1>
+<p>This creates the lock for your private view. <b>Your passcode never leaves this device</b> and is not saved anywhere. If you forget it, run this page again to make a new lock.</p>
+<p>Pick a passcode of <b>at least 12 characters</b>. Four unrelated words work well. A short PIN is not safe here, because the locked data sits on a public site where anyone could try to guess it.</p>
+<form id="f"><input type="text" name="username" autocomplete="username" value="Cover Story owner" readonly style="position:absolute;opacity:0;height:0;width:0;border:0;padding:0">
+<label for="p1">Passcode</label><input id="p1" type="password" autocomplete="new-password" minlength="12" required>
+<label for="p2">Passcode again</label><input id="p2" type="password" autocomplete="new-password" minlength="12" required>
+<button type="submit">Create my lock</button><p class="e" id="e"></p></form>
+<div id="out" hidden><h1>Done. One more step</h1><p>Copy the text below and paste it to Claude in your chat. <b>It is safe to share:</b> it holds no passcode, and the private part can only be opened with your passcode.</p><textarea id="t" readonly></textarea><button type="button" id="c">Copy</button><p class="e" id="m" style="color:#7BD9A0"></p><p>This device is already signed in. On other devices, open the site and tap "Owner sign-in" at the bottom.</p></div>
+</main>
+<script>
+function e64(buf){var u=new Uint8Array(buf),s="";for(var i=0;i<u.length;i++)s+=String.fromCharCode(u[i]);return btoa(s)}
+function idb(fn){return new Promise(function(res,rej){var o=indexedDB.open("cs-site",1);o.onupgradeneeded=function(){o.result.createObjectStore("k")};o.onerror=function(){rej(o.error)};o.onsuccess=function(){var tx=o.result.transaction("k","readwrite");fn(tx.objectStore("k"));tx.oncomplete=function(){res()};tx.onerror=function(){rej(tx.error)}}})}
+document.getElementById("f").onsubmit=async function(ev){ev.preventDefault();var E=document.getElementById("e"),a=document.getElementById("p1").value,b=document.getElementById("p2").value;
+  if(a!==b){E.textContent="The two passcodes do not match.";return}if(a.length<12){E.textContent="Use at least 12 characters.";return}
+  E.textContent="Working…";try{
+    var kp=await crypto.subtle.generateKey({name:"RSA-OAEP",modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:"SHA-256"},true,["encrypt","decrypt"]);
+    var spki=await crypto.subtle.exportKey("spki",kp.publicKey),p8=await crypto.subtle.exportKey("pkcs8",kp.privateKey);
+    var salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12)),iter=600000;
+    var base=await crypto.subtle.importKey("raw",new TextEncoder().encode(a),"PBKDF2",false,["deriveKey"]);
+    var aes=await crypto.subtle.deriveKey({name:"PBKDF2",salt:salt,iterations:iter,hash:"SHA-256"},base,{name:"AES-GCM",length:256},false,["encrypt"]);
+    var priv=await crypto.subtle.encrypt({name:"AES-GCM",iv:iv},aes,p8);
+    var out=JSON.stringify({v:1,pub:e64(spki),salt:e64(salt),iter:iter,iv:e64(iv),priv:e64(priv)});
+    try{var nk=await crypto.subtle.importKey("pkcs8",p8,{name:"RSA-OAEP",hash:"SHA-256"},false,["decrypt"]);await idb(function(s){s.put(nk,"priv")})}catch(x){}
+    document.getElementById("t").value=out;document.getElementById("f").hidden=true;document.getElementById("out").hidden=false;E.textContent="";
+  }catch(x){E.textContent="Something went wrong creating the lock. Try again in Safari."}};
+document.getElementById("c").onclick=function(){var t=document.getElementById("t"),m=document.getElementById("m");t.select();(navigator.clipboard?navigator.clipboard.writeText(t.value):Promise.reject()).then(function(){m.textContent="Copied."},function(){try{document.execCommand("copy");m.textContent="Copied."}catch(x){m.textContent="Press and hold the text to copy it."}})};
+</script></body></html>
