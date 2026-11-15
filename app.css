@@ -1170,3 +1170,7 @@ html,body{overflow-x:clip}
 .bkn{display:block;margin-top:4px;font:500 11.5px/1.35 var(--sys);color:var(--mut);max-width:34ch}
 @media(min-width:900px){.bkn{font-size:12.5px;max-width:46ch}}
 .bank .bkn{margin-left:auto;margin-right:auto;text-align:center}
+
+/* v940 the line on each scores-bar chip: a small gold number beside the favorite */
+.sc .scl{text-decoration:none;font:700 11.5px/1 var(--sys);color:var(--goldl);margin-left:5px;white-space:nowrap}
+@media(min-width:900px){.sc .scl{font-size:12.5px}}
