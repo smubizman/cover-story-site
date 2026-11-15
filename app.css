@@ -1183,3 +1183,6 @@ html,body{overflow-x:clip}
 .sch .schf button[aria-pressed=true]{background:var(--goldl);border-color:var(--goldl);color:var(--navy)}
 .sch .scha{flex:none;margin-left:0}
 @media(min-width:900px){.sch .schf{gap:7px;padding-left:8px}.sch .schf button{font-size:12.5px;padding:6px 12px}}
+/* v943 the line as a small slanted gold tag, the same cut as the Scores and Hot Off the Press tabs */
+.sc .scl{background:var(--goldl);color:var(--navy);font:800 11px/1 var(--sys);padding:3px 6px 3px 8px;margin-left:7px;clip-path:polygon(5px 0,100% 0,100% 100%,0 100%)}
+@media(min-width:900px){.sc .scl{font-size:12px;padding:3px 7px 3px 9px}}
