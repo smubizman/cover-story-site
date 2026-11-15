@@ -1161,3 +1161,9 @@ a.btn{text-decoration:none;display:flex;align-items:center;justify-content:cente
 /* v934 site: Arena picks can be saved from the website once this device has the save key */
 .site.ghon .arena::before{display:none}
 .lnk{font:inherit;color:var(--goldl);text-decoration:underline;padding:0 2px}
+
+/* v938 miss review inside a finished Buy List card */
+.rvw{margin-top:10px;padding-top:10px;border-top:1px solid rgba(159,179,207,.25)}
+.rvw h4{margin:0 0 6px;font:700 12.5px/1.2 var(--sys);color:var(--goldl)}
+.rvw p{margin:6px 0 0}.rvw ul{margin:4px 0 0;padding-left:18px}.rvw li{margin:3px 0}
+html,body{overflow-x:clip}
