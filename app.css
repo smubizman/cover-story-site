@@ -1174,3 +1174,12 @@ html,body{overflow-x:clip}
 /* v940 the line on each scores-bar chip: a small gold number beside the favorite */
 .sc .scl{text-decoration:none;font:700 11.5px/1 var(--sys);color:var(--goldl);margin-left:5px;white-space:nowrap}
 @media(min-width:900px){.sc .scl{font-size:12.5px}}
+
+/* v941 scores bar: sport filter pills on the heading line; "Full" opens the Scores tab */
+.sch .schf{display:flex;align-items:center;gap:5px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;padding:0 6px 0 2px;-webkit-overflow-scrolling:touch}
+.sch .schf::-webkit-scrollbar{display:none}
+.sch .schf button{flex:none;margin:0;min-width:0;min-height:0;font:600 11.5px/1 var(--sys);color:var(--soft);padding:6px 9px;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.04)}
+.sch .schf button:after{inset:-5px 0}
+.sch .schf button[aria-pressed=true]{background:var(--goldl);border-color:var(--goldl);color:var(--navy)}
+.sch .scha{flex:none;margin-left:0}
+@media(min-width:900px){.sch .schf{gap:7px;padding-left:8px}.sch .schf button{font-size:12.5px;padding:6px 12px}}
