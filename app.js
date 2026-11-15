@@ -36,7 +36,7 @@ function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localSto
 /* ---------- bet size ---------- */
 function betPct(){var v=parseFloat(store("cs-betpct-v1"));if(!(v>0)){v=parseFloat(J(D.betpct).pct)}return v>0&&v<=10?v:1}
 function bankroll(){return myBank()}
-function mlab(p){return p&&p.fun?"Model pick · for fun":"Model pick · half size"}
+function mlab(p){return p&&p.lean?"Daily lean · for fun":p&&p.fun?"Model pick · for fun":"Model pick · half size"}
 function units(p){if(p&&p.fun)return 0;var s=String(p&&p.size||"").toLowerCase();if(/half/.test(s)||(p&&p.grade==="model"&&!/max|mid|medium|min|small/.test(s)))return .5;if(/max|large/.test(s))return 3;if(/mid|medium/.test(s))return 2;if(/min|small/.test(s))return 1;var m=/\$\s*([\d.]+)/.exec(String(p&&p.bet||""));return m?Math.min(3,Math.max(1,Math.round(parseFloat(m[1])/10))):1}
 function halved(){var H=J(D.header),hl=parseFloat(String(H.halveLine||"").replace(/[^0-9.]/g,"")),b=bankroll();return hl>0&&b>0&&b<=hl}
 function dollars(n){var b=bankroll(),x=b*betPct()/100*n*(halved()?.5:1);if(!(b>0))return n+"u";var q=x>=20?Math.round(x):Math.round(x*2)/2;return"$"+(q%1?q.toFixed(2):q)}
@@ -145,7 +145,7 @@ function dashes(n,w,g,h){for(var o="",k=0;k<5;k++)o+='<rect x="'+k*(w+g)+'" y="0
 function cring(p){var c=conf(p);if(!c)return"";if(p.against)c={n:0,w:"Against"};return'<span class="cf" role="img" aria-label="Confidence: '+c.w+'"><svg viewBox="0 0 67 3.5" aria-hidden="true">'+dashes(c.n,11,3,3.5)+"</svg><i>"+c.w+"</i></span>"}
 function cbars(p){var c=conf(p);if(!c)return"";if(p.against)c={n:0,w:"Model leans the other way"};return' <svg class="cbars" viewBox="0 0 45 3" preserveAspectRatio="none" role="img" aria-label="Confidence: '+c.w+'"><title>Confidence: '+c.w+"</title>"+dashes(c.n,7,2.5,3)+"</svg>"}
 function rbars(g){var x=g.radar,c=null;if(x){var pm=String(x.pick||"").match(/^([A-Z0-9&]{2,5})\s/),sd=g.me?(g.me.side==="h"?g.h:g.a):pm?pm[1]:"";c=x.ifStars&&!g.me?{have:[0,-.5,.5,1.5,3][+x.ifStars]||0,need:0}:gapConf(g.sp,g.a,g.h,sd,x.ours,x.market)}else if(g.me){var r=modelRow(g.sp,g.a,g.h);if(r)c=gapConf(g.sp,g.a,g.h,g.me.side==="h"?g.h:g.a,r.tierTip,String(r.tierTip||"").split(" · ")[1])}return c?cbars(c):""}
-function blab(g){return(g.buy.grade==="model"?(g.buy.fun?"Model pick · For fun":"The Buy List · Model pick"):g.buy.grade==="proven"?"★ The Buy List · Proven":g.buy.grade==="price"?"★ The Buy List · Price pick":"★ The Buy List")+cbars(g.buy)}
+function blab(g){return(g.buy.grade==="model"?(g.buy.lean?"Daily lean · For fun":g.buy.fun?"Model pick · For fun":"The Buy List · Model pick"):g.buy.grade==="proven"?"★ The Buy List · Proven":g.buy.grade==="price"?"★ The Buy List · Price pick":"★ The Buy List")+cbars(g.buy)}
 function stars(p){var d=+p.have-+p.need;return isNaN(d)?0:d>=3?4:d>=1?3:d>=0?2:1}
 function deckCards(){var B=J(D.buyStrip),now=Date.now(),live=(B.live||[]).filter(Boolean),rk={pre:1,in:0,post:2};live=live.slice().sort(function(a,b){return(rk[a.state]==null?1:rk[a.state])-(rk[b.state]==null?1:rk[b.state])||(a.start<b.start?-1:1)});
  var C=live.map(function(p){return{k:"buy",p:p,bucket:p.state==="post"||stale(p)?"res":dkey(p.start)===dkey(now)||p.state==="in"||Date.parse(p.start)<now?"tod":"up"}});
