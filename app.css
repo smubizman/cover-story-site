@@ -1231,3 +1231,4 @@ svg[data-tm]{cursor:pointer}
 .row.gf .gp u{display:inline-block;margin-top:6px;text-decoration:none;font:600 12px/1 var(--disp);padding:4px 8px;border-radius:999px;background:rgba(169,194,74,.18);color:#D5E69A}
 .row.gf .bt.on{flex:1}
 @media(min-width:900px){.row.gf .gp>i{width:68px;height:68px;font-size:25px}.row.gf .gp b{font-size:30px}.row.gf .gp em{font-size:15px}}
+.rw.nob .bar u{display:none}
