@@ -1186,3 +1186,7 @@ html,body{overflow-x:clip}
 /* v944 the line as an outlined gold pill (Scott's choice, Nov 15 2026: option C) */
 .sc .scl{border:1px solid var(--goldl);color:var(--goldl);background:none;font:700 11px/1 var(--sys);padding:2px 6px;margin-left:7px;border-radius:99px}
 @media(min-width:900px){.sc .scl{font-size:12px;padding:2px 7px}}
+
+/* v945 the sport selector only slides sideways */
+.sch .schf{overflow-y:hidden;touch-action:pan-x;overscroll-behavior:contain}
+.sch .schf button:after{inset:0 -2px}
