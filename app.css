@@ -1128,10 +1128,10 @@ body *:not(svg):not(svg *){text-transform:none!important;letter-spacing:0!import
 .site .arena::before{content:"Picks are off on this device. Tap any pick to turn them on.";display:block;margin:0 12px 8px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;font:500 12.5px/1.4 var(--sys);color:var(--soft);text-align:center}
 
 /* v923 site: one shared list of favorite teams, edited on the private dashboard */
-.site~.ov .tgrid .tm,.site~.ov [data-act=unfav],.site~.ov .tsp,.site~.ov .tq{pointer-events:none}
-.site~.ov .tgrid::before{content:"Your teams are set on the private dashboard, so every device shows the same list. Changes made there appear here at the next update.";grid-column:1/-1;display:block;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:500 13px/1.4 var(--sys);color:var(--soft);text-align:center}
-.site~.ov .tgrid .tm:not(.on){display:none}
-.site~.ov .tsp,.site~.ov .tq{display:none}
+.site:not(.ghon)~.ov .tgrid .tm,.site:not(.ghon)~.ov [data-act=unfav],.site:not(.ghon)~.ov .tsp,.site:not(.ghon)~.ov .tq{pointer-events:none}
+.site:not(.ghon)~.ov .tgrid::before{content:"To change your teams here, first turn on picks: open The Arena and tap any pick. Until then this list is view-only.";grid-column:1/-1;display:block;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:500 13px/1.4 var(--sys);color:var(--soft);text-align:center}
+.site:not(.ghon)~.ov .tgrid .tm:not(.on){display:none}
+.site:not(.ghon)~.ov .tsp,.site:not(.ghon)~.ov .tq{display:none}
 
 /* v924 Scores bar: live score and clock on games in progress */
 .sc .sct>span .scs{margin-left:auto;padding-left:10px;text-decoration:none;font:700 13.5px/1 var(--sys);color:var(--fg)}
