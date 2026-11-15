@@ -1249,3 +1249,24 @@ svg[data-tm]{cursor:pointer}
 .nl .nlk b{text-align:right;font-weight:600;overflow-wrap:anywhere}
 .nl .warn{margin:8px 0 0;font:500 13px/1.4 var(--sys)}
 h4.nlh{margin-top:14px}
+/* v953 mini number line, line chip, live cover history, cover story, your edge */
+.nl.mini{margin:8px 0 0}
+.nl.mini .nlt{height:22px;margin-top:0}
+.nl.mini .nlt:before{top:10px}.nl.mini .nlt i{top:4px;width:14px;height:14px;margin-left:-7px}.nl.mini .nlt s{top:3px}
+.nl .nlc{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font:500 11px/1.3 var(--sys);color:var(--mut)}
+.nl .nlc span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.nl .nlc span i{width:8px;height:8px;border-radius:50%;box-sizing:border-box;border-width:1px;margin-left:6px}
+.nl .nlc span i:first-child{margin-left:0}
+.lmv{font:600 11px/1.3 var(--sys);font-style:normal;color:var(--mut);white-space:nowrap}
+.lmv.ok{color:var(--win)}.lmv.no{color:var(--loss)}
+.nl.mini .warn{margin:4px 0 0;font:500 11.5px/1.3 var(--sys)}
+.lhs{margin:6px 0 0}.lhs svg{display:block;width:100%;height:44px}
+.lhs small{display:block;font:500 10.5px/1.3 var(--sys);color:var(--mut);text-align:center;margin-top:2px}
+.cvs{margin:12px 0 4px;padding:14px 16px;border-radius:16px;border:1px solid rgba(233,200,115,.35);background:linear-gradient(180deg,rgba(233,200,115,.10),rgba(233,200,115,.03))}
+.cvs small{display:flex;align-items:center;gap:6px;font:700 10.5px/1.2 var(--sys);letter-spacing:.14em;text-transform:uppercase;color:var(--goldl,#E9C873)}
+.cvs h2{margin:6px 0 0;font:700 21px/1.2 var(--sys);letter-spacing:-.01em;text-wrap:balance}
+.cvs p{margin:6px 0 0;font:400 14px/1.45 var(--sys);color:var(--mut)}
+@media(min-width:900px){.cvs{padding:18px 22px}.cvs h2{font-size:28px}.cvs p{font-size:16px;max-width:70ch}}
+.edge{margin:4px 0 12px;padding:12px 14px;border-radius:14px;border:1px solid rgba(159,179,207,.25);background:rgba(159,179,207,.07)}
+.edge small{font:700 10.5px/1.2 var(--sys);letter-spacing:.14em;text-transform:uppercase;color:var(--goldl,#E9C873)}
+.edge p{margin:6px 0 0;font:400 14.5px/1.4 var(--sys)}.edge p.anote{color:var(--mut);font-size:12.5px}
