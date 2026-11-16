@@ -1287,6 +1287,13 @@ h4.nlh{margin-top:14px}
 .so-r p{margin:4px 0 0 16px;font:400 13px/1.4 var(--sys);color:var(--mut)}
 .so-foot{margin:10px 0 0;font:400 12px/1.4 var(--sys);color:var(--mut)}
 @media(min-width:900px){.so{padding:16px 20px}.so-t b{font-size:16px}.so-r p{font-size:14px}}
+/* v959 Sat out today moved into the News column (computer) and Hot Off the Press (phones) */
+.nrow .ts.sots{color:var(--goldl,#E9C873);border-color:rgba(233,200,115,.6);background:rgba(233,200,115,.1)}.nrow.sorow{border-left:3px solid rgba(233,200,115,.7);padding-left:10px}.wl.news>.nrow.sorow{grid-column:1/-1}@media(min-width:900px){.buy .sostrip{display:none}}
+.nrow .sp.sot{background:rgba(233,200,115,.16);color:var(--goldl,#E9C873);border:1px solid rgba(233,200,115,.45)}
+.nrow.sorow .ng .spd{margin:0}.nrow.sorow .ng i{font-size:18px;color:var(--goldl,#E9C873)}
+.so.in-sh{margin:0;border:0;background:none;padding:0}
+.sostrip{display:flex;align-items:center;gap:10px;width:100%;text-align:left;margin:2px 0 12px;padding:9px 12px;border:1px solid rgba(233,200,115,.4);border-radius:12px;background:rgba(233,200,115,.07)}.sostrip .sotg{flex:none;font:600 10.5px/1 var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--goldl,#E9C873)}.sostrip .sotx{flex:1;min-width:0;font:600 13.5px/1.25 var(--sys);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sostrip .sotx em{font-style:normal;font-weight:400;color:var(--mut)}.sostrip .sowy{flex:none;font:600 12px/1 var(--sys);color:var(--goldl,#E9C873)}@media(max-width:600px){.sostrip .sotx em{display:none}}
+.wl.news>.so{grid-column:1/-1;margin:4px 0 8px}.so.in-sh h3{font-size:18px;padding-right:36px}
 /* v958 start time on final rows */
 .wrow .mid small.stt{margin-top:1px;opacity:.9}
 /* v961 cover story: headline only, tap for the story */
@@ -1332,8 +1339,3 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 @media (prefers-reduced-motion:reduce){.wt .ldot{animation:none}}
 /* v966: dark ring around the live dot when the Live tab is selected (gold button) */
 .wt button[aria-pressed=true] .ldot{animation:none;box-shadow:0 0 0 1.5px var(--navy)}
-
-/* v967: "Sat out today" lives at the top of News as its own called-out block */
-.so.son{grid-column:1/-1;margin:2px 0 12px;border-color:rgba(233,200,115,.45);border-left:3px solid var(--goldl,#E9C873);background:rgba(233,200,115,.07)}
-.so-k{display:flex;align-items:center;gap:6px;margin:0 0 6px;font:700 10.5px/1 var(--sys);letter-spacing:.14em;text-transform:uppercase;color:var(--goldl,#E9C873)}
-.so-k i{width:6px;height:6px;border-radius:50%;background:var(--goldl,#E9C873)}
