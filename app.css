@@ -1287,3 +1287,5 @@ h4.nlh{margin-top:14px}
 .so-r p{margin:4px 0 0 16px;font:400 13px/1.4 var(--sys);color:var(--mut)}
 .so-foot{margin:10px 0 0;font:400 12px/1.4 var(--sys);color:var(--mut)}
 @media(min-width:900px){.so{padding:16px 20px}.so-t b{font-size:16px}.so-r p{font-size:14px}}
+/* v958 start time on final rows */
+.wrow .mid small.stt{margin-top:1px;opacity:.9}
