@@ -1332,3 +1332,8 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 @media (prefers-reduced-motion:reduce){.wt .ldot{animation:none}}
 /* v966: dark ring around the live dot when the Live tab is selected (gold button) */
 .wt button[aria-pressed=true] .ldot{animation:none;box-shadow:0 0 0 1.5px var(--navy)}
+
+/* v967: "Sat out today" lives at the top of News as its own called-out block */
+.so.son{grid-column:1/-1;margin:2px 0 12px;border-color:rgba(233,200,115,.45);border-left:3px solid var(--goldl,#E9C873);background:rgba(233,200,115,.07)}
+.so-k{display:flex;align-items:center;gap:6px;margin:0 0 6px;font:700 10.5px/1 var(--sys);letter-spacing:.14em;text-transform:uppercase;color:var(--goldl,#E9C873)}
+.so-k i{width:6px;height:6px;border-radius:50%;background:var(--goldl,#E9C873)}
