@@ -1307,3 +1307,16 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 .funl{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;margin:8px 0 2px;padding:9px 12px;border-radius:12px;background:rgba(159,179,207,.06);border:1px solid rgba(159,179,207,.2);font:600 13px/1.2 var(--sys);color:var(--ink,#fff);text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .funl span{min-width:0}.funl small{font:500 12px/1 var(--sys);color:var(--mut);white-space:nowrap}
 @media(min-width:900px){.funl{font-size:15px;padding:11px 16px}.funl small{font-size:13.5px}}
+
+/* v964: bets tile leads to the bet list; return on one line; all-time bets on Record */
+.tile .lbl.lbb{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+.tile .lbl.lbb em{font-style:normal;letter-spacing:.02em;text-transform:none;color:var(--gold2);font-weight:600;white-space:nowrap}
+.tile .sub.ph{flex:0 0 auto;white-space:nowrap;font-size:8.5px;letter-spacing:-.02em}
+.tile:first-child .lf{column-gap:4px}
+#ybets{scroll-margin-top:84px}
+.vs.v3{grid-template-columns:repeat(3,1fr);gap:6px}
+.vs.v3 b{font-size:20px}
+.vs.v3 i{font-size:9px;letter-spacing:.08em}
+.vs.v3 small{font-size:10.5px;line-height:1.25}
+.vs span.ab{cursor:pointer}
+@media(min-width:700px){.vs.v3{gap:10px}.vs.v3 b{font-size:24px}.vs.v3 i{font-size:10.5px;letter-spacing:.14em}.vs.v3 small{font-size:11.5px}}
