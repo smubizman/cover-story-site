@@ -1342,3 +1342,12 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 
 /* v970: fun picks moved from Home to the Record tab */
 .funb{max-width:560px;margin:0 auto}
+
+/* v974: Late news strip on pick cards (option A) */
+.card .lnA{display:flex;align-items:center;gap:8px;width:100%;padding:8px 12px;background:rgba(229,72,77,.12);border-bottom:1px solid rgba(229,72,77,.35);font:500 12.5px/1.3 var(--sys);color:var(--cream);text-align:left;cursor:pointer}
+.card .lnA i{flex:none;width:7px;height:7px;border-radius:50%;background:#E5484D}
+.card .lnA b{flex:none;font:700 10px/1 var(--sys);letter-spacing:.12em;text-transform:uppercase;color:#FF9A9D}
+.card .lnA span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.card .lnA u{flex:none;text-decoration:none;color:var(--mut);white-space:nowrap}
+.cvk .lnd{display:inline-block;width:7px;height:7px;border-radius:50%;background:#E5484D;margin-right:6px;vertical-align:1px}
+@media(min-width:900px){.card .lnA{padding:10px 22px;font-size:13.5px}}
