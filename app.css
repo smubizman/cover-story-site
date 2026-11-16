@@ -1339,3 +1339,6 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 @media (prefers-reduced-motion:reduce){.wt .ldot{animation:none}}
 /* v966: dark ring around the live dot when the Live tab is selected (gold button) */
 .wt button[aria-pressed=true] .ldot{animation:none;box-shadow:0 0 0 1.5px var(--navy)}
+
+/* v970: fun picks moved from Home to the Record tab */
+.funb{max-width:560px;margin:0 auto}
