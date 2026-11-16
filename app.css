@@ -1276,3 +1276,14 @@ h4.nlh{margin-top:14px}
 .cvs p{font-size:13px;margin-top:4px}
 @media(max-width:374px){.cvs h2{font-size:17px}}
 @media(min-width:900px){.cvs{padding:16px 22px 16px 22px}.cvs h2{font-size:26px}.cvs p{font-size:15.5px;max-width:none}}
+/* v957 Sat out today */
+.so{margin:14px 0 4px;border:1px solid rgba(159,179,207,.25);border-radius:16px;background:rgba(159,179,207,.06);padding:12px 14px}
+.so h3{margin:0;display:flex;justify-content:space-between;align-items:baseline;font:700 15px/1.2 var(--sys);color:var(--ink,#fff)}
+.so h3 small{font:500 12px/1 var(--sys);color:var(--mut)}
+.so-r{padding:10px 0 0;margin-top:10px;border-top:1px solid rgba(159,179,207,.16)}
+.so-t{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.so-t b{font:600 14.5px/1.2 var(--sys);min-width:0}
+.so-t em{margin-left:auto;font:600 11px/1 var(--sys);font-style:normal;color:var(--goldl,#E9C873);border:1px solid rgba(233,200,115,.45);border-radius:999px;padding:4px 8px;white-space:nowrap}
+.so-r p{margin:4px 0 0 16px;font:400 13px/1.4 var(--sys);color:var(--mut)}
+.so-foot{margin:10px 0 0;font:400 12px/1.4 var(--sys);color:var(--mut)}
+@media(min-width:900px){.so{padding:16px 20px}.so-t b{font-size:16px}.so-r p{font-size:14px}}
