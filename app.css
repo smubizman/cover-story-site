@@ -1289,3 +1289,14 @@ h4.nlh{margin-top:14px}
 @media(min-width:900px){.so{padding:16px 20px}.so-t b{font-size:16px}.so-r p{font-size:14px}}
 /* v958 start time on final rows */
 .wrow .mid small.stt{margin-top:1px;opacity:.9}
+/* v961 cover story: headline only, tap for the story */
+button.cvs{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button.cvs .cvt{flex:1;min-width:0;display:block}
+button.cvs .cvt small{display:flex;align-items:center;gap:6px;font:700 10.5px/1.2 var(--sys);letter-spacing:.14em;text-transform:uppercase;color:var(--goldl,#E9C873)}
+button.cvs .cvt b{display:block;margin-top:4px;font:700 18.5px/1.2 var(--sys);letter-spacing:-.01em;color:var(--ink,#fff)}
+button.cvs>i{flex:none;font:400 24px/1 var(--sys);font-style:normal;color:var(--goldl,#E9C873)}
+button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2px}
+@media(max-width:374px){button.cvs .cvt b{font-size:17px}}
+@media(min-width:900px){button.cvs .cvt b{font-size:26px}}
+.cvk{display:flex;align-items:center;gap:6px;margin:0 0 6px;font:700 10.5px/1.2 var(--sys);letter-spacing:.14em;text-transform:uppercase;color:var(--goldl,#E9C873)}
+.cvd{font:400 15.5px/1.5 var(--sys);margin:10px 0 0}
