@@ -1300,3 +1300,6 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 @media(min-width:900px){button.cvs .cvt b{font-size:26px}}
 .cvk{display:flex;align-items:center;gap:6px;margin:0 0 6px;font:700 10.5px/1.2 var(--sys);letter-spacing:.14em;text-transform:uppercase;color:var(--goldl,#E9C873)}
 .cvd{font:400 15.5px/1.5 var(--sys);margin:10px 0 0}
+/* v962 new-version bar (website only) */
+.verbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:60;max-width:calc(100% - 32px);padding:10px 16px;border-radius:999px;border:1px solid rgba(233,200,115,.6);background:#E9C873;color:#0E1B33;font:700 13.5px/1.2 var(--sys);box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer;white-space:nowrap}
+@media(min-width:900px){.verbar{bottom:24px}}
