@@ -298,7 +298,8 @@ function isFavGame(g){return!!(favOf(g.sp,g.a,g.an)||favOf(g.sp,g.h,g.hn))}
 function saveFav(){store("cs-fav-v1",JSON.stringify(FAV));try{if(db)db.doc("ui/favs").set({teams:FAV,at:new Date().toISOString()}).catch(function(){});else if(window.CS_PUBLIC&&ghTok())ghSave("ui/favs",{teams:FAV,at:new Date().toISOString()}).catch(function(){toast("Teams not saved","Could not save to the website. Check your connection and try again.")})}catch(e){}}
 async function loadFav(n){if(!db){try{var uf=((window.CS_SNAP||{}).ui||{}).favs;if(uf&&Array.isArray(uf.teams)){FAV=uf.teams;render()}}catch(e){}return}try{var s=await db.doc("ui/favs").get();if(s&&s.exists){var d=s.data();if(d&&Array.isArray(d.teams)&&JSON.stringify(d.teams)!==JSON.stringify(FAV)){FAV=d.teams;store("cs-fav-v1",JSON.stringify(FAV));if(document.querySelector(".ov .tgrid"))teamsRefresh();else if(!document.querySelector(".ov"))render()}}}catch(e){if((n||0)<3)setTimeout(function(){loadFav((n||0)+1)},2500*((n||0)+1))}}
 /* ---------- wire tab ---------- */
-var WV="up",WS=store("cs-wire-sport-v1")||"all",GC=[];if(!/^(all|mine|nfl|cfb|nba|cbb|nhl|mlb|soc|golf)$/.test(WS))WS="all";
+var WV="up",WVA=false,WVU=false,WS=store("cs-wire-sport-v1")||"all",GC=[];
+function wvAuto(){try{var now=Date.now(),W=wireData(),live=W.up.some(function(g){return Date.parse(g.start)<=now}),nx=W.up.map(function(g){return Date.parse(g.start)}).filter(function(t){return t>now}).sort(function(a,b){return a-b})[0],rec=W.fin.some(function(g){return Date.parse(g.start)>now-20*36e5});return!live&&rec&&(!nx||nx>now+36e5)?"fin":"up"}catch(e){return"up"}}if(!/^(all|mine|nfl|cfb|nba|cbb|nhl|mlb|soc|golf)$/.test(WS))WS="all";
 function ago(iso){var m=Math.round((Date.now()-Date.parse(iso))/6e4);if(!(m>=0))return"";return m<60?m+"m ago":m<1440?Math.round(m/60)+"h ago":Math.round(m/1440)+"d ago"}
 function dayPast(iso){var k=dkey(iso),n=Date.now();return k===dkey(n)?"Today":k===dkey(n-864e5)?"Yesterday":fmt(iso,{weekday:"short",month:"short",day:"numeric"})}
 function finScore(g){var s0=String(g.res.sub||"").split(" · ")[0],m=/(\d+)\s*[–-]\s*(\d+)\)?\s*(?:in|\(|$)/.exec(s0)||/(\d+)\s*[–-]\s*(\d+)/.exec(s0);if(!m)return{sc:"Final",ot:""};var hi=Math.max(+m[1],+m[2]),lo=Math.min(+m[1],+m[2]),w=nz(s0),aw=w.indexOf(nz(g.an))===0,hw=w.indexOf(nz(g.hn))===0;if(aw&&hw){aw=nz(g.an).length>=nz(g.hn).length;hw=!aw}
@@ -312,7 +313,7 @@ function grow(g,mode,grp){var k=GC.push(g)-1,fin=mode==="fin",fav=mode==="up"&&i
 function nrow(n,i){var aff=(n.aff||[])[0],cr="",q;if(aff){q=String(aff).split(/\s+@\s+/);if(q.length===2)cr='<span class="ng">'+shield(q[0],colors(n.sport,q[0]),SILVER)+"<i>@</i>"+shield(q[1],colors(n.sport,q[1]),SILVER)+"</span>"}
  var nw="";if(aff&&q&&q.length===2){var na=colors(n.sport,q[0]).team,nh=colors(n.sport,q[1]).team,nok=/^#[0-9a-f]{3,8}$/i;if(nok.test(na)&&nok.test(nh))nw=' style="--a:'+na+";--h:"+nh+'"'}return'<button type="button" class="nrow'+(nw?" tw":"")+'"'+nw+' data-act="news" data-k="'+i+'"><span class="nt"><span class="sp'+(SPC[n.sport]?' sk" style="--spc:'+SPC[n.sport]:"")+'">'+esc(SPS[n.sport]||"News")+"</span><span>"+esc(ago(n.t))+"</span>"+(i===0?'<span class="ts">Top story</span>':"")+'</span><span class="nb"><span class="nh">'+esc(n.headline)+"</span>"+cr+"</span></button>"}
 function wireData(){var now=Date.now(),G=games();return{up:G.filter(function(g){return!isFinal(g)&&Date.parse(g.start)>now-4*36e5}),fin:G.filter(function(g){return isFinal(g)&&Date.parse(g.start)>now-60*36e5}).reverse().slice(0,40).map(function(g,i){return[g,i]}).sort(function(x,y){var dx=dkey(x[0].start),dy=dkey(y[0].start);return dx!==dy?(dx<dy?1:-1):(Date.parse(x[0].start)-Date.parse(y[0].start))||(x[1]-y[1])}).map(function(x){return x[0]}),news:J(D.stories).items||[]}}
-function wireTab(){GC=[];var W=wireData(),list=WV==="news"?W.news:W[WV],have={};list.forEach(function(x){var k=x.sp||x.sport;have[k]=(have[k]||0)+1});var sports=["nfl","cfb","nba","cbb","nhl","mlb","soc","golf"];function nfav(n){var q=String((n.aff||[])[0]||"").split(/\s+@\s+/);return q.some(function(t){return t&&favOf(n.sport,t,t)})}var ALLW=WS==="all"||WS==="every";function wsOk(x){return WV==="news"?(ALLW||(WS==="mine"?nfav(x):x.sport===WS)):(WS==="every"?true:WS==="all"?shown(x):WS==="mine"?isFavGame(x):x.sp===WS)}
+function wireTab(){GC=[];if(!WVA&&!WVU)WV=wvAuto();WVA=true;var W=wireData(),list=WV==="news"?W.news:W[WV],have={};list.forEach(function(x){var k=x.sp||x.sport;have[k]=(have[k]||0)+1});var sports=["nfl","cfb","nba","cbb","nhl","mlb","soc","golf"];function nfav(n){var q=String((n.aff||[])[0]||"").split(/\s+@\s+/);return q.some(function(t){return t&&favOf(n.sport,t,t)})}var ALLW=WS==="all"||WS==="every";function wsOk(x){return WV==="news"?(ALLW||(WS==="mine"?nfav(x):x.sport===WS)):(WS==="every"?true:WS==="all"?shown(x):WS==="mine"?isFavGame(x):x.sp===WS)}
  var body="";
  if(WV==="news"){var items=W.news.map(function(n,i){return[n,i]}).filter(function(x){return wsOk(x[0])});body=items.length?items.map(function(x){return nrow(x[0],x[1])}).join(""):'<p class="soon">'+(WS==="mine"?"No stories about your teams right now.":!ALLW?"No "+SPL[WS].replace(/^College/,"college")+" stories right now.":"No stories yet.")+"</p>"}
  else{var L=list.filter(wsOk),fin=WV==="fin",last="";
@@ -611,12 +612,12 @@ function fitWm(){var w=document.querySelector(".hdr .wm"),t=document.querySelect
 var _bk=function(){var w=window.innerWidth;return w>=1200?3:w>=900?2:w>=600?1:0},_bkv=_bk();try{window.addEventListener("resize",function(){try{var b=_bk();if(b!==_bkv){_bkv=b;render()}else fitWm()}catch(e){}});if(document.fonts){var _fw=function(){try{fitWm()}catch(e){}};if(document.fonts.ready)document.fonts.ready.then(_fw);if(document.fonts.addEventListener)document.fonts.addEventListener("loadingdone",_fw);if(document.fonts.load)document.fonts.load('600 20px "Oswald"').then(_fw,function(){})}[400,1200,2500,5000].forEach(function(ms){setTimeout(function(){try{fitWm()}catch(e){}},ms)})}catch(e){}
 function showCard(i){var n=deckCards().length;if(!n)return;deckI=((i%n)+n)%n;render()}
 function act(el,e){var a=el.getAttribute("data-act");
- if(a==="wirenews"){closeSheet();WV="news";TAB="wire";render();window.scrollTo(0,0)}else if(a==="tab"){closeSheet();TAB=el.getAttribute("data-tab");RV="main";render();window.scrollTo(0,0)}
+ if(a==="wirenews"){closeSheet();WV="news";WVA=true;TAB="wire";render();window.scrollTo(0,0)}else if(a==="tab"){closeSheet();TAB=el.getAttribute("data-tab");WVA=false;RV="main";render();window.scrollTo(0,0)}
  else if(a==="help")helpSheet();
  else if(a==="lr"){if(window.innerWidth<900){lrI[+el.getAttribute("data-k")]++;render()}}
  else if(a==="tickgo"){e.stopPropagation();tickI=+el.getAttribute("data-k");tickHold=Date.now()+8000;var x=tickItems()[tickI];render();if(x&&tickPer()===1)x.t==="g"?gameSheet(x.g):newsSheet(x.n)}
  else if(a==="tickopen"){e.stopPropagation();tickHold=Date.now()+8000;var xo=tickItems()[+el.getAttribute("data-k")];if(xo)xo.t==="g"?gameSheet(xo.g):newsSheet(xo.n)}
- else if(a==="tick"){closeSheet();var xi=tickItems()[tickI*tickPer()];WV=xi&&xi.t==="n"?"news":"up";TAB="wire";render();window.scrollTo(0,0)}
+ else if(a==="tick"){closeSheet();var xi=tickItems()[tickI*tickPer()];WV=xi&&xi.t==="n"?"news":"up";WVA=true;TAB="wire";render();window.scrollTo(0,0)}
  else if(a==="seg"){var k=el.getAttribute("data-k"),C=deckCards();for(var i=0;i<C.length;i++)if(C[i].bucket===k){showCard(i);break}}
  else if(a==="card")showCard(+el.getAttribute("data-i"));
  else if(a==="step")showCard(deckI+ +el.getAttribute("data-d"));
@@ -625,7 +626,7 @@ function act(el,e){var a=el.getAttribute("data-act");
  else if(a==="bet")betSheet();
  else if(a==="pct")betSheet.set(+el.getAttribute("data-d"));
  else if(a==="pctsave")betSheet.save();
- else if(a==="wv"){closeSheet();if(TAB!=="wire"){TAB="wire";window.scrollTo(0,0)}WV=el.getAttribute("data-k");render()}
+ else if(a==="wv"){closeSheet();if(TAB!=="wire"){TAB="wire";window.scrollTo(0,0)}WV=el.getAttribute("data-k");WVA=true;WVU=true;render()}
  else if(a==="sgame"){var sg2=GS[+el.getAttribute("data-k")];if(sg2)gameSheet(sg2)}else if(a==="game"){var gg=GC[+el.getAttribute("data-k")];if(gg)gameSheet(gg)}
  else if(a==="news"){var nn=(J(D.stories).items||[])[+el.getAttribute("data-k")];if(nn)newsSheet(nn)}
  else if(a==="teams"){wsMenu(false);teamsSheet()}
