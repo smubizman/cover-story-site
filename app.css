@@ -1394,10 +1394,10 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 .beb u{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--dn,#ff6b78);text-decoration:none}
 .beb.up u{background:var(--up,#58c6a6)}
 .beb s{position:absolute;top:-4px;width:2px;height:14px;margin-left:-1px;border-radius:2px;background:#fff;text-decoration:none}
-.l10{display:flex;flex-direction:column;align-items:center;gap:7px;width:100%;margin:14px 0 4px;padding:0;background:none;border:0;color:inherit;font:inherit;cursor:pointer}
+.l10{display:flex;flex-direction:column;align-items:center;gap:7px;width:100%;margin:14px 0 4px}
 .l10s{display:flex;gap:6px;justify-content:center}
-.l10s i{width:20px;height:20px;border-radius:6px;display:block}
-.l10s i.w{background:var(--up,#58c6a6)}
-.l10s i.l{background:none;box-shadow:inset 0 0 0 2px var(--dn,#ff6b78)}
-.l10s i.p{background:rgba(159,179,207,.35)}
+.l10s button{width:26px;height:26px;border-radius:7px;display:block;border:0;padding:0;cursor:pointer}
+.l10s button.w{background:var(--up,#58c6a6)}
+.l10s button.l{background:none;box-shadow:inset 0 0 0 2px var(--dn,#ff6b78)}
+.l10s button.p{background:rgba(159,179,207,.35)}
 .l10 small{font:500 12px/1.2 var(--sys);color:var(--mut)}
