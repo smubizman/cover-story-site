@@ -1457,3 +1457,17 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 @media (min-width:900px){.cvA .cva .sym{width:270px;height:270px}}
 .wxs{display:inline-grid;vertical-align:-3px;font-style:normal}.wxs .sym{width:14px;height:14px}
 .wxp .wxs .sym{width:17px;height:17px}
+
+/* v988 live and final cards share the big-shield header: score in the middle, the pick as a chip */
+.row.heroA .hsc{flex:1;min-width:0;text-align:center}
+.row.heroA .hsc>b{display:block;font:850 clamp(26px,8.6vw,36px)/1 var(--sys);letter-spacing:-.02em;color:#fff;white-space:nowrap}
+.row.heroA .hsc .dnd{display:block;margin-top:4px;font:500 12px/1.2 var(--sys);font-style:normal;color:var(--mut)}
+.hchip{display:inline-flex;flex-direction:column;align-items:center;gap:1px;max-width:100%;margin-top:8px;padding:5px 12px;border-radius:14px;background:none;border:1px solid rgba(240,207,122,.55);color:#f0cf7a;font:inherit;cursor:pointer}
+.hchip b{font:750 14px/1.2 var(--sys);white-space:nowrap}.hchip span{font:600 12px/1.2 var(--sys);white-space:nowrap}
+.hchip.ok{border-color:rgba(127,215,155,.75);color:var(--up,#7FD79B)}.hchip.no{border-color:rgba(240,138,138,.75);color:var(--dn,#F08A8A)}
+.sy3 i.rd{color:#ff6b78}.sy3 b.up{color:var(--up,#7FD79B)}.sy3 b.dn{color:var(--dn,#F08A8A)}
+.row.heroA .hfx{margin-top:8px}
+.row.heroL .hs svg{width:56px;height:63px}
+@media (min-width:900px){.row.heroL .hs svg{width:78px;height:88px}.row.heroA .hsc>b{font-size:44px}.hchip b{font-size:16px}.hchip span{font-size:13px}}
+.row.heroL .trk .say,.row.heroL .trk .ends{display:none}
+.row.heroL .trk{margin-top:10px}
