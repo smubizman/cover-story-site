@@ -1418,3 +1418,12 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 @keyframes lvdrift{from{background-position:0% 0}to{background-position:100% 0}}
 @media (prefers-reduced-motion:reduce){.wrow.lvg[style]{animation:none;background-position:50% 0}}
 .wxp{margin-top:10px;color:var(--mut)}
+
+/* v985 serif masthead (Scott chose option A, Tue Nov 17): Newsreader for the name, the tagline and the cover headline. Nothing else changes font. */
+:root{--serif:"Newsreader",Georgia,"Times New Roman",serif}
+html body .hdr .wm,html body .slimbar b{font-family:var(--serif)!important;font-weight:700!important;letter-spacing:-.01em!important;text-transform:none!important}
+html body .hdr .wm{font-size:clamp(30px,9.6vw,40px)!important;line-height:1!important}
+html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;font-weight:500!important;letter-spacing:.02em!important;text-transform:none!important}
+.slimbar b{font-size:19px!important}
+.cvA .cvh{font-family:var(--serif);font-weight:700;font-size:32px;letter-spacing:-.01em}
+@media (min-width:900px){html body .hdr .wm{font-size:64px!important}.cvA .cvh{font-size:48px}}
