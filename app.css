@@ -1412,3 +1412,9 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 .cvA .cvsh{display:inline-flex;gap:3px}.cvA .cvsh svg{width:22px;height:25px}
 .cvA .cvf em{font-style:normal;font-weight:650;border:1px solid rgba(255,255,255,.4);border-radius:99px;padding:4px 11px;flex:none}
 @media (min-width:900px){.cvA{height:260px;padding:22px}.cvA .cvk2{left:22px;right:22px;top:22px;font-size:12px}.cvA .cvh{font-size:44px;left:22px;bottom:54px;max-width:22ch}.cvA .cvf{left:22px;right:22px;bottom:18px;font-size:14px}.cvA .cva{font-size:220px}}
+
+/* v984 live games: the two team colors drift slowly behind the row (report step 6); weather line in the game pop-up */
+.wrow.lvg[style]{background-image:linear-gradient(100deg,color-mix(in srgb,var(--a) 34%,transparent) 0%,transparent 34%,transparent 66%,color-mix(in srgb,var(--h) 34%,transparent) 100%);background-size:190% 100%;animation:lvdrift 8s ease-in-out infinite alternate}
+@keyframes lvdrift{from{background-position:0% 0}to{background-position:100% 0}}
+@media (prefers-reduced-motion:reduce){.wrow.lvg[style]{animation:none;background-position:50% 0}}
+.wxp{margin-top:10px;color:var(--mut)}
