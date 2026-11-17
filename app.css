@@ -1401,3 +1401,14 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 .l10s button.l{background:none;box-shadow:inset 0 0 0 2px var(--dn,#ff6b78)}
 .l10s button.p{background:rgba(159,179,207,.35)}
 .l10 small{font:500 12px/1.2 var(--sys);color:var(--mut)}
+
+/* v983 the daily cover, full size until opened that day */
+.cvA{display:block;position:relative;width:100%;height:232px;margin:12px 0 6px;padding:16px;border-radius:18px;overflow:hidden;text-align:left;color:#fff;font:inherit;cursor:pointer;border:1px solid rgba(233,200,115,.45);background:radial-gradient(120% 90% at 12% 0%,color-mix(in srgb,var(--c1) 78%,#000) 0%,transparent 62%),radial-gradient(120% 100% at 100% 100%,color-mix(in srgb,var(--c2) 78%,#000) 0%,transparent 64%),#101d36}
+.cvA .cva{position:absolute;right:-16px;bottom:-24px;font-size:150px;line-height:1;opacity:.18;transform:rotate(-14deg);pointer-events:none}
+.cvA .cvk2{position:absolute;left:16px;right:16px;top:16px;display:flex;justify-content:space-between;gap:10px;font:700 10.5px/1.2 var(--sys);letter-spacing:.16em;text-transform:uppercase;color:var(--goldl,#E9C873)}
+.cvA .cvh{position:absolute;left:16px;right:54px;bottom:46px;font:850 30px/1.03 var(--sys);letter-spacing:-.02em;text-wrap:balance;text-shadow:0 1px 14px rgba(0,0,0,.45);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.cvA .cvf{position:absolute;left:16px;right:16px;bottom:13px;display:flex;justify-content:space-between;align-items:center;gap:10px;font:500 12.5px/1.2 var(--sys);color:#e6edf7}
+.cvA .cvf>span{display:flex;align-items:center;gap:7px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cvA .cvsh{display:inline-flex;gap:3px}.cvA .cvsh svg{width:22px;height:25px}
+.cvA .cvf em{font-style:normal;font-weight:650;border:1px solid rgba(255,255,255,.4);border-radius:99px;padding:4px 11px;flex:none}
+@media (min-width:900px){.cvA{height:260px;padding:22px}.cvA .cvk2{left:22px;right:22px;top:22px;font-size:12px}.cvA .cvh{font-size:44px;left:22px;bottom:54px;max-width:22ch}.cvA .cvf{left:22px;right:22px;bottom:18px;font-size:14px}.cvA .cva{font-size:220px}}
