@@ -1351,3 +1351,10 @@ button.cvs:focus-visible{outline:2px solid var(--goldl,#E9C873);outline-offset:2
 .card .lnA u{flex:none;text-decoration:none;color:var(--mut);white-space:nowrap}
 .cvk .lnd{display:inline-block;width:7px;height:7px;border-radius:50%;background:#E5484D;margin-right:6px;vertical-align:1px}
 @media(min-width:900px){.card .lnA{padding:10px 22px;font-size:13.5px}}
+
+/* v976: one plain sentence on the card in place of the Market / Ratings / Our number dots */
+.nl.say{margin:10px 0 2px}
+.nl .nls{margin:0;font:500 13px/1.4 var(--sys);color:var(--fg);text-align:left}
+.nl .nls b{color:var(--goldl,#E9C873);font-weight:600}
+.nl.say .nlc{margin-top:6px}
+@media(min-width:900px){.nl .nls{font-size:15px;text-align:center}}
