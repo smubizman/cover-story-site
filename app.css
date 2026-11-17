@@ -1471,3 +1471,7 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 @media (min-width:900px){.row.heroL .hs svg{width:78px;height:88px}.row.heroA .hsc>b{font-size:44px}.hchip b{font-size:16px}.hchip span{font-size:13px}}
 .row.heroL .trk .say,.row.heroL .trk .ends{display:none}
 .row.heroL .trk{margin-top:10px}
+
+/* v989 result color on the top band of a graded pick card */
+.card.rw .band{background:#1F6B45!important;color:#E6FFF0!important}
+.card.rl .band{background:#6B232B!important;color:#FFE1E4!important}
