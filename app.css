@@ -1427,3 +1427,25 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .slimbar b{font-size:19px!important}
 .cvA .cvh{font-family:var(--serif);font-weight:700;font-size:32px;letter-spacing:-.01em}
 @media (min-width:900px){html body .hdr .wm{font-size:64px!important}.cvA .cvh{font-size:48px}}
+
+/* v986 card A (about 30 words): big shields with the pick between them; our own drawn symbols; one-time motion */
+.sym{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:block}
+.row.heroA .hero{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:6px 2px 0}
+.row.heroA .hs svg{width:62px;height:70px;display:block}
+.row.heroA .hs.dim{opacity:.5}
+.row.heroA .hpk{flex:1;min-width:0;background:none;border:0;padding:4px 0;color:inherit;font:inherit;text-align:center;cursor:pointer}
+.row.heroA .hpk b{display:block;font:850 clamp(19px,6.5vw,29px)/1.02 var(--sys);letter-spacing:-.02em;color:#f0cf7a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdots{display:flex;gap:5px;justify-content:center;margin-top:9px}.hdots i{width:9px;height:9px;border-radius:50%;background:rgba(159,179,207,.3)}.hdots i.f{background:#f0cf7a}
+.row.heroA .cvm{height:88px}
+.rsy span{color:#f0cf7a}.rsy span.on.bad{color:#ff9aa3}
+.rsl i{display:grid;place-items:center;color:#f0cf7a}.rsl .on.bad i{color:#ff9aa3}.rsl i .sym{width:22px;height:22px}
+.sy3 i{display:grid;place-items:center;color:#f0cf7a}.sy3 i.gn{color:var(--up,#7FD79B)}.sy3 i .sym{width:18px;height:18px}
+.sy3>*{flex:none!important}
+.sy3 .more{color:var(--soft,#C9D6E8);font:500 14px/1.2 var(--sys);cursor:pointer;width:auto!important;min-width:0!important;padding:0!important;margin:0!important;background:none!important;border:0!important;display:inline-flex!important}
+.card .lnA u{flex:none}
+@keyframes cvgrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.card[aria-hidden="false"] .cvm.an .cvt i.g{transform-origin:left center;animation:cvgrow .55s ease-out both}
+@keyframes l10flip{from{transform:rotateY(180deg);opacity:.2}to{transform:none;opacity:1}}
+.l10s.flip button:last-child{animation:l10flip .6s ease-out both}
+@media (prefers-reduced-motion:reduce){.card[aria-hidden="false"] .cvm.an .cvt i.g,.l10s.flip button:last-child{animation:none}}
+@media (min-width:900px){.row.heroA .hs svg{width:84px;height:94px}.row.heroA .hpk b{font-size:38px}}
