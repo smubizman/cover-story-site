@@ -1449,3 +1449,11 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .l10s.flip button:last-child{animation:l10flip .6s ease-out both}
 @media (prefers-reduced-motion:reduce){.card[aria-hidden="false"] .cvm.an .cvt i.g,.l10s.flip button:last-child{animation:none}}
 @media (min-width:900px){.row.heroA .hs svg{width:84px;height:94px}.row.heroA .hpk b{font-size:38px}}
+
+/* v987 drawn sport and weather symbols */
+.lgm i .sym{width:16px;height:16px;color:#0B2340;stroke-width:2.2;margin:auto}.lgm i:has(.sym){display:grid;place-items:center}
+.cvA .cva{font-size:0;right:-22px;bottom:-30px;opacity:.16;color:#fff}
+.cvA .cva .sym{width:190px;height:190px;stroke-width:1.1}
+@media (min-width:900px){.cvA .cva .sym{width:270px;height:270px}}
+.wxs{display:inline-grid;vertical-align:-3px;font-style:normal}.wxs .sym{width:14px;height:14px}
+.wxp .wxs .sym{width:17px;height:17px}
