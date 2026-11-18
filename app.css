@@ -1475,3 +1475,7 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 /* v989 result color on the top band of a graded pick card */
 .card.rw .band{background:#1F6B45!important;color:#E6FFF0!important}
 .card.rl .band{background:#6B232B!important;color:#FFE1E4!important}
+
+/* v991 team record in the game pop-up */
+.gh .ghm .grec{display:block;font-style:normal;font:500 12px/1.2 var(--sys);color:var(--mut);margin-top:2px}
+.sct .srec{font:400 10.5px/1 var(--sys);font-style:normal;color:var(--mut);font-variant-numeric:tabular-nums;margin-left:-1px}
