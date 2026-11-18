@@ -1481,3 +1481,6 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .sct .srec{font:400 10.5px/1 var(--sys);font-style:normal;color:var(--mut);font-variant-numeric:tabular-nums;margin-left:-1px}
 /* v992 Arena team records match Scores: no underline, small and muted (Scott, Wed Nov 18) */
 .arow .trec{display:block;text-decoration:none;font:400 10.5px/1.1 var(--sys);color:var(--mut);font-variant-numeric:tabular-nums;margin-top:1px}
+
+/* v993 Arena team names: words stay whole; the page shrinks a long name to fit (fitNm) */
+.arow .t span{overflow-wrap:normal;word-break:normal;hyphens:none;display:block;overflow:hidden}
