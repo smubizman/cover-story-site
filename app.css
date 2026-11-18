@@ -1479,3 +1479,5 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 /* v991 team record in the game pop-up */
 .gh .ghm .grec{display:block;font-style:normal;font:500 12px/1.2 var(--sys);color:var(--mut);margin-top:2px}
 .sct .srec{font:400 10.5px/1 var(--sys);font-style:normal;color:var(--mut);font-variant-numeric:tabular-nums;margin-left:-1px}
+/* v992 Arena team records match Scores: no underline, small and muted (Scott, Wed Nov 18) */
+.arow .trec{display:block;text-decoration:none;font:400 10.5px/1.1 var(--sys);color:var(--mut);font-variant-numeric:tabular-nums;margin-top:1px}
