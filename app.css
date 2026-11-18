@@ -1484,3 +1484,32 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 
 /* v993 Arena team names: words stay whole; the page shrinks a long name to fit (fitNm) */
 .arow .t span{overflow-wrap:normal;word-break:normal;hyphens:none;display:block;overflow:hidden}
+
+/* v996 styles for the Buy List's second shelf (fun picks as short rows under the card deck). The rows were added by another chat on Wed Nov 18 without styles; finished here in the app's own look: silver edge like every fun pick, one line per pick, tap to open. */
+.fsh{margin:14px 6px 2px;border:1px solid rgba(195,207,225,.4);border-radius:14px;background:rgba(5,14,31,.32);overflow:hidden}
+.fsh-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:9px 12px;border-bottom:2px solid #C3CFE1;background:rgba(5,14,31,.55)}
+.fsh-h b{font:700 13.5px/1.2 var(--sys);color:#D5DEEC;white-space:nowrap}
+.fsh-h span{font:500 12px/1.2 var(--sys);color:var(--mut);text-align:right;min-width:0}
+.frow{border-top:1px solid rgba(159,179,207,.18)}
+.fsh-h+.frow{border-top:0}
+.frow summary{display:flex;align-items:center;gap:9px;min-height:52px;padding:8px 12px;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent}
+.frow summary::-webkit-details-marker{display:none}
+.frow summary:focus-visible{outline:2px solid var(--goldl);outline-offset:-2px}
+.frow summary .spd{flex:none;margin:0}
+.frow .fn{flex:1;min-width:0;display:block}
+.frow .fn b{display:block;font:650 14.5px/1.2 var(--sys);color:var(--fg);text-wrap:balance}
+.frow .fn small{display:block;margin-top:2px;font:500 11.5px/1.2 var(--sys);color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frow summary>em{flex:none;font:600 12.5px/1.2 var(--sys);font-style:normal;color:var(--soft);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.frow summary>em.w{color:var(--up)}.frow summary>em.l{color:var(--dn)}
+.frow summary>em.live{color:var(--fg)}
+.frow summary>em.live i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#E5484D;margin-right:6px;vertical-align:1px}
+.frow summary>u{flex:none;text-decoration:none;color:var(--mut);font-size:18px;line-height:1;transition:transform .15s}
+.frow[open] summary>u{transform:rotate(90deg)}
+.frow .fb{padding:2px 12px 12px 28px;font:400 13.5px/1.45 var(--sys);color:var(--soft)}
+.frow .fb p{margin:6px 0 0}
+.frow .fb .fc{color:#F4A877}
+.fnums{list-style:none;margin:8px 0 0;padding:0}
+.fnums li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-top:1px solid rgba(159,179,207,.16);font:500 13px/1.3 var(--sys)}
+.fnums li span{color:var(--mut)}.fnums li b{font-weight:600;color:var(--fg);text-align:right}
+@media (prefers-reduced-motion:reduce){.frow summary>u{transition:none}}
+@media(min-width:900px){.fsh{margin:18px 0 0}.fsh-h{padding:11px 16px}.fsh-h b{font-size:15px}.fsh-h span{font-size:13px}.frow summary{padding:10px 16px;min-height:56px}.frow .fn b{font-size:16px}.frow .fn small{font-size:12.5px}.frow summary>em{font-size:13.5px}.frow .fb{padding:2px 16px 14px 34px;font-size:14.5px}}
