@@ -1513,3 +1513,12 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .fnums li span{color:var(--mut)}.fnums li b{font-weight:600;color:var(--fg);text-align:right}
 @media (prefers-reduced-motion:reduce){.frow summary>u{transition:none}}
 @media(min-width:900px){.fsh{margin:18px 0 0}.fsh-h{padding:11px 16px}.fsh-h b{font-size:15px}.fsh-h span{font-size:13px}.frow summary{padding:10px 16px;min-height:56px}.frow .fn b{font-size:16px}.frow .fn small{font-size:12.5px}.frow summary>em{font-size:13.5px}.frow .fb{padding:2px 16px 14px 34px;font-size:14.5px}}
+
+/* v1000 fun-pick rows: a live or just-finished game shows the score on one line and whether the pick is covering under it */
+.frow summary>em.fr.live,.frow summary>em.fr.fin{display:flex;flex-direction:column;align-items:flex-end;gap:2px;max-width:58%}
+.frow summary>em.fr b{font:600 12.5px/1.2 var(--sys);color:var(--fg);white-space:nowrap}
+.frow summary>em.fr.live b i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#E5484D;margin-right:6px;vertical-align:1px}
+.frow summary>em.fr span{font:600 12.5px/1.2 var(--sys);color:var(--soft);white-space:nowrap}
+.frow summary>em.fr span.ok{color:var(--up)}.frow summary>em.fr span.no{color:var(--dn)}
+.frow summary>em.fr small{font:500 11px/1.2 var(--sys);color:var(--mut);white-space:nowrap}
+@media(min-width:900px){.frow summary>em.fr b,.frow summary>em.fr span{font-size:13.5px}.frow summary>em.fr small{font-size:12px}}
