@@ -1640,3 +1640,22 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .hsb svg{display:block;width:100%;max-width:560px;height:auto;margin:0 auto}
 .hsl{text-align:center;margin:6px 0 0;font:500 13px/1.35 var(--sys);color:var(--soft)}.hsl b.up{color:var(--up)}.hsl b.dn{color:var(--dn)}
 .vsm em small{display:block;font:500 11.5px/1.2 var(--sys);color:var(--mut);margin-top:2px}
+/* v1007 fun picks: one swipeable row with a count */
+.fsh-h .fcnt{font:700 12px/1 var(--sys);color:#0B2340;background:#C3CFE1;border-radius:99px;padding:4px 9px;white-space:nowrap;font-variant-numeric:tabular-nums;min-width:0;text-align:center}
+.frail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;padding:10px 12px 4px;scroll-padding-left:12px}
+.frail::-webkit-scrollbar{display:none}
+.fcard{flex:0 0 78%;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;min-width:0;text-align:left;background:rgba(19,41,77,.9);border:1px solid rgba(195,207,225,.4);border-top:3px solid #C3CFE1;border-radius:14px;padding:9px 12px 10px;color:var(--fg);font:inherit;cursor:pointer}
+.fcard .fk{display:flex;align-items:center;gap:6px;font:600 11.5px/1.2 var(--sys);color:var(--mut);min-width:0}
+.fcard .fk .spd{margin:0}
+.fcard .ft{margin-left:auto;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums}
+.fcard .fld{display:inline-block;width:7px;height:7px;border-radius:50%;background:#E5484D;margin-right:5px;vertical-align:1px}
+.fcard .fp{font:700 16px/1.2 var(--sys);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fcard .fs{display:flex;justify-content:space-between;gap:8px;font:500 12.5px/1.25 var(--sys);color:var(--mut);min-width:0}
+.fcard .fs span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fcard .fs b{color:var(--up);font-weight:600;white-space:nowrap}
+.fcard .fs .ok{color:var(--up)}.fcard .fs .no,.fcard .fs b.no{color:var(--dn)}
+.fdots{display:flex;gap:5px;justify-content:center;padding:4px 0 10px}
+.fdots i{width:6px;height:6px;border-radius:50%;background:rgba(195,207,225,.3);transition:width .2s}
+.fdots i.on{width:16px;border-radius:9px;background:#C3CFE1}
+@media (prefers-reduced-motion:reduce){.fdots i{transition:none}}
+@media(min-width:900px){.fcard{flex-basis:70%}.fcard .fp{font-size:17px}}
