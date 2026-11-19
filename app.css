@@ -1554,3 +1554,62 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .lrow .lb.lw i{transition:width .8s ease}
 @media (prefers-reduced-motion:reduce){.lrow .lb.lw i{transition:none}}
 .wl .lcap{grid-column:1/-1;margin:6px 2px 4px;font:500 12px/1.35 var(--sys);color:var(--mut)}
+
+/* v1003 pinned games at the top of Home */
+.pins{display:flex;flex-direction:column;gap:6px;padding-top:4px!important;padding-bottom:6px!important}
+.pinc{border:1.5px solid var(--gold);border-radius:16px;padding:10px 12px 11px;display:flex;flex-direction:column;gap:7px;cursor:pointer;background:linear-gradient(90deg,color-mix(in srgb,var(--a,#12335B) 44%,#0C2344),#0C2344 45%,#0C2344 55%,color-mix(in srgb,var(--h,#0C2344) 44%,#0C2344))}
+.pinh{display:flex;align-items:center;gap:8px}
+.pinh .pn{font:600 12.5px/1.2 var(--sys);color:var(--goldl)}
+.pinx{margin-left:auto;font:600 12px/1 var(--sys);color:var(--soft);border:1px solid rgba(159,179,207,.45);border-radius:99px;padding:6px 10px;position:relative}
+.pinx:after{content:"";position:absolute;inset:-8px -4px}
+.pinl{font:500 12px/1.3 var(--sys);color:var(--mut)}
+.pinl .lvd,.pinr .lvd{color:#FF6B6B;font-weight:700;font-style:normal}
+.pinm{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px;text-align:center}
+.pinm .pt{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.pinm .pt b{font:700 15px/1.15 var(--sys);overflow-wrap:anywhere}
+.pinm .pt small{font:500 12px/1 var(--sys);color:var(--mut);font-variant-numeric:tabular-nums}
+.pinm .ps b{display:block;font:800 28px/1 var(--sys);letter-spacing:-.02em!important;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pinm .ps em{display:block;font:500 11.5px/1.2 var(--sys);font-style:normal;color:var(--mut);margin-top:4px;white-space:nowrap}
+.pbar{display:flex;gap:2px;height:6px;border-radius:99px;overflow:hidden}
+.pbar i{display:block;height:100%;transition:width .8s ease}
+.pbl{display:flex;justify-content:space-between;font:500 11px/1 var(--sys);color:var(--mut);margin-top:-2px;font-variant-numeric:tabular-nums}
+.pinp{display:flex;justify-content:space-between;align-items:center;gap:8px;font:600 13px/1.25 var(--sys);color:var(--goldl)}
+.pinp .ok{color:var(--up)}.pinp .no{color:var(--dn)}
+.pinp .cvn{font:600 12.5px/1.2 var(--sys);white-space:nowrap}.pinp .cvn.ok{color:var(--up)}.pinp .cvn.no{color:var(--dn)}
+.pinr{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:rgba(255,255,255,.04);cursor:pointer;font:500 13px/1.2 var(--sys)}
+.pinr b{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pinr small{margin-left:auto;color:var(--mut);font-size:12px;white-space:nowrap}
+.lrow .lpin{margin-left:auto;font:600 11.5px/1 var(--sys);color:var(--mut);border:1px solid rgba(159,179,207,.35);border-radius:99px;padding:4px 8px;white-space:nowrap;position:relative}
+.lrow .lpin:after{content:"";position:absolute;inset:-8px -2px}
+.lrow .lpin.on{color:var(--goldl);border-color:rgba(240,218,152,.6)}
+.lrow .lh u~.lpin{margin-left:6px}
+.pinrow{margin:12px 0 0}
+.pinb{width:100%;min-height:42px;border-radius:10px;border:1px solid rgba(240,218,152,.55);color:var(--goldl);font:600 14px/1 var(--sys);background:rgba(240,218,152,.07)}
+.pinb.on{background:rgba(240,218,152,.16)}
+@media (prefers-reduced-motion:reduce){.pbar i{transition:none}}
+@media (min-width:900px){.pinc{padding:12px 18px 13px}.pinm .ps b{font-size:34px}.pinm .pt b{font-size:17px}.pins{max-width:none}}
+/* v1003 team card: last five and league ranks */
+.tsx:empty{display:none}
+.tf{margin:4px 0 10px}
+.tfk{display:flex;justify-content:space-between;gap:8px;font:600 12px/1.2 var(--sys);color:var(--mut);margin-bottom:7px}
+.tfd{display:flex;gap:6px}
+.tfd span{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:1px;border-radius:9px;padding:6px 2px;border:1px solid rgba(127,215,155,.35);background:rgba(127,215,155,.12)}
+.tfd span.l{border-color:rgba(245,155,155,.35);background:rgba(245,155,155,.1)}
+.tfd span.t{border-color:var(--line);background:var(--surf)}
+.tfd b{font:700 13px/1 var(--sys);color:var(--up)}.tfd .l b{color:var(--dn)}.tfd .t b{color:var(--soft)}
+.tfd small{font:500 10.5px/1.2 var(--sys);color:var(--mut);white-space:nowrap;font-variant-numeric:tabular-nums}
+.trk2{margin:0 0 10px}
+.trk2>div{display:grid;grid-template-columns:minmax(0,1fr) 54px auto;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid rgba(159,179,207,.16);font:500 13.5px/1.2 var(--sys)}
+.trk2>div span{color:var(--mut)}.trk2>div b{text-align:right;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.trk2 .hd{font:600 11.5px/1 var(--sys)!important;border-bottom:0!important;padding-bottom:0!important}
+.trk2 .m{height:6px;border-radius:99px;background:rgba(159,179,207,.2);overflow:hidden}.trk2 .m i{display:block;height:100%;border-radius:99px;background:var(--gold)}
+/* v1003 reason tags in the Arena */
+.rtags{display:inline-flex;flex-wrap:wrap;gap:5px;vertical-align:middle}
+.rtag{font:600 11.5px/1 var(--sys);border-radius:99px;padding:4px 9px;border:1px solid;white-space:nowrap}
+.rtag.g,.rdot.g{color:#9CC7FF;border-color:rgba(156,199,255,.45);background:rgba(156,199,255,.1)}
+.rtag.p,.rdot.p{color:#FFCF8A;border-color:rgba(255,207,138,.45);background:rgba(255,207,138,.1)}
+.rtag.f,.rdot.f{color:#C9B6FF;border-color:rgba(201,182,255,.45);background:rgba(201,182,255,.1)}
+.rtrow{margin-top:7px}
+.arow .rn{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px}
+.rdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px;border:0}
+.rdot.g{background:#9CC7FF}.rdot.p{background:#FFCF8A}.rdot.f{background:#C9B6FF}
