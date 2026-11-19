@@ -1659,3 +1659,4 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .fdots i.on{width:16px;border-radius:9px;background:#C3CFE1}
 @media (prefers-reduced-motion:reduce){.fdots i{transition:none}}
 @media(min-width:900px){.fcard{flex-basis:70%}.fcard .fp{font-size:17px}}
+.pinrow.top{margin:8px 0 4px}
