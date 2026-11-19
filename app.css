@@ -1613,3 +1613,10 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .arow .rn{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px}
 .rdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px;border:0}
 .rdot.g{background:#9CC7FF}.rdot.p{background:#FFCF8A}.rdot.f{background:#C9B6FF}
+/* v1004 How they match up */
+.hmu>div{display:grid;grid-template-columns:minmax(0,1fr) 88px 88px;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(159,179,207,.16);font:500 13px/1.25 var(--sys)}
+.hmu>div span{color:var(--mut)}
+.hmu>div b{text-align:right;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--soft)}
+.hmu>div b.hb{color:var(--goldl);font-weight:700}
+.hmu .hmh{border-bottom:0!important;padding-bottom:0!important}.hmu .hmh b{color:var(--fg)!important;font-weight:700}
+@media(max-width:380px){.hmu>div{grid-template-columns:minmax(0,1fr) 78px 78px;font-size:12.5px}}
