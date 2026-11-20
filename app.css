@@ -1797,3 +1797,8 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .wb .wtyp{margin-left:6px;max-width:48%}
 .amenus{flex:0 0 100%;display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
 @media(min-width:900px){.amenus{flex:0 0 auto;order:3;margin:0 0 0 10px}.wb .wtyp{max-width:none}}
+/* v1022 limit picks: the price on the card; void cards are grey, not red */
+.row.heroA .hpk .lim{display:block;margin-top:4px;font:700 11.5px/1.2 var(--sys);color:#0B2340;background:var(--goldl);border-radius:99px;padding:3px 9px;width:max-content;max-width:100%;margin-left:auto;margin-right:auto;white-space:nowrap}
+.card.rv .band{background:#3A4A66!important;color:#E3EAF4!important}
+@media(min-width:900px){.row.heroA .hpk .lim{font-size:13px;padding:4px 11px}}
+.verd.limr{font-size:12.5px;color:var(--mut)}.verd.limr b{color:var(--fg)}
