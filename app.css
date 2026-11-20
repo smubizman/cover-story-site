@@ -1854,3 +1854,12 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 /* v1033 picked-team shield on Record rows */
 .rr2>.rsh{flex:none;display:flex;margin-left:-4px}
 .rr2>.rsh svg{width:26px;height:auto}
+
+/* v1035 (preview) Watch highlights link */
+.hlk{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:42px;border-radius:10px;border:1px solid rgba(240,218,152,.55);background:rgba(240,218,152,.07);color:var(--goldl);font:600 14px/1 var(--sys);text-decoration:none}
+.hlk span{font-size:12px}
+.hlk small{font:500 11.5px/1 var(--sys);color:var(--mut);margin-left:4px}
+.hlk.in{width:auto;min-height:34px;margin-top:6px;padding:0 14px;font-size:13px}
+.hlk.card{width:auto;align-self:center;margin:8px auto 0;min-height:34px;padding:0 16px;font-size:13px;background:rgba(5,14,31,.35)}
+@media(min-width:900px){.hlk.card{font-size:14px;min-height:38px}}
+.hlk{flex-direction:row!important;flex-wrap:nowrap!important;white-space:nowrap}
