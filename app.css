@@ -1850,3 +1850,7 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .fcard .fp>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .fcard .fp{white-space:normal}
 .fcard .fp>span{white-space:normal;text-overflow:clip;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.2}
+
+/* v1033 picked-team shield on Record rows */
+.rr2>.rsh{flex:none;display:flex;margin-left:-4px}
+.rr2>.rsh svg{width:26px;height:auto}
