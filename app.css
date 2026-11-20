@@ -1699,3 +1699,16 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 @media(max-width:899px){.prail .pinm .ps b{font-size:24px}.prail .pinm .pt b{font-size:14px}.prail .pinm{gap:6px}}
 @media(min-width:900px){.prail .pinm .ps b{font-size:30px}}
 @media(max-width:380px){.prail .pinm .ps b{font-size:21px}.prail .pinm .pt b{font-size:13.5px}}
+/* v1012 Home section labels: one tab style for every section; The Buy List gets the only solid gold one */
+.sch.sec{margin:14px 0 6px;min-height:30px}
+.sch.sec b{font-size:13.5px;gap:6px}
+.sch.sec .shn{margin-left:auto;align-self:center;padding-left:10px;font:500 12px/1.2 var(--sys);color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sch.sec .shn .fcnt{font:700 11.5px/1 var(--sys);color:#0B2340;background:#C3CFE1;border-radius:99px;padding:3px 8px;margin-left:2px}
+.sch.sec.gold b{background:var(--goldl);color:var(--navy);box-shadow:none}
+.app>.sch.sec{margin-left:12px;margin-right:12px}
+.buy>.sch.sec{margin-top:4px}
+.fsh{margin-top:0}
+.tick .chy .tag:empty{display:none}
+.tick .chy .kind{padding-left:12px}
+@media(min-width:900px){.app>.sch.sec{margin-left:22px;margin-right:22px}.sch.sec b{font-size:14.5px}.sch.sec .shn{font-size:13px}.buy>.sch.sec{display:none}}
+.sch.sec+.board,.sch.sec+.tick{border-top:0!important}
