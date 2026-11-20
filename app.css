@@ -1712,3 +1712,11 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .tick .chy .kind{padding-left:12px}
 @media(min-width:900px){.app>.sch.sec{margin-left:22px;margin-right:22px}.sch.sec b{font-size:14.5px}.sch.sec .shn{font-size:13px}.buy>.sch.sec{display:none}}
 .sch.sec+.board,.sch.sec+.tick{border-top:0!important}
+/* v1013 Games strip under the header; on phones the sport buttons fold into one small menu */
+.sch .sbsel{display:none}
+@media(max-width:899px){
+.sch .schf{display:none}
+.sch .sbsel{display:block;margin-left:auto;align-self:center;-webkit-appearance:none;appearance:none;font:600 12px/1 var(--sys);color:var(--goldl);background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23F0DA98' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 9px center/9px 6px;border:1px solid rgba(240,218,152,.55);border-radius:99px;padding:6px 24px 6px 11px;min-height:30px;max-width:60%;cursor:pointer}
+.sch .sbsel option{color:#0B2340;background:#fff}
+.hdr+.sch{margin-top:2px}
+}
