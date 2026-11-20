@@ -1737,3 +1737,21 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .pchp .ok,.pchp .cvn.ok{color:var(--up)}.pchp .no,.pchp .cvn.no{color:var(--dn)}
 .pchp .cvn{font:600 11.5px/1.2 var(--sys);flex:none}
 @media(min-width:900px){.pch{width:270px;padding:8px 12px}.pcht>span{font-size:14px}}
+/* v1015 Hot Off the Press: Cover Story banner + self-moving headline row */
+.hotp{display:flex;flex-direction:column;gap:8px;padding-top:0!important;padding-bottom:6px!important}
+.cvL{display:flex;flex-direction:column;gap:4px;width:100%;text-align:left;border-radius:14px;padding:11px 13px 10px;border:1px solid rgba(240,218,152,.45);color:#fff;font:inherit;cursor:pointer;background:radial-gradient(120% 120% at 0% 0%,color-mix(in srgb,var(--c1) 70%,#000) 0%,transparent 70%),radial-gradient(120% 120% at 100% 100%,color-mix(in srgb,var(--c2) 70%,#000) 0%,transparent 70%),#101d36}
+.cvL small{font:700 10.5px/1.2 var(--sys);letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--goldl)}
+.cvL b{font:700 20px/1.15 var(--serif,Georgia),Georgia,serif;text-wrap:balance}
+.cvL>span{display:flex;justify-content:space-between;gap:8px;font:500 12px/1.2 var(--sys);color:#d9e1ee}
+.cvL>span>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cvL u{text-decoration:none;font-weight:600;white-space:nowrap}
+.prs{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.prs::-webkit-scrollbar{display:none}
+.hcd{flex:0 0 60%;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;min-width:0;text-align:left;border-radius:11px;background:rgba(255,255,255,.055);border:1px solid var(--line);padding:8px 10px 9px;color:var(--fg);font:inherit;cursor:pointer}
+.hcd small{display:flex;align-items:center;gap:6px;font:600 10.5px/1 var(--sys);color:var(--mut);white-space:nowrap}
+.hcd small i{font-style:normal;font:700 9.5px/1 var(--sys);border-radius:4px;padding:3px 5px;background:rgba(255,255,255,.12);color:#D5DEEA}
+.hcd small u{text-decoration:none;color:#FF8A80;font-weight:700}
+.hcd small em{font-style:normal;margin-left:auto}
+.hcd>span{font:600 13px/1.3 var(--sys);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.hcd.more{flex:0 0 32%;align-items:center;justify-content:center;color:var(--goldl);font:600 13px/1.2 var(--sys)}
+@media(min-width:900px){.hcd{flex-basis:30%}.hcd.more{flex-basis:14%}.cvL b{font-size:26px}.cvL{padding:14px 18px}}
