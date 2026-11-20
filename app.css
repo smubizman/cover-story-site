@@ -1892,3 +1892,5 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 @media(max-width:599px){.agc{grid-template-columns:40px minmax(0,1fr);row-gap:8px;padding:12px}.agi{width:40px;height:40px;align-self:start}.agn{grid-column:2;justify-content:space-between}}
 /* v1038 the "Picks are off on this device" note shows on game pages, not the Arena lobby */
 .site .arena.lobby::before{display:none}
+.lrow .ldraw{font:500 12px/1.2 var(--sys);color:var(--mut);margin:-2px 0 0 34px}
+@media(min-width:900px){.lrow .ldraw{margin-left:38px}}
