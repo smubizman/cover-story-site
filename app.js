@@ -347,7 +347,7 @@ var PG=[];
 function pkeyG(sp,a,h,st){return sp+":"+a+"@"+h+":"+(st?dkey(st):"")}
 function gk(g){return pkeyG(g.sp,g.a,g.h,g.start)}
 function pinAuto(g){return!!(g.me||buyBet(g)||(g.buy&&g.buy.pick&&!isFunCard(g.buy)))}
-function pinOld(g){var t=Date.parse(g.start);return!(t>Date.now()-20*36e5)||t>Date.now()+8*864e5}
+function pinOld(g){var t=Date.parse(g.start);if((isFinal(g)||espnFin(g))&&t){/* v1041: a finished pinned game drops off at 6 AM Central the next morning */try{var d=new Date(t).toLocaleDateString("en-CA",{timeZone:"America/Chicago"});if(Date.now()>=Date.parse(d+"T06:00:00-06:00")+864e5)return true}catch(e){}}return!(t>Date.now()-20*36e5)||t>Date.now()+8*864e5}
 function pinList(){var G=games(),out=[];G.forEach(function(g){if(pinOld(g))return;var k=gk(g);if(PINS.on.indexOf(k)>=0||(pinAuto(g)&&Date.parse(g.start)<Date.now()+30*36e5&&PINS.off.indexOf(k)<0))out.push(g)});var seen={};out=out.filter(function(g){var k=gk(g);if(seen[k])return false;seen[k]=1;return true});out.sort(function(x,y){var lx=isLiveG(x)?0:(isFinal(x)||espnFin(x))?2:1,ly=isLiveG(y)?0:(isFinal(y)||espnFin(y))?2:1;return lx-ly||Date.parse(x.start)-Date.parse(y.start)});return out}
 function isPinned(g){var k=gk(g);return pinList().some(function(x){return gk(x)===k})}
 function pinSave(){var now=Date.now(),keep=function(k){var d=k.split(":").pop();return!d||Date.parse(d+"T12:00:00Z")>now-3*864e5};PINS.on=PINS.on.filter(keep).slice(-12);PINS.off=PINS.off.filter(keep).slice(-40);store("cs-pin-v1",JSON.stringify(PINS))}
