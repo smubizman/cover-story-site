@@ -1685,3 +1685,17 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .board .tile.vt{display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;gap:4px;overflow:hidden}
 .board .tile.vt .lf{flex:1 1 auto;width:100%;flex-wrap:nowrap}
 .board .tile.vt .lf>*{flex:none}
+/* v1010 several pinned games: full cards in a swipe row (phones), side by side (computer) */
+.prail{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.prail::-webkit-scrollbar{display:none}
+.prail>.pinc{flex:0 0 calc(100% - 26px);min-width:0;scroll-snap-align:start}
+.prail>.pinc:last-child{scroll-snap-align:end}
+.pdots{display:flex;gap:5px;justify-content:center;padding:2px 0 0}
+.pdots i{width:6px;height:6px;border-radius:50%;background:rgba(240,218,152,.3);transition:width .2s}
+.pdots i.on{width:16px;border-radius:9px;background:var(--goldl)}
+@media (prefers-reduced-motion:reduce){.pdots i{transition:none}}
+@media(min-width:900px){.prail{overflow:visible;scroll-snap-type:none}.prail>.pinc{flex:1 1 0}.pdots{display:none}}
+.pinm .pt b{overflow-wrap:break-word;word-break:normal;hyphens:none}
+@media(max-width:899px){.prail .pinm .ps b{font-size:24px}.prail .pinm .pt b{font-size:14px}.prail .pinm{gap:6px}}
+@media(min-width:900px){.prail .pinm .ps b{font-size:30px}}
+@media(max-width:380px){.prail .pinm .ps b{font-size:21px}.prail .pinm .pt b{font-size:13.5px}}
