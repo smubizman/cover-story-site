@@ -1720,3 +1720,20 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .sch .sbsel option{color:#0B2340;background:#fff}
 .hdr+.sch{margin-top:2px}
 }
+/* v1014 pinned games lead the Games row: wider chip, gold edge, score, live-chance bar, our pick */
+.pch{flex:0 0 auto;width:236px;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;text-align:left;border:1.5px solid var(--goldl);border-radius:10px;padding:6px 10px 7px;color:var(--fg);font:inherit;cursor:pointer;background:linear-gradient(90deg,color-mix(in srgb,var(--a) 40%,#0C2344),#0C2344 50%,color-mix(in srgb,var(--h) 40%,#0C2344));min-width:0}
+.pchh{display:flex;justify-content:space-between;align-items:center;gap:8px;font:600 11px/1.2 var(--sys);color:var(--mut);white-space:nowrap}
+.pchh u{text-decoration:none;color:var(--goldl);font-weight:700}
+.pchh .lvd{color:#FF6B6B}
+.pcht{display:flex;flex-direction:column;gap:3px}
+.pcht>span{display:flex;align-items:center;gap:6px;font:600 13px/1.1 var(--sys);min-width:0}
+.pcht svg{width:17px;height:auto;flex:none}
+.pcht b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.pcht em{margin-left:auto;font:800 14px/1 var(--sys);font-style:normal;font-variant-numeric:tabular-nums}
+.pch .pbar{height:4px;margin-top:1px}
+.pch .pbl{display:none}
+.pchp{display:flex;justify-content:space-between;align-items:center;gap:6px;font:600 11.5px/1.2 var(--sys);color:var(--goldl);white-space:nowrap;min-width:0}
+.pchp>span{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.pchp .ok,.pchp .cvn.ok{color:var(--up)}.pchp .no,.pchp .cvn.no{color:var(--dn)}
+.pchp .cvn{font:600 11.5px/1.2 var(--sys);flex:none}
+@media(min-width:900px){.pch{width:270px;padding:8px 12px}.pcht>span{font-size:14px}}
