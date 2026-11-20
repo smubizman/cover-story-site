@@ -1898,3 +1898,9 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 @media(max-width:899px){.app>.scbar{margin-left:1.5px!important;margin-right:1.5px!important;padding-left:10px!important;padding-right:10px!important;scroll-padding-left:10px!important}}
 @media(max-width:899px){.app>.sch .sbtyp{margin-right:10px;min-width:0;flex:0 1 auto}.app>.sch .sbsel{min-width:0;flex:0 1 auto}}
 @media(max-width:899px){.app>.sch .sbsel{flex:none;max-width:none}.app>.sch .sbtyp{flex:1 1 0;max-width:none;width:0}}
+
+/* v1043 row header: date line on the left, chip + pin kept together on the right */
+.lrow .lh{flex-wrap:nowrap}
+.lrow .lh .lhl{flex:1 1 auto;min-width:0}
+.lrow .lh .lhr{display:flex;align-items:center;gap:6px;margin-left:auto;flex:none}
+.lrow .lh .lhr u,.lrow .lh .lhr .lpin{margin-left:0}
