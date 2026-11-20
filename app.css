@@ -1758,3 +1758,28 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 /* v1016 small phones: the big pick text on Buy List cards fits ("ANA to win" was cut to "ANA to …" at 360 wide) */
 @media(max-width:380px){.row.heroA .hero{gap:6px}.row.heroA .hs svg{width:50px;height:56px}.row.heroA .hpk b{font-size:21px;letter-spacing:-.025em!important}}
 @media(max-width:340px){.row.heroA .hs svg{width:44px;height:50px}.row.heroA .hpk b{font-size:19px}}
+/* v1018 label band on our picks in the Games row */
+.sc.tagd{flex-wrap:wrap;align-content:flex-start;padding-top:0}
+.sc .sctag{flex:0 0 calc(100% + 20px);margin:0 -10px 5px;display:flex;align-items:center;gap:8px;padding:4px 10px;font:700 11px/1.2 var(--sys);white-space:nowrap;min-width:0;border-radius:9px 9px 0 0}
+.sc .sctag b{font-weight:800}
+.sc .sctag span{margin-left:auto;font-weight:600;overflow:hidden;text-overflow:ellipsis;min-width:0;opacity:.9}
+.sc .sctag.real{background:var(--goldl);color:#0B2340}
+.sc .sctag.fun{background:rgba(195,207,225,.18);color:#D5DEEC;border-bottom:1px solid rgba(195,207,225,.35)}
+.sc .sctag.mine{background:#F3E3B0;color:#0B2340}
+.sc.tagd:has(.sctag.real){border-color:var(--goldl)}
+.sc.tagd:has(.sctag.fun){border-color:rgba(195,207,225,.6)}
+.sc.tagd:has(.sctag.mine){border-color:#F3E3B0}
+.sc[style].tagd .sct{margin-top:0}
+@media(min-width:900px){.sc .sctag{flex-basis:calc(100% + 24px);margin:0 -12px 6px;padding:5px 12px}}
+.pch .sctag{display:flex;align-items:center;gap:8px;margin:-6px -10px 2px;padding:4px 10px;font:700 11px/1.2 var(--sys);border-radius:8px 8px 0 0;white-space:nowrap}
+.pch .sctag b{font-weight:800}
+.pch .sctag.real{background:var(--goldl);color:#0B2340}.pch .sctag.fun{background:rgba(195,207,225,.18);color:#D5DEEC;border-bottom:1px solid rgba(195,207,225,.35)}.pch .sctag.mine{background:#F3E3B0;color:#0B2340}
+.pch:has(.sctag.fun){border-color:rgba(195,207,225,.6)}.pch:has(.sctag.mine){border-color:#F3E3B0}
+@media(min-width:900px){.pch .sctag{margin:-8px -12px 2px;padding:5px 12px}}
+.sc .sctag span{flex:none;overflow:visible}
+/* v1018b: band sits on top of the chip without widening it */
+.sc.tagd{position:relative;flex-wrap:nowrap;padding-top:27px!important}
+.sc .sctag{position:absolute;left:0;right:0;top:0;margin:0;flex:none}
+.sc .sctag span{flex:0 1 auto;overflow:hidden;text-overflow:ellipsis}
+.sc[style].tagd .sct{margin-top:0}
+@media(min-width:900px){.sc.tagd{padding-top:29px!important}.sc .sctag{margin:0}}
