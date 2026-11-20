@@ -1830,3 +1830,7 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .glr.gap{display:block;text-align:center;color:var(--mut);padding:2px 0;border-bottom:0}
 .glr.cutl{display:block;padding:3px 8px;border-bottom:2px dashed rgba(240,218,152,.55);font:600 11.5px/1.2 var(--sys);color:var(--goldl);text-align:right}
 .glg{margin:8px 2px 0;font:600 13px/1.4 var(--sys);color:var(--fg)}
+
+/* v1029 the pick chip on a finished card wraps a long result line instead of spilling past its outline */
+.hchip{box-sizing:border-box;max-width:100%}
+.hchip span{white-space:normal;text-wrap:balance;text-align:center;line-height:1.25}
