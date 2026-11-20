@@ -247,7 +247,7 @@ function lhSpark(k,side,n,cover){var L=LH[k];if(!L||L.length<3)return"";var v=L.
 function amOdds(c){c=+c;if(!(c>0&&c<100))return"";return c===50?"+100":c<50?"+"+Math.round(100*(100-c)/c):"−"+Math.round(100*c/(100-c))}
 function chanceWorth(p,pk){var ch=+p.chance,lm=+p.limit,cov=/[+\-−]\d/.test(String(pk||"")),a=ch>0&&ch<100?'<span class="cw1">Our chance <b>'+Math.round(ch)+"%</b> to "+(cov?"cover":"win")+"</span>":"",b=lm>0&&lm<100?'<span class="cw2">Worth it up to '+lm+"¢ (about "+amOdds(lm)+")"+(isLim(p)?" · over that, skip it":"")+"</span>":"";return a||b?'<span class="cw">'+a+b+"</span>":""}
 function isLim(p){return!!(p&&((p.tags||[]).some(function(t){return/limit/i.test(t)})||p.limitCard))}
-function isVoidP(p){return!!(p&&(p.void===true||(isLim(p)&&p.state==="post"&&/\bvoid\b/i.test(String(p.closeNote||"")))))}
+function isVoidP(p){return!!(p&&(p.void===true||(isLim(p)&&p.state==="post"&&/\bvoid\b|\bno bet\b|never (?:reached|got to|came down)/i.test(String(p.closeNote||"")))))}
 /* v1021 (Scott, Thu Nov 19 8:25 PM): the TV channel on Buy List cards before and during the game */
 function cardTv(p){try{var a=(p.away||{}).abbr,h=(p.home||{}).abbr,g=games().filter(function(x){return x.sp===p.sport&&x.a===a&&x.h===h})[0];return g&&g.tv?String(g.tv):""}catch(e){return""}}
 function buyCard(c,i,n,open){var p=c.p,a=p.away||{},h=p.home||{},s=sides(p),tv=String(p.tip||"").split(" · ").pop()||"",st=stars(p),sw=["","Lean","Lean","Solid","Strong"][st];
