@@ -1840,3 +1840,13 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .lrow .ln>svg{flex:none;width:26px;height:auto;margin-right:2px}
 .lrow .lb{margin-left:34px}
 @media(min-width:900px){.lrow .ln>svg{width:30px}.lrow .lb{margin-left:38px}}
+
+/* v1032 team colors on every chance bar; team shields on fun-pick cards and Hot Off the Press stories (Scott, Fri Nov 20: logos consistent across the app) */
+.fcard .fp{display:flex;align-items:center;gap:8px}
+.fcard .fp>svg{flex:none;width:24px;height:auto}
+.hcd .hsh{display:flex;align-items:center;gap:5px;margin-top:auto;padding-top:2px;color:var(--mut)}
+.hcd .hsh svg{width:22px;height:auto}
+.hcd .hsh i{font:500 11px/1 var(--sys);font-style:normal}
+.fcard .fp>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fcard .fp{white-space:normal}
+.fcard .fp>span{white-space:normal;text-overflow:clip;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.2}
