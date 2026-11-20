@@ -1783,3 +1783,10 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .sc .sctag span{flex:0 1 auto;overflow:hidden;text-overflow:ellipsis}
 .sc[style].tagd .sct{margin-top:0}
 @media(min-width:900px){.sc.tagd{padding-top:29px!important}.sc .sctag{margin:0}}
+/* v1019 picks filter beside All sports */
+.sch .sbtyp{display:block;align-self:center;margin-left:6px;-webkit-appearance:none;appearance:none;font:600 12px/1 var(--sys);color:var(--goldl);background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23F0DA98' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 9px center/9px 6px;border:1px solid rgba(240,218,152,.55);border-radius:99px;padding:6px 24px 6px 11px;min-height:30px;max-width:44%;cursor:pointer;text-overflow:ellipsis}
+.sch .sbtyp.on{background-color:var(--goldl);color:#0B2340;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%230B2340' stroke-width='1.6'/%3E%3C/svg%3E")}
+.sch .sbtyp option{color:#0B2340;background:#fff}
+@media(max-width:899px){.sch .sbsel{max-width:40%}}
+@media(min-width:900px){.sch .sbtyp{margin-left:10px;margin-right:4px;max-width:none}}
+.scnone{flex:none;align-self:center;font:500 12.5px/1.3 var(--sys);color:var(--mut);padding:10px 12px;border:1px dashed var(--line);border-radius:10px}
