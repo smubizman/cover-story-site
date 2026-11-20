@@ -1834,3 +1834,9 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 /* v1029 the pick chip on a finished card wraps a long result line instead of spilling past its outline */
 .hchip{box-sizing:border-box;max-width:100%}
 .hchip span{white-space:normal;text-wrap:balance;text-align:center;line-height:1.25}
+
+/* v1031 team shields on Scores rows (Scott, Fri Nov 20: Scores looked bland next to Home) */
+.lrow .ln{align-items:center}
+.lrow .ln>svg{flex:none;width:26px;height:auto;margin-right:2px}
+.lrow .lb{margin-left:34px}
+@media(min-width:900px){.lrow .ln>svg{width:30px}.lrow .lb{margin-left:38px}}
