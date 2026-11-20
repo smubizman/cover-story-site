@@ -1660,3 +1660,28 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 @media (prefers-reduced-motion:reduce){.fdots i{transition:none}}
 @media(min-width:900px){.fcard{flex-basis:70%}.fcard .fp{font-size:17px}}
 .pinrow.top{margin:8px 0 4px}
+/* v1009 record row: You vs the model is a third tile; phones swipe the row (two tiles per screen) */
+.board .tile.vt{cursor:pointer;box-shadow:inset 0 0 0 1px rgba(240,218,152,.4)}
+.board .tile.vt .rec small{font:600 14px/1 var(--sys);color:var(--mut);letter-spacing:0}
+.board .tile.vt .sub.up{color:var(--up)}.board .tile.vt .sub.dn{color:var(--dn)}
+.board .vnx{display:flex;justify-content:space-between;gap:6px;border-top:1px solid var(--line);padding-top:4px;font:600 11.5px/1.3 var(--sys);min-width:0}
+.board .vnx span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.board .vnx u{text-decoration:none;color:var(--gold2);white-space:nowrap}
+.bdots{display:none}
+@media(max-width:899px){
+.board{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.board::-webkit-scrollbar{display:none}
+.board>.tile{flex:0 0 calc(50% - 4px);scroll-snap-align:start}
+.board:has(.vt){padding-bottom:2px!important}
+.bdots{display:flex;gap:5px;justify-content:center;padding:0 0 4px}
+.bdots i{width:6px;height:6px;border-radius:50%;background:rgba(195,207,225,.3);transition:width .2s}
+.bdots i.on{width:16px;border-radius:9px;background:#C3CFE1}
+}
+@media (prefers-reduced-motion:reduce){.bdots i{transition:none}}
+@media(min-width:900px){.board .tile.vt{flex:0 0 auto;flex-direction:column;align-items:stretch;gap:6px;min-width:220px}.board .vs.vs2{color:transparent;width:0;overflow:hidden}}
+.board .tile.vt .lf{display:flex;flex-direction:column;align-items:stretch;gap:2px;min-width:0}
+.board .tile.vt .lf .lbl{display:flex;justify-content:space-between;gap:6px}
+.board .tile.vt .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11.5px}
+@media(max-width:899px){.board .tile.vt .rec{font-size:clamp(22px,7vw,30px)}}
+.board .tile.vt{display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;gap:4px;overflow:hidden}
+.board .tile.vt .lf{flex:1 1 auto;width:100%;flex-wrap:nowrap}
+.board .tile.vt .lf>*{flex:none}
