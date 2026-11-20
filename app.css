@@ -1904,3 +1904,9 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .lrow .lh .lhl{flex:1 1 auto;min-width:0}
 .lrow .lh .lhr{display:flex;align-items:center;gap:6px;margin-left:auto;flex:none}
 .lrow .lh .lhr u,.lrow .lh .lhr .lpin{margin-left:0}
+
+/* v1045 Breaking news card at the front of Hot Off the Press */
+.hcd.brk{border-color:rgba(255,107,107,.75);background:linear-gradient(180deg,rgba(176,42,42,.28),rgba(255,255,255,.04))}
+.hcd .brkl{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font:800 10.5px/1 var(--sys);letter-spacing:.08em!important;text-transform:uppercase!important;color:#fff;background:#C62828;border-radius:4px;padding:4px 7px}
+.hcd .brkl i{width:6px;height:6px;border-radius:50%;background:#fff;animation:tkpulse 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.hcd .brkl i{animation:none}}
