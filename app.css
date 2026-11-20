@@ -1910,3 +1910,5 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .hcd .brkl{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font:800 10.5px/1 var(--sys);letter-spacing:.08em!important;text-transform:uppercase!important;color:#fff;background:#C62828;border-radius:4px;padding:4px 7px}
 .hcd .brkl i{width:6px;height:6px;border-radius:50%;background:#fff;animation:tkpulse 1.6s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.hcd .brkl i{animation:none}}
+
+.hcd small.brkby{display:block;font:600 11px/1.25 var(--sys);color:#FFB4B4;white-space:normal}
