@@ -70,9 +70,9 @@ def full_snap(src):
             if coll == "picks" and name == "today":
                 continue
             full[coll][name] = unwrap(json.load(open(f)))
-    # the owner's saved favorite teams and bankroll adjustments (nothing else from "ui")
+    # the owner's saved favorite teams, bankroll adjustments and pinned games (nothing else from "ui")
     full["ui"] = {}
-    for name in ("favs", "bank"):
+    for name in ("favs", "bank", "pins"):
         f = os.path.join(src, "ui", name + ".json")
         if os.path.exists(f):
             full["ui"][name] = unwrap(json.load(open(f)))
