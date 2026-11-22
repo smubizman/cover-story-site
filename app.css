@@ -2076,3 +2076,4 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .sc.pinned.lvn .scl,.scbar>.sc .sct>span>em{display:none}
 .scbar>.sc .scw .tv{max-width:64px;overflow:hidden;text-overflow:ellipsis}
 .scbar>.sc .sct>span .scs{padding-left:6px}
+.sc .scw b.fnl{color:var(--mut)}
