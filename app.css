@@ -1969,3 +1969,22 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .ghm span.gto{flex-direction:row!important;gap:4px!important;margin:4px 0 6px}
 .ghm span.gto i{display:block;width:14px;height:4px;border-radius:2px;background:rgba(255,255,255,.22)}
 .ghm span.gto i.on{background:#fff!important;opacity:1!important}
+
+/* v1052 Team stats bars (Apple Sports style): value · label · value, two team-color bars meeting in the middle; the leader is bold, the trailing bar dims */
+.gts{margin:4px 0 6px}
+.gtsh{display:flex;justify-content:space-between;font:700 12px/1 var(--sys);color:var(--mut);padding:0 2px 6px;border-bottom:1px solid rgba(159,179,207,.16)}
+.gtsh b:first-child{color:var(--ta)}.gtsh b:last-child{color:var(--th)}
+.gtr{padding:8px 2px 9px;border-bottom:1px solid rgba(159,179,207,.12)}
+.gtv{display:grid;grid-template-columns:minmax(56px,auto) 1fr minmax(56px,auto);align-items:baseline;gap:8px}
+.gtv span{text-align:center;font:500 12.5px/1.2 var(--sys);color:var(--mut)}
+.gtv b{font:600 16px/1.1 var(--sys);color:var(--soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.gtv b:last-child{text-align:right}
+.gtv b.ld{color:var(--fg);font-weight:800}
+.gtb{display:flex;gap:3px;margin-top:6px;height:7px}
+.gtb i{flex:none;display:block;height:100%;border-radius:99px;min-width:3px}
+.gtb::before,.gtb::after{content:none}
+.gtb{display:grid;grid-template-columns:1fr 1fr}
+.gtb i.a{justify-self:end;background:var(--ta)}
+.gtb i.h{justify-self:start;background:var(--th)}
+.gtb i.tr{opacity:.45}
+@media(min-width:900px){.gtv b{font-size:18px}.gtv span{font-size:13.5px}.gtb{height:8px}}
