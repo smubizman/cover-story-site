@@ -2022,3 +2022,14 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .mtb.on{background:var(--goldl);color:var(--navy);border-color:var(--goldl)}
 .mtb .cbd{margin-left:2px}
 @media(max-width:899px){.wb{flex-wrap:wrap;row-gap:8px}.wb .wtyp{flex:1 1 120px;max-width:none}}
+/* v1056 pinned games: the regular team-row chip inside the pinned frame (band, pick line, chance bar, gold outline) */
+.sc.pinned{flex-direction:column;align-items:stretch;gap:6px;border:1.5px solid var(--goldl)!important;min-width:250px}
+.sc.pinned .pscr{display:flex;align-items:center;gap:9px;min-width:0}
+.sc.pinned .sctag .pnl{margin-left:auto;font-weight:700;opacity:1}
+.sc.pinned .sctag.pin{background:rgba(240,218,152,.16);color:var(--goldl);border-bottom:1px solid rgba(240,218,152,.4)}
+.sc.pinned .pbar{height:4px;margin:0}
+.sc.pinned .pbl{display:none}
+.sc.pinned .pchp{display:flex;justify-content:space-between;align-items:center;gap:6px;font:600 12px/1.2 var(--sys);color:var(--goldl);white-space:nowrap;min-width:0}
+.sc.pinned .pchp>span{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.sc.pinned .pchp .ok{color:var(--up)}.sc.pinned .pchp .no{color:var(--dn)}
+@media(min-width:900px){.sc.pinned{min-width:280px}.sc.pinned .pchp{font-size:13px}}
