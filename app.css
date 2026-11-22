@@ -2092,3 +2092,4 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .scbar>.sc .sct>span .scs{margin-left:auto}
 /* v1066 game pop-up: the dot line is gone (Scott: it made no sense); the plain list of what each source expects stays */
 .ov .nl .nlt,.ov .nl .nle{display:none}
+.deck .card[aria-hidden=false]{cursor:pointer}
