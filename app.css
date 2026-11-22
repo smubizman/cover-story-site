@@ -2077,3 +2077,4 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .scbar>.sc .scw .tv{max-width:64px;overflow:hidden;text-overflow:ellipsis}
 .scbar>.sc .sct>span .scs{padding-left:6px}
 .sc .scw b.fnl{color:var(--mut)}
+.rec h4 small.stk{display:block;font:500 12px/1.3 var(--sys);color:var(--mut);margin-top:3px}
