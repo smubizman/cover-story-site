@@ -2017,3 +2017,8 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 @media(min-width:900px){.pch.bug{width:350px}.bgs svg{width:28px}.bgn b{font-size:14px}.bgsc strong{font-size:32px}.bgc b{font-size:13px}.bgdd{font-size:12.5px}}
 @media(max-width:360px){.pch.bug{width:282px}.bgsc strong{font-size:24px}.bgs svg{width:20px}}
 .bgsog{font:700 10.5px/1 var(--sys);font-style:normal;color:rgba(255,255,255,.8);white-space:nowrap;font-variant-numeric:tabular-nums}
+/* v1054 My Teams button on Scores */
+.mtb{flex:none;display:flex;align-items:center;gap:5px;font:600 13px/1 var(--sys);color:var(--goldl);border:1px solid rgba(240,218,152,.55);border-radius:999px;padding:7px 11px;min-height:36px;white-space:nowrap;background:rgba(255,255,255,.04)}
+.mtb.on{background:var(--goldl);color:var(--navy);border-color:var(--goldl)}
+.mtb .cbd{margin-left:2px}
+@media(max-width:899px){.wb{flex-wrap:wrap;row-gap:8px}.wb .wtyp{flex:1 1 120px;max-width:none}}
