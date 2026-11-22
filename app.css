@@ -1912,3 +1912,21 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 @media (prefers-reduced-motion:reduce){.hcd .brkl i{animation:none}}
 
 .hcd small.brkby{display:block;font:600 11px/1.25 var(--sys);color:#FFB4B4;white-space:normal}
+
+/* v-possB: possession Option B (approved Sat 11/21, ported from the live page) */
+i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0 0 1px 6px!important;border-radius:50%;background:#A8622A!important;border:1px solid #6E3A12!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)!important;transform:rotate(-24deg);vertical-align:middle;flex:none}
+.pos::after{content:"";position:absolute;left:4px;right:4px;top:50%;height:1.5px;margin-top:-.75px;background:#fff;border-radius:1px}
+.pos::before{content:"";position:absolute;left:5px;right:5px;top:50%;height:4px;margin-top:-2px;background:repeating-linear-gradient(90deg,#fff 0 1px,transparent 1px 2.5px)}
+.pos.rz{background:#D63A22!important;border-color:#7A1508!important}
+:is(span,u,b):has(>.pos){text-decoration:underline 2.5px var(--gold)!important;text-underline-offset:4px;text-decoration-skip-ink:none}
+:is(span,u,b):has(>.pos.rz){text-decoration-color:#E0492F!important}
+.dnd{font-size:13.5px!important;font-weight:700!important;line-height:1.3!important}
+.dnd .rzt{display:inline-block;margin-left:6px;padding:1px 5px;border-radius:3px;background:#E0492F;color:#fff;font:800 10px/1.4 var(--sys);letter-spacing:.06em;vertical-align:1px}
+@media (prefers-reduced-motion:no-preference){.dnd .rzt{animation:rzp 2s ease-in-out infinite}@keyframes rzp{50%{opacity:.75}}}
+/* v1049 possession on pinned chips */
+.pcht>span .pos{margin-left:2px!important}
+.pchd{font:700 11.5px/1.2 var(--sys);color:var(--goldl);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pchd.rz{color:#FF8A7A}
+.pcht>span:has(>.pos){text-decoration:none!important}
+.pcht>span:has(>.pos)>b{text-decoration:underline 2.5px var(--gold);text-underline-offset:4px;text-decoration-skip-ink:none}
+.pcht>span:has(>.pos.rz)>b{text-decoration-color:#E0492F}
