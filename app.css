@@ -2244,3 +2244,9 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stcard.s0 .stbet>span{font-size:16px}
 .stcard.s0 .stp{font-size:17px}
 .stcard.sparse .stin{gap:26px}
+/* v1087 declutter story cards (Scott, Mon Nov 23 2:48 PM): the chapter row repeated the bottom tabs; view buttons repeated the markers; filters and the You-vs-Model banner repeated on every card */
+.stch{display:none!important}
+.stcard .wh .wt{display:none!important}
+.stcard:not(:first-child) .wh .wb,.stcard:not(:first-child) .h2l,.stcard:not(:first-child) .h2x,.stcard:not(:first-child) .shrb{display:none!important}
+.stcard.s0 .stbet{flex-wrap:wrap}
+.stcard.s0 .stbet>span{flex-basis:100%;padding-left:56px}
