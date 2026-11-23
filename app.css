@@ -2306,3 +2306,10 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 /* v1094 team-color band behind each team on Scores rows, like the old Home Games strip (Scott, 3:52 PM: "we lost some of the team color schemes") */
 .lrow .lt[style]{background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 46%,transparent),color-mix(in srgb,var(--tc) 12%,transparent) 55%,transparent 85%);border-radius:9px;margin:0 -8px;padding:5px 8px}
 .lrow .lt[style].lo{opacity:.7}
+/* v1095 a clear way out of a filter: ✕ on My Teams when it is on, and "Show all games" on an empty card (Scott, 4:00 PM) */
+.mtb .mtx{font:800 12px/1 var(--sys);margin-left:4px}
+.stclr{display:inline-block;margin-top:14px;text-transform:none;letter-spacing:0;font:600 14px/1 var(--sys);padding:11px 16px}
+.stflt .wb .wtyp{flex:0 0 108px!important;width:108px}
+.stflt .lg{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.stflt .mtb{flex:none!important;white-space:nowrap}
+@media(max-width:400px){.stflt .lg>i{display:none}.stflt .lg{padding-left:12px}}
