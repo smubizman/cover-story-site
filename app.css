@@ -2250,3 +2250,16 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stcard:not(:first-child) .wh .wb,.stcard:not(:first-child) .h2l,.stcard:not(:first-child) .h2x,.stcard:not(:first-child) .shrb{display:none!important}
 .stcard.s0 .stbet{flex-wrap:wrap}
 .stcard.s0 .stbet>span{flex-basis:100%;padding-left:56px}
+/* v1088 mini top bar on Scores/Arena/Record, one-time swipe hint, top-10 lists */
+.stmini{display:flex;align-items:center;gap:9px;padding:0 4px 10px}
+.stmini svg{width:24px;height:auto;flex:none}
+.stmini b{font:700 19px/1 Newsreader,Georgia,serif;color:#F3E3B0;white-space:nowrap}
+.stmini span{margin-left:auto;font:500 12.5px/1 Inter,var(--body),sans-serif;color:#9FB0C8;white-space:nowrap}
+.story.withmini{height:calc(100dvh - 244px - env(safe-area-inset-bottom,0px))}
+.sthint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:5;pointer-events:none;font:600 13px Inter,var(--body),sans-serif;color:#0B1A33;background:#F3E3B0;border-radius:999px;padding:7px 14px;box-shadow:0 6px 18px rgba(0,0,0,.4);animation:sthint 1.6s ease-in-out infinite}
+.sthint b{display:inline-block;animation:sthintb 1.6s ease-in-out infinite}
+@keyframes sthintb{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+@keyframes sthint{0%,100%{opacity:1}50%{opacity:.85}}
+@media(prefers-reduced-motion:reduce){.sthint,.sthint b{animation:none}}
+.sthid{display:none!important}
+.stmore{display:block;width:100%;margin:10px 0 4px;padding:12px;border-radius:14px;border:1px solid rgba(212,177,90,.5);background:rgba(212,177,90,.12);color:#F3E3B0;font:600 15px Inter,var(--body),sans-serif;cursor:pointer}
