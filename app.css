@@ -2295,3 +2295,14 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 /* v1092 Home: section ribbons give way to the card's big title */
 .stcard.sth9 .stin>.sch,.stcard.sth9 .buy>.sch{display:none!important}
 .story.withlbl:not(.withmini){height:calc(100dvh - 214px - env(safe-area-inset-bottom,0px))}
+/* v1094 Scores filters: the Top Games menu opens over the cards instead of being clipped; all three filters fit on one row (Scott, 3:51 PM) */
+.stflt{position:relative;z-index:30}
+.stflt .wb{overflow:visible!important;flex-wrap:nowrap}
+.stflt .wb>*{flex:0 1 auto!important;min-width:0}
+.stflt .lg{min-height:34px;padding:6px 10px 6px 7px;font-size:13px}
+.stflt .lg>i{min-width:20px;height:20px}
+.stflt .wb .wtyp,.stflt .wb select{max-width:none!important;flex:1 1 0!important;min-width:0;font-size:13px}
+.stflt .lgm{left:0;right:auto;z-index:60}
+/* v1094 team-color band behind each team on Scores rows, like the old Home Games strip (Scott, 3:52 PM: "we lost some of the team color schemes") */
+.lrow .lt[style]{background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 46%,transparent),color-mix(in srgb,var(--tc) 12%,transparent) 55%,transparent 85%);border-radius:9px;margin:0 -8px;padding:5px 8px}
+.lrow .lt[style].lo{opacity:.7}
