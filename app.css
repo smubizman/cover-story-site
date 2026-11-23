@@ -2225,3 +2225,8 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stav:disabled{opacity:.3;cursor:default}
 @media(hover:hover) and (pointer:fine){.stmode .stav{display:block}}
 @media(prefers-reduced-motion:reduce){.story{scroll-behavior:auto}}
+/* v1085 chapter row above the markers */
+.stch{display:flex;gap:14px;margin:0 0 8px;font:600 11px/1 Oswald,var(--disp),sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(159,176,200,.6)}
+.stch span.on{color:#F3E3B0}
+.stcard .rec,.stcard .wire,.stcard .arena{background:transparent!important;border:0!important;box-shadow:none!important}
+.stcard .aback{display:none!important}
