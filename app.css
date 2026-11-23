@@ -2263,3 +2263,9 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 @media(prefers-reduced-motion:reduce){.sthint,.sthint b{animation:none}}
 .sthid{display:none!important}
 .stmore{display:block;width:100%;margin:10px 0 4px;padding:12px;border-radius:14px;border:1px solid rgba(212,177,90,.5);background:rgba(212,177,90,.12);color:#F3E3B0;font:600 15px Inter,var(--body),sans-serif;cursor:pointer}
+/* v1089 Home Games card: one full-width tile per row so names and lines show in full (Scott, 3:03 PM "This looks weird") */
+.story .scbar{flex-direction:column;flex-wrap:nowrap;gap:8px;margin-left:0;margin-right:0;padding-left:0;padding-right:0}
+.story .scbar>*{flex:none!important;width:100%!important;max-width:none!important;min-width:0!important}
+.story .s2 .sch{flex-wrap:wrap;row-gap:8px}
+.story .s2 .sch .schf{flex-wrap:wrap;overflow:visible}
+@media(min-width:760px){.story .scbar{display:grid!important;grid-template-columns:1fr 1fr}}
