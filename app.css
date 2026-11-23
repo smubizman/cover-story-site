@@ -2292,3 +2292,6 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stt{margin:2px 0 4px;font:700 34px/1.05 Newsreader,Georgia,serif;color:#EEF2F8}
 .story.withlbl{height:calc(100dvh - 256px - env(safe-area-inset-bottom,0px))}
 .story.withlbl.withflt{height:calc(100dvh - 300px - env(safe-area-inset-bottom,0px))}
+/* v1092 Home: section ribbons give way to the card's big title */
+.stcard.sth9 .stin>.sch,.stcard.sth9 .buy>.sch{display:none!important}
+.story.withlbl:not(.withmini){height:calc(100dvh - 214px - env(safe-area-inset-bottom,0px))}
