@@ -2314,10 +2314,3 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stflt .mtb{flex:none!important;white-space:nowrap}
 @media(max-width:400px){.stflt .lg>i{display:none}.stflt .lg{padding-left:12px}}
 
-/* v1098 deck end bump */
-@keyframes dkb{0%{transform:translateX(0)}35%{transform:translateX(-14px)}70%{transform:translateX(4px)}100%{transform:translateX(0)}}
-@keyframes dkbr{0%{transform:translateX(0)}35%{transform:translateX(14px)}70%{transform:translateX(-4px)}100%{transform:translateX(0)}}
-#deck.dkb{animation:dkb .35s ease-out}#deck.dkbr{animation:dkbr .35s ease-out}
-.dkend{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 92px);transform:translateX(-50%);max-width:calc(100% - 32px);padding:7px 12px;border-radius:999px;background:#D4B15A;color:#081a33;box-shadow:0 4px 14px rgba(0,0,0,.35);font:600 12.5px/1.2 Inter,system-ui,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;z-index:5;pointer-events:none;animation:dkf 2.2s ease forwards}
-@keyframes dkf{0%{opacity:0}10%{opacity:.92}80%{opacity:.92}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){#deck.dkb,#deck.dkbr{animation:none}}
