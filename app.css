@@ -2144,3 +2144,28 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .wrpov .wk{letter-spacing:.16em!important;font-size:13px!important}.wrpov .wtop{letter-spacing:.14em!important}
 .wrpov .wt small,.wrpov .whd small,.wrpov .wrw small,.wrpov .wg2 span{display:block!important}
 .wrpov .wt{display:block}.wrpov .wclub>div span{text-transform:none!important}
+/* v1075 Wrapped-style Buy List card (pre-game, real picks) */
+.card.wst{background:radial-gradient(110% 60% at 85% 0%,color-mix(in srgb,var(--pc,#1d4fa0) 55%,#2a5fb0) 0%,transparent 62%),radial-gradient(90% 55% at 0% 100%,#5b4512 0%,transparent 60%),linear-gradient(165deg,color-mix(in srgb,var(--pc,#002868) 65%,#0B2340),#06132a 72%)!important;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 0 0 1px rgba(212,177,90,.35)}
+.card.wst .band{background:transparent!important;color:#F3E3B0!important;border:0!important;text-align:left;font:600 12px/1.2 Oswald,var(--disp),sans-serif!important;letter-spacing:.12em!important;text-transform:uppercase!important;padding:14px 18px 0!important}
+.wcd{padding:6px 18px 16px;display:flex;flex-direction:column;gap:12px;color:#EEF2F8;text-align:left}
+.wcd .wct{display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.wcd .wct svg{width:54px;height:62px;flex:none}
+.wcd .wct b{display:block;font:700 30px/1.05 Newsreader,Georgia,serif;text-wrap:balance}
+.wcd .wct small{display:block;font-size:13px;color:#C9D6E8;margin-top:4px;text-transform:none!important}
+.wcd .wch{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+.wcd .wcp b{display:block;font:700 54px/.9 Newsreader,Georgia,serif;color:#F3E3B0}
+.wcd .wcp small{display:block;font-size:13px;line-height:1.35;color:#C9D6E8;margin-top:8px;text-transform:none!important}
+.wcd .wco{text-align:right;font-size:13px;color:#C9D6E8}
+.wcd .wco b{display:block;font:700 28px/1 Newsreader,Georgia,serif;color:#EEF2F8;margin:2px 0}
+.wcd .wco em{font-style:normal;color:#9FB0C8}
+.wcd .wcl{margin:0;font:600 19px/1.3 Newsreader,Georgia,serif;color:#EEF2F8;text-wrap:balance}
+.wcd .wcc{display:flex;flex-wrap:wrap;gap:6px}
+.wcd .wcc span{font-size:12.5px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#DDE6F2}
+.wcd .wcc span.g{color:#7FD79B;border-color:rgba(127,215,155,.45)}
+.wcd .wcc span.r{color:#F08A8A;border-color:rgba(240,138,138,.45)}
+.wcd .wcf{display:flex;align-items:center;gap:10px;margin-top:2px}
+.wcd .wcb{font:600 14px/1 Inter,var(--sys),sans-serif;padding:10px 12px;border-radius:12px;background:rgba(212,177,90,.16);color:#F3E3B0;border:1px solid rgba(212,177,90,.5);cursor:pointer}
+.wcd .wcs{font-size:12.5px;color:#C9D6E8}
+.wcd .wcs.ok{color:#7FD79B}
+.wcd .wcw{margin-left:auto;font:600 14px Inter,var(--sys),sans-serif;color:#EEF2F8;background:none;border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:9px 12px;cursor:pointer}
+.card.wst .foldbox{margin:0 18px 16px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14)}
