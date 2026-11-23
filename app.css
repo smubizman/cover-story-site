@@ -2189,14 +2189,14 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .story{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;height:calc(100dvh - 200px - env(safe-area-inset-bottom,0px));min-height:440px;border-radius:24px;outline:none}
 .story::-webkit-scrollbar{display:none}
 .story:focus-visible{box-shadow:0 0 0 2px #F3E3B0}
-.stcard{display:flex;flex-direction:column;gap:12px;flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;padding:16px 14px 28px;border-radius:24px;border:1.5px solid rgba(212,177,90,.35);background:linear-gradient(170deg,#0F2B50,#081a33 70%)}
+.stcard{display:flex;flex-direction:column;flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;padding:16px 14px 28px;border-radius:24px;border:1.5px solid rgba(212,177,90,.35);background:linear-gradient(170deg,#0F2B50,#081a33 70%)}
 .stcard.s0{background:radial-gradient(120% 55% at 90% 0%,#1d4fa0 0%,transparent 60%),linear-gradient(170deg,#0b2350,#07101f 75%)}
 .stcard.s1{background:radial-gradient(120% 50% at 10% 0%,rgba(91,69,18,.9) 0%,transparent 60%),linear-gradient(170deg,#151a24,#07101f 75%)}
 .stcard.s2{background:linear-gradient(170deg,#0d1f3c,#07101f 75%)}
 .stcard.s3{background:radial-gradient(120% 50% at 85% 0%,#5a1c1c 0%,transparent 60%),linear-gradient(170deg,#1a1220,#07101f 75%)}
 .stcard.s4{background:radial-gradient(120% 50% at 85% 0%,#7a5a12 0%,transparent 60%),linear-gradient(170deg,#241a08,#07101f 75%)}
 .stcard.s5{background:radial-gradient(120% 60% at 50% 0%,#1d4fa0 0%,transparent 60%),linear-gradient(170deg,#0b2350,#07101f 75%)}
-.stcard>*{width:100%;max-width:760px;margin-left:auto!important;margin-right:auto!important;flex:none}
+
 /* rails become lists inside a story card: only one sideways swipe in the app */
 .story .scbar,.story .prail,.story .prs,.story .frail,.story .hstrip,.story .tsp{flex-wrap:wrap;overflow-x:visible;scroll-snap-type:none}
 .story .board{overflow-x:visible;scroll-snap-type:none}
@@ -2230,3 +2230,17 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stch span.on{color:#F3E3B0}
 .stcard .rec,.stcard .wire,.stcard .arena{background:transparent!important;border:0!important;box-shadow:none!important}
 .stcard .aback{display:none!important}
+/* v1086 cards fill the screen: content sits in .stin; short cards are scaled up (stFit) and centered */
+.stin{display:flex;flex-direction:column;gap:12px;width:100%;max-width:760px;margin:0 auto;flex:none}
+.stin>*{width:100%;max-width:760px;margin-left:auto!important;margin-right:auto!important;flex:none}
+.stcard.sparse{justify-content:center}
+.stcard.sparse .stin{gap:18px}
+.stcard.sparse .stin{transform-origin:50% 50%}
+.stcard.s0 .sth{font-size:48px}
+.stcard.s0 .stnow{gap:18px}
+.stcard.s0 .stbet{padding:18px 16px}
+.stcard.s0 .stbet b{font-size:26px}
+.stcard.s0 .stbet small{font-size:14px}
+.stcard.s0 .stbet>span{font-size:16px}
+.stcard.s0 .stp{font-size:17px}
+.stcard.sparse .stin{gap:26px}
