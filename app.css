@@ -2169,3 +2169,10 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .wcd .wcs.ok{color:#7FD79B}
 .wcd .wcw{margin-left:auto;font:600 14px Inter,var(--sys),sans-serif;color:#EEF2F8;background:none;border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:9px 12px;cursor:pointer}
 .card.wst .foldbox{margin:0 18px 16px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14)}
+
+/* v1078 fun shelf, light Wrapped touch */
+.fcard{position:relative;overflow:hidden}
+.fcard::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--fc,#3b4f78) 45%,transparent) 0%,transparent 70%)}
+.fcard>*{position:relative}
+.fcard .fp span{font-family:Newsreader,Georgia,serif!important;font-weight:700!important;letter-spacing:0!important}
+.fcard .fs b{color:#F3E3B0!important}
