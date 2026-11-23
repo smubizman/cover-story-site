@@ -979,7 +979,7 @@ function soRow(){var I=soItems();if(!I.length)return"";var sp=[];I.forEach(funct
 
 function satSheet(){var h=satOut();if(!h)return;sheet(h.replace('<section class="so">','<div class="so in-sh">').replace(/<\/section>$/,"</div>")+'<div class="btnrow"><button type="button" class="btn" data-act="close" data-focus>Close</button></div>')}
 /* v1074 Cover Story Wrapped: "<Month>, Covered" story cards (Scott, Mon Nov 23 8:32 AM: "I love it. Let's do it."). Data: dash/header field wrapped, built by code/wrapped on the 1st of the month (A98). Shows for 7 days from wrapped.from; add #wrap to the address to open it any time. */
-function wrapData(){var w=J(D.header).wrapped;return w&&w.cards&&w.cards.length?w:null}
+function wrapData(){var w=J(D.header).wrapped||(D.header||{}).wrapped;return w&&w.cards&&w.cards.length?w:null}
 function wrapOn(){var w=wrapData();if(!w)return false;var n=Date.now(),f=Date.parse(w.from+"T06:00:00-06:00"),u=Date.parse(w.until+"T06:00:00-06:00");return(n>=f&&n<u)||/wrap/.test(String(location.hash||""))}
 function wrapBtn(){if(!wrapOn())return"";var w=wrapData();return'<button type="button" class="wrpb" data-act="wrap"><span class="wrps" aria-hidden="true">CS</span><span class="wrpt"><b>'+esc(w.title)+"</b><small>Your month in bets · tap to play</small></span><u aria-hidden=\"true\">›</u></button>"}
 function wmd(t){return esc(String(t||"")).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")}
