@@ -2328,3 +2328,10 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .tabs button[aria-selected=true] svg{background:rgba(212,177,90,.16);box-shadow:inset 0 0 0 1px rgba(212,177,90,.35)}
 }
 @media (prefers-reduced-motion:reduce){.tabs button svg,.tabs button svg .f{transition:none}}
+
+/* v1105 label ribbon for sections with more than five cards */
+.stm.many{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;gap:6px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%)}
+.stm.many::-webkit-scrollbar{display:none}
+.stm.many.atl{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 18px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 18px),transparent 100%)}
+.stm.many.atr{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 100%)}
+.stm.many button{flex:0 0 auto;min-width:76px;padding-left:8px;padding-right:8px}
