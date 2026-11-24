@@ -2364,3 +2364,8 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .trk-sub{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:#9FB0C8}
 .trk-sub span{min-width:0}.trk-sub b{color:#F3E3B0;font-weight:600;white-space:nowrap}
 .trk-foot{font-size:12.5px;color:#9FB0C8;margin:12px 2px 0}
+
+/* v1110: sport headers on Live; the live card zooms in, so phones use the short name (CBB) when it would wrap */
+.lsec .lss{display:none}
+@media (max-width:480px){.wl.live .lsec .lsf{display:none}.wl.live .lsec .lss{display:inline}}
+.lsec button{flex:none}
