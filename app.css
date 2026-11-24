@@ -2348,3 +2348,19 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .m .c .dnd{white-space:normal;text-align:center;overflow-wrap:anywhere;max-width:7.6em;margin:4px auto 0;font-size:12.5px!important}
 .m .c .dnd .rzt{display:table;margin:4px auto 0}
 .m .t span{min-width:0;overflow-wrap:anywhere}
+
+/* v1108 Tracker Scoreboard (Record, 6th card) */
+.trk-dek{color:#9FB0C8;margin:0 0 6px;font-size:14px}
+.trk-grp{font:600 11.5px/1.2 Inter,var(--sys),sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#D4B15A;margin:16px 2px 8px}
+.trk-t{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:12px 14px;margin-bottom:8px}
+.trk-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.trk-nm{font-weight:600;font-size:15px;min-width:0;color:#F4EEDC}
+.trk-sp{font-size:12px;color:#9FB0C8;font-weight:500;margin-left:6px}
+.trk-live{display:inline-block;font:700 10.5px/1.4 Inter,var(--sys),sans-serif;letter-spacing:.06em;color:#081A33;background:#D4B15A;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:2px}
+.trk-rec{font:600 14px Inter,var(--sys),sans-serif;white-space:nowrap;color:#9FB0C8}
+.trk-rec.ok{color:#7FD49B}.trk-rec.no{color:#F29A9A}
+.trk-bar{height:7px;border-radius:999px;background:rgba(255,255,255,.08);margin:9px 0 6px;overflow:hidden}
+.trk-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#b8923a,#D4B15A)}
+.trk-sub{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:#9FB0C8}
+.trk-sub span{min-width:0}.trk-sub b{color:#F3E3B0;font-weight:600;white-space:nowrap}
+.trk-foot{font-size:12.5px;color:#9FB0C8;margin:12px 2px 0}
