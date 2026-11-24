@@ -2342,3 +2342,9 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stlive .fstrip,.stlive [class*=field]{margin-top:0}
 .stpay{margin:2px 4px 0;font:600 15px/1.3 Inter,var(--body),sans-serif;color:#F3E3B0}
 .stlive .cvn.ok{color:#7FD49B}.stlive .cvn.no{color:#F29A9A}
+
+/* v1107 (Scott, 9:03 PM): on Buy List live cards the down-and-distance line wraps inside the middle column (it spilled over both team names), and RED ZONE sits on its own line under it */
+.wcd .m .c,.cd .m .c,.m .c{min-width:0}
+.m .c .dnd{white-space:normal;text-align:center;overflow-wrap:anywhere;max-width:7.6em;margin:4px auto 0;font-size:12.5px!important}
+.m .c .dnd .rzt{display:table;margin:4px auto 0}
+.m .t span{min-width:0;overflow-wrap:anywhere}
