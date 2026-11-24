@@ -2314,3 +2314,6 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stflt .mtb{flex:none!important;white-space:nowrap}
 @media(max-width:400px){.stflt .lg>i{display:none}.stflt .lg{padding-left:12px}}
 
+
+/* v1102 (Scott, 6:10 PM): inside a story card the day/section header sticks to the top of the card, not part-way down (the phone safe-area offset only belongs to the page) */
+.stcard .wday{top:-16px;margin-top:0;background:#0F2747;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 6px 10px -6px rgba(3,10,24,.8)}
