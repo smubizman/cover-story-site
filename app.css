@@ -2335,3 +2335,10 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stm.many.atl{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 18px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 18px),transparent 100%)}
 .stm.many.atr{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 100%)}
 .stm.many button{flex:0 0 auto;min-width:76px;padding-left:8px;padding-right:8px}
+
+/* v1106 live game on the Today card */
+.stlive{display:flex;flex-direction:column;gap:8px;margin:0 0 10px}
+.stlive .lrow{width:100%}
+.stlive .fstrip,.stlive [class*=field]{margin-top:0}
+.stpay{margin:2px 4px 0;font:600 15px/1.3 Inter,var(--body),sans-serif;color:#F3E3B0}
+.stlive .cvn.ok{color:#7FD49B}.stlive .cvn.no{color:#F29A9A}
