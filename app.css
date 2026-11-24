@@ -2369,3 +2369,7 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .lsec .lss{display:none}
 @media (max-width:480px){.wl.live .lsec .lsf{display:none}.wl.live .lsec .lss{display:inline}}
 .lsec button{flex:none}
+/* v1111 (Scott, 10:54 AM): sport headers stick like the day and My Teams headers, so a sport header replaces "My Teams" once you scroll past your games */
+.stcard .lsec{position:sticky;top:-16px;z-index:3;align-items:center;margin:12px 0 2px;padding:10px 2px 8px;background:#0F2747;box-shadow:0 6px 10px -6px rgba(3,10,24,.8)}
+.stcard .lsec:first-child{margin-top:0}
+.stcard .lsec button{padding:4px 0}
