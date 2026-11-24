@@ -16,7 +16,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Work+Sans:wght@400;500;600;700&family=Special+Elite&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap">
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px);background:#050E1F}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#050E1F;color:#EEF2F8}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.boot{padding:48px 20px;text-align:center;font:500 15px -apple-system,BlinkMacSystemFont,sans-serif;color:#AEC0D9}</style>
-<link rel="stylesheet" href="app.css?v=c93c4379">
+<link rel="stylesheet" href="app.css?v=7d008f1c">
 </head>
 <body>
 <main id="app" class="app"><p class="boot">Loading Cover Story…</p></main>
@@ -43,11 +43,11 @@ window.CS_PUBLIC=true;
       try{p8=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(K.iv)},aes,b64(K.priv))}catch(e){err.textContent="That passcode is not right.";return}
       var priv=await crypto.subtle.importKey("pkcs8",p8,{name:"RSA-OAEP",hash:"SHA-256"},false,["decrypt"]);await idb("readwrite",function(s){return s.put(priv,"priv")});location.reload()
     }catch(e){err.textContent="Could not sign in. Check your connection and try again."}}};
-  window.CS_VER="c93c4379";
+  window.CS_VER="7d008f1c";
   /* pick up a new version of the site even when this page itself came from a cache */
   fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){try{if(j&&j.v&&j.v!==window.CS_VER&&sessionStorage.getItem("cs-ver-try")!==j.v){sessionStorage.setItem("cs-ver-try",j.v);location.replace(location.pathname+"?v="+j.v)}}catch(e){}}).catch(function(){});
   fetch("data.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){return window.CS_OPEN(d)}).then(function(d){
-    window.CS_SNAP=d;var s=document.createElement("script");s.src="app.js?v=c93c4379";s.onerror=fail;document.body.appendChild(s)
+    window.CS_SNAP=d;var s=document.createElement("script");s.src="app.js?v=7d008f1c";s.onerror=fail;document.body.appendChild(s)
   }).catch(fail);
 })();
 </script>

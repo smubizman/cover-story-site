@@ -2317,3 +2317,14 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 
 /* v1102 (Scott, 6:10 PM): inside a story card the day/section header sticks to the top of the card, not part-way down (the phone safe-area offset only belongs to the page) */
 .stcard .wday{top:-16px;margin-top:0;background:#0F2747;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 6px 10px -6px rgba(3,10,24,.8)}
+
+/* v1104 new tab icons: outline when idle, gold fill and a soft gold pill when selected */
+.tabs button svg .f{fill:currentColor;stroke:none;opacity:0;transition:opacity .2s}
+.tabs button[aria-selected=true] svg .f{opacity:.3}
+.tabs button[aria-selected=true] svg{stroke-width:1.9}
+@media (max-width:899px){
+.tabs button{gap:4px;padding:6px 4px 5px;font:600 11px/1 var(--sys);letter-spacing:.02em}
+.tabs button svg{box-sizing:content-box;width:24px;height:24px;padding:4px 16px;border-radius:999px;transition:background .2s}
+.tabs button[aria-selected=true] svg{background:rgba(212,177,90,.16);box-shadow:inset 0 0 0 1px rgba(212,177,90,.35)}
+}
+@media (prefers-reduced-motion:reduce){.tabs button svg,.tabs button svg .f{transition:none}}
