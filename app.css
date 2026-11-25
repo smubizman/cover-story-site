@@ -2618,3 +2618,19 @@ img.crest{max-width:100%}
 /* v1140: limit-order tip on pick cards */
 .wcd .wlim{margin:8px 0 2px;padding:8px 11px;border-radius:12px;background:rgba(212,177,90,.1);border:1px solid rgba(212,177,90,.3);font-size:13.5px;line-height:1.4;color:#DDE6F2}
 .wcd .wlim b{color:#F3E3B0}
+/* v1141: Buy List levels (option A) */
+.wcd.real::before{content:"◆  Value Buy  ·  " attr(data-rib)}
+.deck .card.wst.fpc.bst{border:2px solid #4FB7D1!important;box-shadow:0 0 0 1px rgba(79,183,209,.4),0 0 24px rgba(79,183,209,.35),0 10px 30px rgba(0,0,0,.5)!important}
+.lvr{display:flex;gap:8px;margin:8px 0 10px}
+.lvr button{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;padding:7px 4px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:#AEC0D9;font:500 12.5px Inter,var(--sys),sans-serif;cursor:pointer}
+.lvr button b{font:700 20px/1.1 Inter,var(--sys),sans-serif;color:#C9D5E6}
+.lvr .lv-best b{color:#7FD3E8}.lvr .lv-best{border-color:rgba(79,183,209,.45)}
+.lvr .lv-value b{color:#F0DA98}.lvr .lv-value{border-color:rgba(212,177,90,.45)}
+.lvr button:disabled{opacity:.55;cursor:default}
+.deck .card.wst.fpc.bst{outline:2.5px solid #4FB7D1!important}
+.deck .card.wst.fpc.bst .band{background:linear-gradient(100deg,#1E6F86,#4FB7D1)!important;color:#06101F!important}
+.stcalls{display:flex;flex-direction:column;gap:8px;margin:14px 0 4px}
+.stc1{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;border-radius:12px;padding:10px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:15px;color:#EEF2F8}
+.stc1 b{color:#C9D5E6;font-weight:700}
+.stc1.b{border-color:#4FB7D1;box-shadow:0 0 14px rgba(79,183,209,.25)}.stc1.b b{color:#7FD3E8}
+.stc1 .stct{margin-left:auto;color:#AEC0D9;font-size:13px}
