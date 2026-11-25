@@ -2426,3 +2426,10 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .wcd:has(.wcall) .wcc{display:none}
 @media (max-width:600px){.wcd .whyl li:nth-child(n+3){display:none}}
 @media (min-width:900px){.wcd .wart{height:76px}.wcd .wobj{width:118px}.wcd .wobj-bb{width:96px}.wcd .wcity{font-size:calc(var(--fs,46px)*1.1)}}
+
+/* v1120: photo-style objects, sized per sport */
+.wcd .wobj-fb{width:102px;bottom:-12px}
+.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:82px;right:6px;bottom:-8px}
+.wcd .wobj-pk{width:100px;bottom:-2px}
+.wcd .wobj-golf{width:46px;right:22px;bottom:-12px}
+@media (min-width:900px){.wcd .wobj-fb{width:126px}.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:94px}.wcd .wobj-pk{width:112px}.wcd .wobj-golf{width:52px}}
