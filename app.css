@@ -2381,3 +2381,37 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 /* v1115: You vs Model boxes on mid-size computer screens: wrap the W/L dots to a second line instead of spilling outside the box */
 .h2h .sd{flex-wrap:wrap;row-gap:6px;column-gap:12px}
 .h2h .sd>*{flex:0 0 auto}
+
+/* v1116: pick cards read "our call → why → the pick"; real picks get a solid gold outline, fun picks a dashed silver one */
+.deck .card.rpc{outline:2px solid #D4B15A;outline-offset:-2px;box-shadow:0 0 0 4px rgba(212,177,90,.14),0 12px 32px rgba(212,177,90,.16)}
+.deck .card.fpc{outline:2px dashed rgba(201,214,232,.6);outline-offset:-2px}
+.deck .card.fpc .band{color:#C9D6E8}
+.wcd .lab{font:600 11px/1.2 Inter,var(--sys),sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#9FB0C8}
+.wcd .wcall{padding-top:10px;border-top:1px solid rgba(255,255,255,.14)}
+.wcd .wcall .win{font:700 30px/1.1 Newsreader,Georgia,serif;color:#F3E3B0;margin:4px 0 2px}
+.wcd .wcall .wsub{font-size:14px;color:#DDE6F2}
+.wcd .wcall .wsub b{color:#F3E3B0}
+.wcd .whyl{margin:10px 0 0;padding-left:18px;font-size:14px;line-height:1.4;color:#DDE6F2}
+.wcd .whyl li{margin:3px 0}
+.wcd .wbl{margin-bottom:-6px}
+.wcd .wats{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14)}
+.wcd .wats .p{font:700 22px/1.15 Inter,var(--sys),sans-serif;color:#EEF2F8;margin-top:2px}
+.wcd .wats .c{text-align:right;font:700 30px/1 Newsreader,Georgia,serif;color:#F3E3B0;white-space:nowrap}
+.wcd .wats .c small{display:block;font:500 11.5px/1.3 Inter,var(--sys),sans-serif;color:#C9D6E8;margin-top:4px}
+.wcd .wbar{position:relative;height:8px;border-radius:999px;background:rgba(255,255,255,.1)}
+.wcd .wbar i{position:absolute;inset:0 auto 0 0;border-radius:999px;background:linear-gradient(90deg,#b8923a,#D4B15A)}
+.wcd .wbar u{position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:rgba(255,255,255,.6)}
+.wcd .wcb.fz{cursor:default;background:rgba(201,214,232,.1);color:#DDE6F2;border-color:rgba(201,214,232,.4)}
+.wcd .wcall .wsub{text-align:left}
+.wcd:has(.wcall){gap:9px}
+.wcd:has(.wcall) .wct b{font-size:25px}
+.wcd:has(.wcall) .wct svg{width:44px;height:50px}
+.wcd:has(.wcall) .wcp b{font-size:40px}
+.wcd:has(.wcall) .wco b{font-size:24px}
+.wcd:has(.wcall) .wch{padding:8px 0}
+.wcd .wcall .win{font-size:26px}
+.wcd .whyl{font-size:13.5px;margin-top:6px}
+@media (min-width:900px){.wcd:has(.wcall) .wct b{font-size:28px}.wcd .wcall .win{font-size:30px}}
+.deck .card.wst.fpc{outline:2.5px dashed rgba(201,214,232,.8);outline-offset:-3px;background:radial-gradient(110% 60% at 85% 0%,color-mix(in srgb,var(--pc,#1d4fa0) 50%,#2a4a7a) 0%,transparent 62%),linear-gradient(165deg,color-mix(in srgb,var(--pc,#002868) 55%,#0B2340),#081a33 72%)!important;box-shadow:0 10px 30px rgba(0,0,0,.45)!important}
+.deck .card.wst.fpc .band{color:#DDE6F2!important}
+.deck .card.wst.fpc .wcall .win,.deck .card.wst.fpc .wats .c{color:#EEF2F8}
