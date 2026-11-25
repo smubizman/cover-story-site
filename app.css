@@ -2373,3 +2373,11 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stcard .lsec{position:sticky;top:-16px;z-index:3;align-items:center;margin:12px 0 2px;padding:10px 2px 8px;background:#0F2747;box-shadow:0 6px 10px -6px rgba(3,10,24,.8)}
 .stcard .lsec:first-child{margin-top:0}
 .stcard .lsec button{padding:4px 0}
+
+/* v1115 (Scott, Nov 24 evening): on computer the big "Cover Story" wordmark ran under the bankroll chips. The title keeps its full width and the chips drop to their own line when there isn't room; a loss shows red, not green. */
+@media (min-width:900px){.hdr{flex-wrap:wrap;row-gap:10px}.hdr .tx{flex:0 1 auto;min-width:max-content}.hdr .chips{flex:0 0 auto}}
+.hdr .chips .r b{color:var(--down,#F29A9A)}
+
+/* v1115: You vs Model boxes on mid-size computer screens: wrap the W/L dots to a second line instead of spilling outside the box */
+.h2h .sd{flex-wrap:wrap;row-gap:6px;column-gap:12px}
+.h2h .sd>*{flex:0 0 auto}
