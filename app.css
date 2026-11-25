@@ -2461,3 +2461,35 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .stmini img.crest{width:24px;height:auto;flex:none}
 .brag .bb img.crest{width:46px;height:auto}
 img.crest{max-width:100%}
+
+/* v1124: spotlight look in Scores (first upcoming game per sport), Home bets, finished Buy List cards */
+.lfeat{position:relative;border-radius:18px;margin:6px 0 10px;background:radial-gradient(90% 120% at 0% 0%,color-mix(in srgb,var(--c1) 60%,transparent),transparent 60%),radial-gradient(90% 120% at 100% 100%,color-mix(in srgb,var(--c2) 60%,transparent),transparent 62%),#0B1F3B;border:1px solid rgba(212,177,90,.35);overflow:hidden}
+.lfeat>*:not(.lfob){position:relative;z-index:1;background:transparent!important;border-color:transparent!important;box-shadow:none!important;margin:0!important}
+.lfeat .lfob{position:absolute;z-index:0;right:-18px;bottom:-22px;width:110px;opacity:.55;filter:drop-shadow(0 10px 10px rgba(0,0,0,.5));pointer-events:none}
+.lfeat .lfob-golf{width:44px;right:8px;bottom:-14px}
+.stbspot{cursor:default}
+.stbspot .ssw b{color:#F3E3B0}
+.stspot .sspay{display:block;margin-top:6px;font-size:13.5px;color:#7FD49B;font-weight:600}
+.deck .card .rball{position:absolute;right:-14px;top:auto;bottom:46px;width:92px;z-index:0;opacity:.85;filter:drop-shadow(0 10px 10px rgba(0,0,0,.5));pointer-events:none}
+.deck .card .rball-golf{width:40px;right:14px}
+.deck .card.rw,.deck .card.rl{position:relative}
+.deck .card.rw>*:not(.rball),.deck .card.rl>*:not(.rball){position:relative;z-index:1}
+/* Today card: keep everything inside the card on phones when the spotlight shows */
+@media (max-width:600px){.stnow:has(.stspot) .sth{font-size:clamp(34px,10vw,44px)}.stnow:has(.stspot) .stp{font-size:15px;margin-bottom:0}.stnow:has(.stspot) .stspot{margin-top:12px}.stnow:has(.stspot) .ston{margin-top:12px}}
+
+/* v1124 D/E/F: balls on Arena rows, Record by sport, golf cards */
+.arow{position:relative;overflow:hidden}
+.arow>*:not(.aob){position:relative;z-index:1}
+.arow .aob{position:absolute;z-index:0;right:-14px;top:-14px;width:64px;opacity:.5;pointer-events:none;filter:drop-shadow(0 6px 6px rgba(0,0,0,.5))}
+.arow .aob-golf{width:28px;right:8px;top:-4px}
+.rsg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 10px}
+.rsc{position:relative;overflow:hidden;border-radius:16px;padding:12px;min-height:96px;border:1px solid rgba(212,177,90,.35);background:radial-gradient(100% 120% at 0% 0%,color-mix(in srgb,var(--c1) 70%,transparent),transparent 65%),#0B1F3B}
+.rsc .rsob{position:absolute;right:-10px;top:-8px;width:58px;filter:drop-shadow(0 6px 6px rgba(0,0,0,.5))}
+.rsc .rsob-golf{width:26px;right:8px}
+.rsc .rsl{display:block;font:600 11px/1.2 Oswald,var(--disp),sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#F3E3B0;padding-right:44px}
+.rsc .rsr{display:block;font:700 28px/1 Newsreader,Georgia,serif;color:#EEF2F8;margin:14px 0 4px}
+.rsc .rsp{font-size:12.5px;color:#C9D6E8}.rsc .rsp.up{color:#7FD49B}.rsc .rsp.dn{color:#F29A9A}
+@media (min-width:900px){.rsg{grid-template-columns:repeat(4,1fr);max-width:820px}}
+.row.gf{position:relative;overflow:hidden;background:radial-gradient(100% 120% at 100% 0%,rgba(31,92,58,.55),transparent 60%)}
+.row.gf>*:not(.gob){position:relative;z-index:1}
+.row.gf .gob{position:absolute;z-index:0;right:10px;top:6px;width:34px;opacity:.9;pointer-events:none}
