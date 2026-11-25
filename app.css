@@ -2433,3 +2433,6 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .wcd .wobj-pk{width:100px;bottom:-2px}
 .wcd .wobj-golf{width:46px;right:22px;bottom:-12px}
 @media (min-width:900px){.wcd .wobj-fb{width:126px}.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:94px}.wcd .wobj-pk{width:112px}.wcd .wobj-golf{width:52px}}
+
+/* v1121: the CS crest is an image now; size it where the old svg rule did */
+.slimbar img.crest{width:24px;height:auto;flex:none}
