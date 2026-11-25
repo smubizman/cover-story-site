@@ -2648,3 +2648,16 @@ img.crest{max-width:100%}
 .pcov{margin:6px 0 4px}.pcov .stcbar{display:block;width:100%;height:6px;border-radius:6px;background:rgba(255,255,255,.12);overflow:hidden}
 .pcov .stcbar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#7FE0A8,#43C784)}
 .pcov .stcp{display:block;margin-top:4px;font-size:13px;color:#C3D0E3}.pcov .stcp b{color:#7FE0A8;font-size:15px}
+
+/* v1147 Bad Beat stamp */
+.card .bbst{position:absolute;z-index:6;right:14px;bottom:70px;transform:rotate(-12deg);border:3px solid #E5484D;color:#FF6B6E;font:700 20px/1.05 var(--brand)!important;letter-spacing:.12em;text-transform:uppercase!important;padding:3px 12px 2px;border-radius:6px;background:rgba(229,72,77,.08);box-shadow:inset 0 0 0 2px rgba(229,72,77,.3);pointer-events:none;-webkit-mask:repeating-linear-gradient(115deg,#000 0 7px,rgba(0,0,0,.78) 7px 9px);mask:repeating-linear-gradient(115deg,#000 0 7px,rgba(0,0,0,.78) 7px 9px)}
+.card .bbst small{display:block;text-align:center;font:600 10px/1.2 var(--body);letter-spacing:.06em}
+.bbrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:14px 0 8px}
+.bbm{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;gap:3px;padding:12px 14px 14px;border-radius:16px;background:linear-gradient(135deg,#2a1420 0%,#0E2247 70%);border:1px solid rgba(229,72,77,.45);min-height:118px}
+.bbm .bbob{position:absolute;right:-18px;top:-16px;width:80px;opacity:.22;z-index:-1}
+.bbm .bbk{font:600 13px var(--brand);letter-spacing:.04em;color:#F3E3B0}
+.bbm b{font:700 19px/1.15 var(--serif);color:#fff}
+.bbm .bbf{font-size:13px;color:#C3D0E3}
+.bbm .bbs{text-transform:uppercase!important;align-self:flex-end;margin-top:6px;transform:rotate(-8deg);border:2px solid #E5484D;color:#FF6B6E;font:700 14px/1.05 var(--brand);letter-spacing:.1em;text-transform:uppercase;padding:2px 8px 1px;border-radius:5px;text-align:center}
+.bbm .bbs small{display:block;font:600 9px var(--body);letter-spacing:.04em}
+.bbnote{font-size:12.5px;color:#9FB0C8;margin-top:8px}
