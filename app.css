@@ -2497,3 +2497,8 @@ img.crest{max-width:100%}
 /* v1126 (Scott, Wed Nov 25 7:25 AM): more room between the CS crest and the Cover Story title */
 #story .hdr{padding-left:100px!important}
 @media (min-width:900px){#story .hdr{padding-left:166px!important}}
+
+/* v1128 (Scott, Wed 7:39 AM): balls vanished on iPhone after scrolling (Safari drops filtered layers inside a scrolling card) and were too big */
+.lfeat{isolation:isolate;-webkit-transform:translateZ(0);transform:translateZ(0)}
+.lfeat .lfob{filter:none!important;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;width:78px;right:-12px;bottom:-16px;opacity:.6}
+.lfeat .lfob-golf{width:36px;right:8px;bottom:-10px}
