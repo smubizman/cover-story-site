@@ -2615,3 +2615,6 @@ img.crest{max-width:100%}
 .wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:72px;bottom:-22px}
 @media (min-width:900px){.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:84px;bottom:-24px}}
 .wcd .lmv{align-items:flex-start;white-space:normal;max-width:100%;box-sizing:border-box}.wcd .lmv>span{min-width:0;white-space:normal;overflow-wrap:anywhere}.wcd .lmv svg{margin-top:2px}
+/* v1140: limit-order tip on pick cards */
+.wcd .wlim{margin:8px 0 2px;padding:8px 11px;border-radius:12px;background:rgba(212,177,90,.1);border:1px solid rgba(212,177,90,.3);font-size:13.5px;line-height:1.4;color:#DDE6F2}
+.wcd .wlim b{color:#F3E3B0}
