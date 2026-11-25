@@ -2587,3 +2587,12 @@ img.crest{max-width:100%}
 
 /* v1135: city + ball strip on his own bet cards */
 .card .row.meh{flex:none;min-height:0;padding:4px 18px 0;justify-content:flex-start}
+/* v1136: my-bet cards on the fun-card layout */
+.wcd.mecd .mepay{margin:2px 0 0;font-size:15px;color:#C9D6E8}
+.wcd.mecd .mepay b{color:#9BE3B0;font-weight:700}
+.wcd.mecd .mepay small{color:#AEC0D9;font-size:12px}
+.wcd.mecd .wsub.mdn{color:#F3C3A0}
+.wcd.mecd .wats .p{white-space:nowrap}
+.wcd.mecd .wcf{gap:8px}
+.wcd.mecd .wcf .wcb,.wcd.mecd .wcf .wcs,.wcd.mecd .wcf .wcw{white-space:nowrap}
+.wcd.mecd .wats .c small{white-space:nowrap}
