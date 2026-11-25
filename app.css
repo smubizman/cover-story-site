@@ -2520,3 +2520,29 @@ img.crest{max-width:100%}
 
 /* v1130: less empty space on the Today card on computers */
 @media (min-width:900px){.stcard.sparse{justify-content:flex-start;padding-top:30px}.stcard.sparse .stin{gap:18px;max-width:860px}.stcard.sparse .stin>*{max-width:860px}.story{max-height:820px}}
+
+/* v1133: "Also today" list beside the Game of the Day, computers only */
+.stalso{display:none}
+@media (min-width:900px){
+.stsm{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:start;margin:18px 0 4px}
+.stsm .stspot{margin:0;max-width:none}
+.stalso{display:flex;flex-direction:column;min-width:0}
+.stalso .stol{margin:0 0 6px}
+.stmg{display:flex;flex-direction:column;gap:7px}
+.stm1{position:relative;display:flex;flex-direction:column;gap:3px;text-align:left;padding:9px 12px;border-radius:14px;border:1px solid rgba(212,177,90,.28);background:radial-gradient(80% 140% at 0% 0%,color-mix(in srgb,var(--c1) 45%,transparent),transparent 65%),radial-gradient(80% 140% at 100% 100%,color-mix(in srgb,var(--c2) 45%,transparent),transparent 65%),#0B1F3B;color:#EEF2F8;font:inherit;cursor:pointer;overflow:hidden;isolation:isolate;min-width:0;flex:none}
+.stm1:hover{border-color:rgba(240,218,152,.65)}
+.stm1 .stmob{position:absolute;z-index:-1;right:-10px;bottom:-14px;width:52px;opacity:.3;pointer-events:none}
+.stm1 .stmt{display:flex;align-items:center;gap:4px;min-width:0}
+.stm1 .stmt svg{width:20px;height:23px;flex:none}
+.stm1 .stmt b{margin-left:4px;font:700 14.5px/1.2 Newsreader,Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stm1 .stmt i{font:400 12px var(--sys);color:#AEC0D9;font-style:normal}
+.stm1 .stmw{font-size:12px;color:#AEC0D9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stm1 .stmw b{color:#F3E3B0;font-weight:600}
+}
+@media (min-width:900px){
+.stm1{flex-direction:row;align-items:center;justify-content:space-between;gap:10px;padding:7px 12px}
+.stm1 .stmt{flex:1 1 auto}
+.stm1 .stmw{flex:none;text-align:right}
+.stalso .stol{margin:0 0 6px;line-height:1.2}
+.stm1 .stmob{width:40px;bottom:-12px;right:-8px}
+}
