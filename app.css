@@ -2596,3 +2596,12 @@ img.crest{max-width:100%}
 .wcd.mecd .wcf{gap:8px}
 .wcd.mecd .wcf .wcb,.wcd.mecd .wcf .wcs,.wcd.mecd .wcf .wcw{white-space:nowrap}
 .wcd.mecd .wats .c small{white-space:nowrap}
+/* v1138 (Scott, Wed 10:33 AM): card balls smaller and the faint city name stops before the ball so nothing is covered */
+.wcd .wart{height:58px}
+.wcd .wcity{right:96px;text-overflow:clip}
+.wcd .wobj{width:80px;right:-2px;bottom:-4px}
+.wcd .wobj-fb{width:84px;bottom:-6px}
+.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:64px;right:6px;bottom:-6px}
+.wcd .wobj-pk{width:84px;bottom:0}
+.wcd .wobj-golf{width:38px;right:20px;bottom:-10px}
+@media (min-width:900px){.wcd .wart{height:64px}.wcd .wobj-fb{width:92px}.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:70px}.wcd .wobj-pk{width:92px}.wcd .wobj-golf{width:42px}.wcd .wcity{font-size:var(--fs,46px);right:110px}}
