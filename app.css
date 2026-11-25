@@ -2506,3 +2506,17 @@ img.crest{max-width:100%}
 /* v1129 (Scott, Wed 7:43 AM): bold ball on the first card of each day/sport, fainter on the rest */
 .lfeat .lfob{opacity:.28}
 .lsec+.lfeat .lfob,.wday+.lfeat .lfob,.lfeat:first-child .lfob{opacity:.6}
+
+/* v1130: ball stays behind the text on iPhone (Safari layered it on top of 66%); softer bold level; bankroll chip on Home is tappable */
+.lfeat>*:not(.lfob){-webkit-transform:translateZ(0);transform:translateZ(0)}
+.lfeat .lfob{z-index:-1!important}
+.lfeat .lfob{opacity:.22}
+.lsec+.lfeat .lfob,.wday+.lfeat .lfob,.lfeat:first-child .lfob{opacity:.42}
+.chips .bkc{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.chips .bkc:hover{border-color:rgba(240,218,152,.7)}
+.chips .bke{text-decoration:none;opacity:.75;font-style:normal}
+.stmini .bkc{font-style:normal;cursor:pointer}
+.stmini .bke{text-decoration:none;opacity:.7;font-size:.85em}
+
+/* v1130: less empty space on the Today card on computers */
+@media (min-width:900px){.stcard.sparse{justify-content:flex-start;padding-top:30px}.stcard.sparse .stin{gap:18px;max-width:860px}.stcard.sparse .stin>*{max-width:860px}.story{max-height:820px}}
