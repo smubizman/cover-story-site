@@ -2493,3 +2493,7 @@ img.crest{max-width:100%}
 .row.gf{position:relative;overflow:hidden;background:radial-gradient(100% 120% at 100% 0%,rgba(31,92,58,.55),transparent 60%)}
 .row.gf>*:not(.gob){position:relative;z-index:1}
 .row.gf .gob{position:absolute;z-index:0;right:10px;top:6px;width:34px;opacity:.9;pointer-events:none}
+
+/* v1126 (Scott, Wed Nov 25 7:25 AM): more room between the CS crest and the Cover Story title */
+#story .hdr{padding-left:100px!important}
+@media (min-width:900px){#story .hdr{padding-left:166px!important}}
