@@ -2584,3 +2584,6 @@ img.crest{max-width:100%}
 .fpg .fpr:nth-child(2),.fpg .fpr:nth-child(3){border-top:0}
 .fpl .fph{font-size:28px}
 }
+
+/* v1135: city + ball strip on his own bet cards */
+.card .row.meh{flex:none;min-height:0;padding:4px 18px 0;justify-content:flex-start}
