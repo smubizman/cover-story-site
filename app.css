@@ -2415,3 +2415,14 @@ i.pos,.pos{position:relative;width:16px!important;height:10px!important;margin:0
 .deck .card.wst.fpc{outline:2.5px dashed rgba(201,214,232,.8);outline-offset:-3px;background:radial-gradient(110% 60% at 85% 0%,color-mix(in srgb,var(--pc,#1d4fa0) 50%,#2a4a7a) 0%,transparent 62%),linear-gradient(165deg,color-mix(in srgb,var(--pc,#002868) 55%,#0B2340),#081a33 72%)!important;box-shadow:0 10px 30px rgba(0,0,0,.45)!important}
 .deck .card.wst.fpc .band{color:#DDE6F2!important}
 .deck .card.wst.fpc .wcall .win,.deck .card.wst.fpc .wats .c{color:#EEF2F8}
+
+/* v1119: hero strip on pick cards: big city name + rendered ball/puck */
+.wcd .wart{position:relative;height:64px;margin:-2px 0 -4px;pointer-events:none}
+.wcd .wcity{position:absolute;left:0;right:-20px;bottom:2px;font:700 var(--fs,46px)/.9 Oswald,Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.005em;color:#fff;opacity:.2;white-space:nowrap;overflow:hidden;z-index:0}
+.wcd .wobj{position:absolute;z-index:1;right:-6px;bottom:-6px;width:104px;height:auto;filter:drop-shadow(0 12px 10px rgba(0,0,0,.55)) drop-shadow(0 3px 3px rgba(0,0,0,.35))}
+.wcd .wobj-pk{width:108px;bottom:0}
+.wcd .wobj-bb{width:84px;right:4px;bottom:-10px}
+.wcd:has(.wart) .wct svg{display:none}
+.wcd:has(.wcall) .wcc{display:none}
+@media (max-width:600px){.wcd .whyl li:nth-child(n+3){display:none}}
+@media (min-width:900px){.wcd .wart{height:76px}.wcd .wobj{width:118px}.wcd .wobj-bb{width:96px}.wcd .wcity{font-size:calc(var(--fs,46px)*1.1)}}
