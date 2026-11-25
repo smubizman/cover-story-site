@@ -2502,3 +2502,7 @@ img.crest{max-width:100%}
 .lfeat{isolation:isolate;-webkit-transform:translateZ(0);transform:translateZ(0)}
 .lfeat .lfob{filter:none!important;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;width:78px;right:-12px;bottom:-16px;opacity:.6}
 .lfeat .lfob-golf{width:36px;right:8px;bottom:-10px}
+
+/* v1129 (Scott, Wed 7:43 AM): bold ball on the first card of each day/sport, fainter on the rest */
+.lfeat .lfob{opacity:.28}
+.lsec+.lfeat .lfob,.wday+.lfeat .lfob,.lfeat:first-child .lfob{opacity:.6}
