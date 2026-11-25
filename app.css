@@ -2605,3 +2605,13 @@ img.crest{max-width:100%}
 .wcd .wobj-pk{width:84px;bottom:0}
 .wcd .wobj-golf{width:38px;right:20px;bottom:-10px}
 @media (min-width:900px){.wcd .wart{height:64px}.wcd .wobj-fb{width:92px}.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:70px}.wcd .wobj-pk{width:92px}.wcd .wobj-golf{width:42px}.wcd .wcity{font-size:var(--fs,46px);right:110px}}
+
+/* merged from another chat session (v-realstand, v-citygap, v-citygap2, Wed 9:50-10:30 AM) */
+.deck .card.wst:has(.wcd.real){box-shadow:0 0 0 3px #D4B15A,0 0 28px rgba(212,177,90,.45),0 10px 30px rgba(0,0,0,.5)!important}.wcd.real::before{content:"★  Real money  ·  " attr(data-rib);display:block;margin:-6px -18px 2px;padding:11px 18px;background:linear-gradient(100deg,#b8923a,#F3E3B0 45%,#D4B15A 60%,#b8923a);color:#0B2340;font:800 13px/1.2 Inter,var(--sys),sans-serif;letter-spacing:.06em}.wcd .lmv{display:flex;align-items:center;gap:8px;margin-top:9px;padding:7px 11px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);font-size:13.5px;line-height:1.35;color:#DDE6F2}.wcd .lmv svg{flex:none}.wcd .lmv b{color:#EEF2F8}.wcd .lmv .ok{color:#7FD79B}.wcd .lmv .no{color:#F0A08A}
+/* v-citygap (Scott, Wed Nov 25 10:27 AM): the ball covered the end of the big team name; the name now stops before the ball and shrinks a little to fit */
+.wcd .wcity{right:96px;font-size:calc(var(--fs,46px)*.8);-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}
+@media (min-width:900px){.wcd .wcity{right:128px;font-size:var(--fs,46px)}}
+/* v-citygap2 (Scott, 10:30 AM): basketball/baseball/soccer ball sat too high (into the top label); line strip text was cut off */
+.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:72px;bottom:-22px}
+@media (min-width:900px){.wcd .wobj-bb,.wcd .wobj-base,.wcd .wobj-soc{width:84px;bottom:-24px}}
+.wcd .lmv{align-items:flex-start;white-space:normal;max-width:100%;box-sizing:border-box}.wcd .lmv>span{min-width:0;white-space:normal;overflow-wrap:anywhere}.wcd .lmv svg{margin-top:2px}
