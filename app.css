@@ -2691,4 +2691,4 @@ img.crest{max-width:100%}
 /* v1154 (Scott, Thu 3:50 AM): the longer slogan was cut off on phones; stack its three phrases there, one line on computers */
 .hdr .tg{white-space:normal!important;display:flex;flex-wrap:wrap;column-gap:.4em;row-gap:1px}
 .hdr .tg span{white-space:nowrap}
-@media(max-width:899px){.hdr .tg{flex-direction:column;font-size:15px!important;line-height:1.25!important}}
+@media(max-width:899px){.hdr .tg{flex-direction:row!important;font-size:min(15px,3.7vw)!important;line-height:1.25!important}}
