@@ -2738,3 +2738,17 @@ img.crest{max-width:100%}
 /* v1167: top chapter labels read as story progress, not a second menu */
 .stm.lbl button span{font-size:11px!important;font-weight:500!important;letter-spacing:.02em;color:rgba(159,176,200,.62)!important}
 .stm.lbl button.on span{color:#F3E3B0!important;font-weight:600!important}
+/* v1168: looping swipe rails on the Today card */
+.strl{margin:14px 0 4px;touch-action:pan-y}
+.strh{display:flex;align-items:center;gap:10px;margin:0 2px 8px;font:600 12px/1 Oswald,var(--disp),sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F3E3B0}
+.strh .strc{font:500 12px/1 Inter,var(--sys),sans-serif;letter-spacing:0;text-transform:none;color:#9FB0C8;font-style:normal}
+.strh .strb{margin-left:auto;display:flex;gap:6px}
+.strh .strb button{width:30px;height:30px;border-radius:50%;border:1px solid rgba(243,227,176,.35);background:rgba(255,255,255,.05);color:#F3E3B0;font:600 18px/1 Inter,sans-serif;cursor:pointer;display:grid;place-items:center;padding:0}
+.strv{overflow:hidden;border-radius:20px}
+.strt{display:flex;align-items:flex-start;transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+@media (prefers-reduced-motion:reduce){.strt{transition:none}}
+.strs{flex:0 0 100%;min-width:0}
+.strs>*{width:100%;margin:0!important;box-sizing:border-box}
+.strd{display:flex;justify-content:center;gap:6px;margin-top:8px}
+.strd i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.22)}.strd i.on{background:#F3E3B0;width:16px;border-radius:4px}
+.strl+.strl{margin-top:18px}
