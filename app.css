@@ -2699,3 +2699,6 @@ img.crest{max-width:100%}
 /* v1158 (Scott, Thu 4:15 AM): Today headline on one line (fitted by the page), white with the number in brand gold */
 .sth1{white-space:nowrap!important;text-wrap:nowrap}
 .sth1 .hnum{color:#F3E3B0}
+
+/* v1159: update line always one line (fitter shrinks it) */
+.stupd>span{flex:1 1 auto;min-width:0;white-space:nowrap!important;overflow:hidden}
