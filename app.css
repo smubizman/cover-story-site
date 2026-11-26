@@ -2720,3 +2720,14 @@ img.crest{max-width:100%}
 .lvr .lv-value span,.lvr .lv-value b{color:#F3E3B0!important;text-shadow:0 0 10px rgba(243,227,176,.45)}
 .lvr button span{white-space:nowrap}
 .lvr .lvs{display:block;font-style:normal;color:#F3E3B0;letter-spacing:.12em;font-size:12px;line-height:1.1;margin:2px 0 1px}
+/* v1165 (Scott, Thu 9:34 AM): Buy List cards were too tall on phones; trim the long parts */
+@media (max-width:600px){
+#deck .whyl{display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:4px}
+#deck .whyl>*:not(:first-child){display:none}
+#deck .row.wcd{gap:6px!important;padding-bottom:10px!important;justify-content:flex-start!important}
+#deck .wart{height:52px;margin:-4px 0 -6px!important}
+#deck .wart .wcity{font-size:34px!important}
+#deck .wart .wobj{height:50px!important;width:auto}
+#deck .wcall{padding-top:4px!important}
+#deck .wats{padding-top:6px!important}
+}
