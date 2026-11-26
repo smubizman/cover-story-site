@@ -2702,3 +2702,16 @@ img.crest{max-width:100%}
 
 /* v1159: update line always one line (fitter shrinks it) */
 .stupd>span{flex:1 1 auto;min-width:0;white-space:nowrap!important;overflow:hidden}
+/* v1161 (Scott, Thu 9:08 AM): sport chips fill the full width; label stays on one line */
+.ston .stol{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ston .stoc{gap:10px}
+.ston .stchip{flex:1 1 0;min-width:max-content;justify-content:center;padding:11px 16px;font-size:14.5px}
+.ston .stchip svg{width:18px;height:18px}
+/* v1161b: TV-style header + richer chips to match the app */
+.ston{margin-top:18px}
+.ston .stol{display:flex;align-items:center;gap:8px;font:600 13px Oswald,var(--disp),sans-serif!important;letter-spacing:.16em;text-transform:uppercase;color:#F3E3B0!important;margin:0 0 10px;overflow:visible}
+.ston .stol span{white-space:nowrap;flex:none}
+.ston .stol svg{width:19px;height:19px;flex:none;fill:none;stroke:#F3E3B0;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ston .stol::after{content:"";flex:1 1 auto;height:1px;min-width:12px;background:linear-gradient(90deg,rgba(243,227,176,.45),rgba(243,227,176,0))}
+.ston .stchip{background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.025));border:1px solid rgba(243,227,176,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 4px 14px rgba(0,0,0,.25)}
+.ston .stchip b{font:600 19px Oswald,var(--disp),sans-serif;line-height:1}
