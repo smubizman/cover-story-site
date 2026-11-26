@@ -2769,3 +2769,5 @@ img.crest{max-width:100%}
 .ssag.t{color:#C9D5E6}
 #deck .rl .rball{bottom:-12px!important;height:72px!important;width:auto!important;opacity:.5}
 #deck .rl .fx,#deck .rl .bts,#deck .rl .hlk{position:relative;z-index:1}
+/* v1170: one filter button on Scores */
+.wb .lgx{width:36px;height:36px;border-radius:50%;border:1px solid rgba(243,227,176,.4);background:rgba(255,255,255,.05);color:#F3E3B0;font:600 14px/1 var(--sys);display:grid;place-items:center;padding:0;flex:none}
