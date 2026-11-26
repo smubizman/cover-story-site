@@ -1249,3 +1249,10 @@ setInterval(function(){var el=document.querySelector(".card.none");if(el&&!docum
 setInterval(function(){if(document.hidden||TAB!=="today"||document.querySelector(".ov"))return;if(Date.now()>tickHold){tickI++;var s=document.querySelector(".tick");if(s){var d=document.createElement("div");d.innerHTML=ticker();if(d.firstChild)s.replaceWith(d.firstChild)}}},6000);
 load();
 })();
+
+/* v1157: fit the slogan on one line on every device and font */
+(function(){var busy=0;function fitTg(){busy=0;try{document.querySelectorAll(".hdr .tg").forEach(function(t){if(!t.offsetParent)return;t.style.removeProperty("font-size");var f=parseFloat(getComputedStyle(t).fontSize)||15,box=t.parentElement,avail=box.clientWidth,hdr=t.closest(".hdr");if(hdr){var hr=hdr.getBoundingClientRect(),tr=t.getBoundingClientRect();avail=Math.min(avail,hr.right-tr.left-12)}var n=0;while(t.scrollWidth>avail+0.5&&f>8&&n<40){f-=0.25;t.style.setProperty("font-size",f+"px","important");n++}})}catch(e){}}
+function soon(){if(!busy){busy=1;requestAnimationFrame(fitTg)}}
+window.addEventListener("resize",soon);try{document.fonts&&document.fonts.ready.then(soon)}catch(e){}
+try{new MutationObserver(soon).observe(document.documentElement,{childList:true,subtree:true})}catch(e){}
+document.addEventListener("DOMContentLoaded",soon);setTimeout(soon,300);setTimeout(soon,1500)})();
