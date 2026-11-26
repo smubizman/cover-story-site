@@ -2695,3 +2695,7 @@ img.crest{max-width:100%}
 /* v1157 (Scott, Thu 4:05 AM): slogan always one line; the page shrinks it to fit the space on each device */
 .hdr .tg{display:block!important;white-space:nowrap!important;overflow:visible}
 .hdr .tg span{display:inline!important;white-space:nowrap}
+
+/* v1158 (Scott, Thu 4:15 AM): Today headline on one line (fitted by the page), white with the number in brand gold */
+.sth1{white-space:nowrap!important;text-wrap:nowrap}
+.sth1 .hnum{color:#F3E3B0}
