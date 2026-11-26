@@ -2682,3 +2682,9 @@ img.crest{max-width:100%}
 .sbr b{font-size:14px;text-align:right;min-width:72px}.sbr b.up{color:#7FE0A8}.sbr b.dn{color:#FF8A8C}
 .sbks{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.sbk{font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}.sbk.up{color:#7FE0A8;border-color:rgba(127,224,168,.4)}.sbk.dn{color:#FF8A8C;border-color:rgba(229,72,77,.4)}
 @media(max-width:600px){.sbr{grid-template-columns:minmax(0,1fr) auto auto;row-gap:6px}.sbr .sbbar{grid-column:1/-1;order:5}}
+
+/* v1153 update line at the bottom of Today; masthead keeps crest, name and slogan */
+#story .hdr .asof,#story .hdr>.q{display:none!important}
+.stupd{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px;padding-top:12px;border-top:1px solid rgba(243,227,176,.15);font-size:13px;color:#9FB0C8}
+.stupd.od{color:#FFB3B5}
+.stupd .q{position:static!important;flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid #F3E3B0;background:transparent;color:#F3E3B0;font-weight:700;cursor:pointer}
