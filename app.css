@@ -2776,3 +2776,9 @@ img.crest{max-width:100%}
 .stcard.stw section.wire{padding-top:4px!important}
 .stcard.stw .wh{margin-bottom:0!important}
 .stcard.stw .stt{margin-bottom:2px}
+/* v1172: live pick rows on Today */
+.stcw.stlive{color:#FFD0D0;font-weight:600;display:flex;align-items:center;gap:6px}
+.stcw.stlive .lvdot{width:8px;height:8px;border-radius:50%;background:#F26B6B;box-shadow:0 0 0 0 rgba(242,107,107,.6);animation:lvp 1.6s infinite;flex:none}
+@keyframes lvp{0%{box-shadow:0 0 0 0 rgba(242,107,107,.6)}70%{box-shadow:0 0 0 8px rgba(242,107,107,0)}100%{box-shadow:0 0 0 0 rgba(242,107,107,0)}}
+@media (prefers-reduced-motion:reduce){.stcw.stlive .lvdot{animation:none}}
+.stclv{display:block;font-weight:700;font-size:15px;margin-top:6px}.stclv.ok{color:#9BE3B5}.stclv.mid{color:#F3E3B0}.stclv.no{color:#FFB3B5}
