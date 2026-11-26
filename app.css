@@ -2669,3 +2669,16 @@ img.crest{max-width:100%}
 .card .fx1 b{white-space:nowrap}
 .card .bbst{bottom:36px!important;right:12px!important;font-size:18px!important;padding:2px 10px 1px!important}
 @media(min-width:900px){.card .bbst{bottom:46px!important}}
+
+/* v1151 Shadow bankroll */
+.sbsum{color:#C3D0E3;font-size:14px;margin:2px 0 12px}
+.stnow .sth .up{color:#7FE0A8}.stnow .sth .dn{color:#FF8A8C}
+.sbrows{display:flex;flex-direction:column;gap:8px}
+.sbr{display:grid;grid-template-columns:minmax(0,1.4fr) auto minmax(60px,1.6fr) auto;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;background:rgba(255,255,255,.04)}
+.sbl{display:flex;align-items:center;gap:8px;font-weight:600;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sbl img{width:22px;height:22px;object-fit:contain;flex:none}
+.sbw{font-size:13px;color:#C3D0E3}
+.sbbar{display:block;height:6px;border-radius:6px;background:rgba(255,255,255,.1);overflow:hidden}.sbbar i{display:block;height:100%;border-radius:6px}
+.sbbar.up i{background:linear-gradient(90deg,#7FE0A8,#43C784)}.sbbar.dn i{background:linear-gradient(90deg,#FF8A8C,#E5484D)}
+.sbr b{font-size:14px;text-align:right;min-width:72px}.sbr b.up{color:#7FE0A8}.sbr b.dn{color:#FF8A8C}
+.sbks{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.sbk{font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}.sbk.up{color:#7FE0A8;border-color:rgba(127,224,168,.4)}.sbk.dn{color:#FF8A8C;border-color:rgba(229,72,77,.4)}
+@media(max-width:600px){.sbr{grid-template-columns:minmax(0,1fr) auto auto;row-gap:6px}.sbr .sbbar{grid-column:1/-1;order:5}}
