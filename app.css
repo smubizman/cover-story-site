@@ -2928,3 +2928,9 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 .rsc{min-height:clamp(120px,22vh,190px);display:flex;flex-direction:column;justify-content:flex-end}
 .rsc .rsr{font-size:clamp(34px,5vw,52px)}
 @media (min-width:900px){.rsg{max-width:none;gap:16px}.rsc{min-height:clamp(180px,34vh,300px);padding:20px}.rsc .rsl{font-size:18px}.rsc .rsp{font-size:16px}}
+
+/* v1186 (Scott, Fri 7:10 AM): Today's Games on ONE row */
+.ston .stoc{flex-wrap:nowrap;gap:6px;overflow-x:auto;scrollbar-width:none}
+.ston .stoc::-webkit-scrollbar{display:none}
+.ston .stchip{flex:1 1 0;min-width:max-content;justify-content:center;padding:7px 9px;gap:5px;font-size:13px;white-space:nowrap}
+@media (max-width:520px){.ston .stchip svg{display:none}.ston .stchip{padding:7px 6px}}
