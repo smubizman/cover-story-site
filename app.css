@@ -2966,3 +2966,8 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 .srp em{font-style:normal;font:700 13px/1 Inter,sans-serif;color:#C9D5E6;white-space:nowrap}.srp em.w{color:#5BD394}.srp em.l{color:#FF7A7A}
 @media (max-width:899px){#app .stm{margin-right:44px}}
 .stcw.stfin{color:#C9D5E6;font-weight:700;letter-spacing:.02em}
+
+/* v1191: Buy List cards fill the screen; extra content scrolls inside the card */
+#deck>.card.cfill{display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+#deck>.card.cfill::-webkit-scrollbar{display:none}
+#deck>.card.cfill>:last-child{margin-top:auto}
