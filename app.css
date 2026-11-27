@@ -2794,3 +2794,10 @@ html:has(#story),html:has(#story) body{overscroll-behavior-y:none}
 /* v1179: Scores filter menu scrolls inside itself when taller than the screen */
 .lgm{max-height:calc(100dvh - 200px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 .lgm button{min-height:38px;padding-block:7px}
+
+/* v1180: section headings in the Scores filter menu; empty pick rows read 0, softly dimmed */
+.lgm .lgh{display:block;padding:8px 10px 3px;font:700 10.5px/1 var(--sys);letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.lgm button.nil0{opacity:.62}
+.lgm b.lgh{text-transform:uppercase!important;font-size:10.5px!important;letter-spacing:.12em!important;color:var(--mut)!important}
+.lgm button[data-act=wty]>i{width:34px;min-width:34px;padding:0}
+.lgm button[data-act=wty]:not(.on)>i{opacity:.95}
