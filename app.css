@@ -2894,3 +2894,16 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 .ston .stchip{flex:1 1 auto;min-width:0;padding:6px 10px;min-height:0;font-size:13px;gap:6px;border-radius:999px;line-height:1.1}
 .ston .stchip b{font-size:15px}
 .ston .stchip svg{width:14px;height:14px}
+
+/* v1184 (Scott, Fri 6:46 AM): on computers the Home chapters use the whole card width */
+@media (min-width:900px){
+.stin,.stcard.sparse .stin{max-width:min(1240px,100%)}
+.stcard.sparse .stin>*{max-width:none}
+.stspot,.stsm .stspot{max-width:none}
+}
+@media (min-width:900px){
+#app.stmode.t-today{max-width:none;width:auto;margin-left:24px;margin-right:24px}
+#app.t-today .stnow{max-width:none}
+#app.t-today .stin,#app.t-today .stcard.sparse .stin{max-width:none;padding-left:clamp(16px,3vw,48px);padding-right:clamp(16px,3vw,48px);box-sizing:border-box}
+}
+@media (min-width:900px){#app.t-today .hdr{max-width:none}}
