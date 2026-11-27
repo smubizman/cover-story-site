@@ -1554,6 +1554,11 @@ html body .hdr .tg,html body .hdr .tg span{font-family:var(--serif)!important;fo
 .lrow .lb.lw i{transition:width .8s ease}
 @media (prefers-reduced-motion:reduce){.lrow .lb.lw i{transition:none}}
 .wl .lcap{grid-column:1/-1;margin:6px 2px 4px;font:500 12px/1.35 var(--sys);color:var(--mut)}
+/* v-winpct (Scott, Fri Nov 27 11:11 AM): win % at the end of each live chance bar; faded bar = our pregame chance when ESPN has none */
+.lrow .lt:has(.lpc) .lb{grid-column:1/2}
+.lrow .lpc{grid-column:2;justify-self:end;align-self:center;text-decoration:none;font:700 12.5px/1 var(--sys);color:var(--cream);font-variant-numeric:tabular-nums;white-space:nowrap}
+.lrow .lpc.pre{color:var(--mut);font-weight:600}
+.lrow .lb.pre i{opacity:.45}
 
 /* v1003 pinned games at the top of Home */
 .pins{display:flex;flex-direction:column;gap:6px;padding-top:4px!important;padding-bottom:6px!important}
