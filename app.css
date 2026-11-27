@@ -2782,3 +2782,7 @@ img.crest{max-width:100%}
 @keyframes lvp{0%{box-shadow:0 0 0 0 rgba(242,107,107,.6)}70%{box-shadow:0 0 0 8px rgba(242,107,107,0)}100%{box-shadow:0 0 0 0 rgba(242,107,107,0)}}
 @media (prefers-reduced-motion:reduce){.stcw.stlive .lvdot{animation:none}}
 .stclv{display:block;font-weight:700;font-size:15px;margin-top:6px}.stclv.ok{color:#9BE3B5}.stclv.mid{color:#F3E3B0}.stclv.no{color:#FFB3B5}
+/* v1173: rails fit the card on top; bet result line */
+.strv{transition:height .25s ease}
+.strt{align-items:flex-start!important}
+.stpay b.ok{color:#9BE3B5}.stpay b.no{color:#FFB3B5}.stpay b.mid{color:#F3E3B0}
