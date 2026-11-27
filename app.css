@@ -2965,3 +2965,4 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 .srp span{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.srp b{font:700 14px/1.25 Inter,sans-serif;color:#EEF2F8}.srp small{font:500 12px/1.2 Inter,sans-serif;color:#9FB3CF}
 .srp em{font-style:normal;font:700 13px/1 Inter,sans-serif;color:#C9D5E6;white-space:nowrap}.srp em.w{color:#5BD394}.srp em.l{color:#FF7A7A}
 @media (max-width:899px){#app .stm{margin-right:44px}}
+.stcw.stfin{color:#C9D5E6;font-weight:700;letter-spacing:.02em}
