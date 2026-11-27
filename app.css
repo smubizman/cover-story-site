@@ -2887,3 +2887,10 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 .clvi i{font-style:normal;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;flex:none}
 .clvi.cw i{background:rgba(63,191,119,.3);color:#9BE3B5}.clvi.cl i{background:rgba(226,85,85,.3);color:#FFB3B5}.clvi.cp i{background:rgba(159,179,207,.2);color:#C9D5E6}
 .clvi span{flex:1;min-width:0}.clvi em{font-style:normal;font-size:12px;color:#9FB3CF;white-space:nowrap}
+/* v1183 (Scott, Fri 6:38 AM): Today's Games takes far less height: small pills that fill each row */
+.ston{margin-top:14px}
+.ston .stol{margin:0 0 8px;font-size:12px!important}
+.ston .stoc{gap:6px}
+.ston .stchip{flex:1 1 auto;min-width:0;padding:6px 10px;min-height:0;font-size:13px;gap:6px;border-radius:999px;line-height:1.1}
+.ston .stchip b{font-size:15px}
+.ston .stchip svg{width:14px;height:14px}
