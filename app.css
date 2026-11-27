@@ -2801,3 +2801,25 @@ html:has(#story),html:has(#story) body{overscroll-behavior-y:none}
 .lgm b.lgh{text-transform:uppercase!important;font-size:10.5px!important;letter-spacing:.12em!important;color:var(--mut)!important}
 .lgm button[data-act=wty]>i{width:34px;min-width:34px;padding:0}
 .lgm button[data-act=wty]:not(.on)>i{opacity:.95}
+
+/* v1181: cover bar on his bets */
+.cbar{margin:8px 2px 2px;font-family:Inter,var(--body),sans-serif}
+.cbx{position:relative;height:46px}
+.cbt{position:absolute;left:0;right:0;top:19px;height:9px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden;display:flex}
+.cbt i{display:block;height:100%}
+.cbf{background:linear-gradient(90deg,rgba(226,85,85,.08),rgba(226,85,85,.38))}
+.cbw{background:linear-gradient(90deg,rgba(64,196,120,.38),rgba(64,196,120,.08))}
+.cbz{position:absolute;top:16px;width:1px;height:15px;background:rgba(255,255,255,.35)}
+.cbzl{position:absolute;top:34px;transform:translateX(-50%);font:600 10px/1 Inter,sans-serif;color:#8FA3BF;white-space:nowrap}
+.cbl{position:absolute;top:13px;width:2px;height:21px;margin-left:-1px;border-radius:2px;background:#E6C877}
+.cbll{position:absolute;top:0;transform:translateX(-50%);font:700 10.5px/1 Inter,sans-serif;color:#E6C877;white-space:nowrap}
+.cbd{position:absolute;top:14px;width:18px;height:18px;margin-left:-9px;border-radius:50%;border:2px solid #fff;background:#9FB3CF;box-shadow:0 2px 6px rgba(0,0,0,.5);transition:left .6s ease}
+.cbd.g{background:#3FBF77;box-shadow:0 0 0 4px rgba(63,191,119,.22),0 0 12px rgba(63,191,119,.6)}
+.cbd.r{background:#E25555;box-shadow:0 0 0 4px rgba(226,85,85,.22),0 0 12px rgba(226,85,85,.55)}
+.cbd.m{background:#E6C877}
+.cbar.lv .cbd.g,.cbar.lv .cbd.r{animation:cbp 1.8s ease-in-out infinite}
+@keyframes cbp{50%{box-shadow:0 0 0 7px rgba(255,255,255,.06),0 0 16px rgba(255,255,255,.25)}}
+@media (prefers-reduced-motion:reduce){.cbar.lv .cbd{animation:none}.cbd{transition:none}}
+.cbe{display:flex;justify-content:space-between;gap:8px;font:600 10.5px/1.2 Inter,sans-serif;color:#8FA3BF;margin-top:2px}
+.cbc{margin:6px 0 0;font:600 13px/1.3 Inter,sans-serif;color:#C9D5E6}
+.stlive .cbar{margin:12px 8px 4px}
