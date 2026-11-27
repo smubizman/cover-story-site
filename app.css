@@ -2790,3 +2790,7 @@ img.crest{max-width:100%}
 /* v1177: no page bounce on story screens */
 html:has(#story),html:has(#story) body{overscroll-behavior-y:none}
 #story>.stcard{overscroll-behavior-y:contain}
+
+/* v1179: Scores filter menu scrolls inside itself when taller than the screen */
+.lgm{max-height:calc(100dvh - 200px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.lgm button{min-height:38px;padding-block:7px}
