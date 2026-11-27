@@ -2786,3 +2786,4 @@ img.crest{max-width:100%}
 .strv{transition:height .25s ease}
 .strt{align-items:flex-start!important}
 .stpay b.ok{color:#9BE3B5}.stpay b.no{color:#FFB3B5}.stpay b.mid{color:#F3E3B0}
+.lfeat:has(> .lrow.sthid){display:none!important}
