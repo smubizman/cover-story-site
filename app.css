@@ -2787,3 +2787,6 @@ img.crest{max-width:100%}
 .strt{align-items:flex-start!important}
 .stpay b.ok{color:#9BE3B5}.stpay b.no{color:#FFB3B5}.stpay b.mid{color:#F3E3B0}
 .lfeat:has(> .lrow.sthid){display:none!important}
+/* v1177: no page bounce on story screens */
+html:has(#story),html:has(#story) body{overscroll-behavior-y:none}
+#story>.stcard{overscroll-behavior-y:contain}
