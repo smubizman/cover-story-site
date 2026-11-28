@@ -3004,3 +3004,5 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 /* v1200 Price Watch ribbon */.wcd.real.lv-watch::before{content:"◎  Price Watch  ·  " attr(data-rib)}
 
 /* v1201 Arena line: You and Model on two lines */.stvs .stvt b,.stvs .stvt span{display:block;line-height:1.3}.stvs .stvt span{color:#B9C4D4}
+
+/* v1202 goalposts: show the whole goalpost, smaller, in the corner */.lfeat .lfob.lfob-cfbg{width:66px;right:8px;bottom:-6px}.wcd .wobj.wobj-cfbg{width:96px;right:2px;bottom:-4px}.deck .card .rball.rball-cfbg{width:78px;right:0}.stspot .ssobj{}
