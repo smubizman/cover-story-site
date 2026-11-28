@@ -3011,3 +3011,6 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 
 /* v1205 ribbon says only Value Buy */.wcd.real::before{content:"\25C6  Value Buy"!important}
 .wcd .wcb{white-space:nowrap}
+
+/* v1208 (Scott, Sat 6:31 AM): a sideways swipe on a Buy List card moves the card only; since v1205 the card scrolls inside itself, so it needs its own pan-y or the swipe also slides the app to the next section */#deck,#deck>.card,#deck>.card *{touch-action:pan-y}
+#deck>.card.cfill{overscroll-behavior-x:none}
