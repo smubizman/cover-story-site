@@ -2971,3 +2971,30 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 #deck>.card.cfill{display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 #deck>.card.cfill::-webkit-scrollbar{display:none}
 #deck>.card.cfill>:last-child{margin-top:auto}
+
+/* v1192: one confidence system (the stars); the five-dash meter is gone */
+.bt .cf,.cf[role=img]{display:none!important}
+
+/* v1192: result reveal */
+.rv{position:relative;text-align:center;padding:10px 4px 6px;overflow:hidden}
+.rvk{margin:0 0 6px;font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9FB3CF}
+.rvh{margin:0;font:800 34px/1.1 var(--serif,Georgia),serif}
+.rvw .rvh{color:#F3E3B0;text-shadow:0 0 24px rgba(230,200,119,.55)}.rvl .rvh{color:#FF8A8A}.rvp .rvh{color:#E6C877}
+.rvpk{margin:8px 0 14px;font:700 16px/1.3 Inter,sans-serif;color:#EEF2F8}
+.rvsc{display:flex;flex-direction:column;gap:8px;margin:0 auto 12px;max-width:340px}
+.rvsc span{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.05)}
+.rvsc span>svg,.rvsc span>.shd{width:30px;height:30px;flex:none}
+.rvsc b{flex:1;text-align:left;font:700 15px Inter,sans-serif;color:#EEF2F8}.rvsc em{font-style:normal;font:800 20px Inter,sans-serif;color:#F4F7FB}
+.rvamt{margin:4px 0 14px;font:800 30px/1 Inter,sans-serif}.rvw .rvamt{color:#5BD394}.rvl .rvamt{color:#FF7A7A}.rvp .rvamt{color:#C9D5E6}
+.rvsp{margin:6px 0 0;font:600 12px/1 Inter,sans-serif;color:#9FB3CF;text-align:left}
+.rv .wps{margin:6px 0 14px}
+.rvburst{position:absolute;left:50%;top:58px;width:0;height:0;pointer-events:none}
+.rvburst i{position:absolute;left:-2px;top:-60px;width:4px;height:40px;border-radius:3px;background:linear-gradient(#F3E3B0,rgba(230,200,119,0));transform-origin:2px 60px;transform:rotate(var(--r)) scaleY(.2);opacity:0;animation:rvb 1.1s cubic-bezier(.2,.7,.2,1) var(--d) forwards}
+@keyframes rvb{30%{opacity:1}100%{opacity:0;transform:rotate(var(--r)) translateY(-40px) scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.rvburst{display:none}}
+
+/* v1192: you vs. the model line */
+.stvs{display:flex;align-items:center;gap:10px;width:100%;margin-top:10px;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(159,179,207,.2);color:#C9D5E6;font:500 13px/1.25 Inter,sans-serif;text-align:left}
+.stvs .stvk{font:700 11px/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#E6C877;white-space:nowrap}
+.stvs .stvt{flex:1;min-width:0}.stvs .stvt b{color:#EEF2F8}
+.stvs em{font-style:normal;font-weight:700;white-space:nowrap}.stvs.up em{color:#5BD394}.stvs.dn em{color:#FF9A9A}
