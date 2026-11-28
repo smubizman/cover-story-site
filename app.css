@@ -3016,3 +3016,4 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 #deck>.card.cfill{overscroll-behavior-x:none}
 
 /* v1209 (Scott, Sat 6:38 AM): Value Buy stripe slimmer and centered */.wcd.real::before{padding:6px 18px!important;text-align:center;font-size:12px!important;letter-spacing:.12em}
+/* v1210 (Scott, Sat 6:41 AM): a lot thinner */.wcd.real::before{padding:2px 18px!important;font-size:10.5px!important;line-height:1.25!important;letter-spacing:.14em;margin-bottom:4px!important}
