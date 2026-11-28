@@ -2998,3 +2998,5 @@ div.stlive:has(.cbar) .cvn{display:none!important}
 .stvs .stvk{font:700 11px/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#E6C877;white-space:nowrap}
 .stvs .stvt{flex:1;min-width:0}.stvs .stvt b{color:#EEF2F8}
 .stvs em{font-style:normal;font-weight:700;white-space:nowrap}.stvs.up em{color:#5BD394}.stvs.dn em{color:#FF9A9A}
+
+/* v1199 price target on the Home pick card */.stc1 .stcbuy{display:inline-block;align-self:flex-start;margin:2px 0 4px;padding:3px 10px;border-radius:999px;border:1px solid rgba(232,196,106,.7);color:#F3E3B0;font-size:13px;font-weight:700;letter-spacing:.02em;background:rgba(232,196,106,.12)}
